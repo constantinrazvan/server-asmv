@@ -1,6 +1,6 @@
-﻿namespace ServerAsmv;
+﻿namespace ServerAsmv.Interfaces {
 
-public interface IProjects
-{
-
+    public interface IProjects {
+        
+    }
 }

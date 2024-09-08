@@ -1,6 +1,6 @@
-﻿namespace ServerAsmv;
+﻿namespace ServerAsmv.Services { 
+    public class ProjectsService
+    {
 
-public class ProjectsService
-{
-
+    }
 }

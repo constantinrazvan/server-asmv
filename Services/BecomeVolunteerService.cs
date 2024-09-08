@@ -1,6 +1,6 @@
-﻿namespace ServerAsmv;
+﻿namespace ServerAsmv.Services { 
+    public class BecomeVolunteerService
+    {
 
-public class BecomeVolunteerService
-{
-
+    }
 }

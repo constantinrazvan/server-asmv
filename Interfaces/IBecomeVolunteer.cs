@@ -1,6 +1,6 @@
-﻿namespace ServerAsmv;
+﻿namespace ServerAsmv.Interfaces {
+    public interface IBecomeVolunteer
+    {
 
-public interface IBecomeVolunteer
-{
-
+    }
 }

@@ -1,6 +1,11 @@
-﻿namespace ServerAsmv;
-
-public class RegisterDTO
-{
-
+﻿namespace ServerAsmv.DTOs {
+    public class RegisterDTO
+    {
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public string Role { get; set; }
+        public string AccessKey { get; set; }
+    }
 }

@@ -1,6 +1,6 @@
-﻿namespace ServerAsmv;
+﻿namespace ServerAsmv.Interfaces { 
+    public interface IVolunteer
+    {
 
-public interface IVolunteer
-{
-
+    }
 }

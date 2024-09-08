@@ -1,6 +1,6 @@
-﻿namespace ServerAsmv;
+﻿namespace ServerAsmv.Interfaces {
+    public interface IAuth
+    {
 
-public interface IAuth
-{
-
+    }
 }

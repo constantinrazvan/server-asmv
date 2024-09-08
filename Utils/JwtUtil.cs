@@ -1,6 +1,6 @@
-﻿namespace ServerAsmv;
+﻿namespace ServerAsmv.Utils {
+    public class JwtUtil
+    {
 
-public class JwtUtil
-{
-
+    }
 }

@@ -1,6 +1,7 @@
-﻿namespace ServerAsmv;
-
-public class AuthService
+﻿namespace ServerAsmv.Services
 {
+    public class AuthService
+    {
 
+    }
 }

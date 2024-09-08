@@ -1,6 +1,6 @@
-﻿namespace ServerAsmv;
+﻿namespace ServerAsmv.Interfaces {
+    public interface IMessage
+    {
 
-public interface IMessage
-{
-
+    }
 }
