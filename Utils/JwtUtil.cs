@@ -62,11 +62,12 @@ namespace ServerAsmv.Utils
             try
             {
                 var principal = tokenHandler.ValidateToken(token, validationParameters, out var validatedToken);
-                return principal;
+                return principal ?? throw new InvalidOperationException("Failed to validate token");
             }
-            catch
+            catch (Exception ex)
             {
-                return null;
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                throw;
             }
         }
     }
