@@ -5,7 +5,7 @@ namespace ServerAsmv.Interfaces {
     public interface IMessage
     {
         bool AddMessage(MessageDTO message);
-        List<MessageDTO> GetMessages();
+        List<Message> GetMessages();
         Message GetMessageById(long Id);
     }
 }
