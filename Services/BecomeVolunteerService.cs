@@ -71,9 +71,45 @@ namespace ServerAsmv.Services {
             return becomeVolunteers;
         }
 
-        public bool UpdateBecomeVolunteer(BecomeVolunteer newBecomeVolunteer)
+        public async Task<bool> UpdateBecomeVolunteer(BecomeVolunteer newBecomeVolunteer, long Id)
         {
-            throw new NotImplementedException();
+            BecomeVolunteer? found = await _context.BecomeVolunteers.FindAsync(Id);
+        
+            if (found == null) {
+                throw new KeyNotFoundException($"{Id} has not be found!");
+            }
+        
+            if (newBecomeVolunteer.Fullname != found.Fullname || newBecomeVolunteer.Fullname != null) {
+                found.Fullname = newBecomeVolunteer.Fullname;
+            }
+        
+            if (newBecomeVolunteer.Email != found.Email || newBecomeVolunteer.Email != null) { 
+                found.Email = newBecomeVolunteer.Email;
+            }
+        
+            if (newBecomeVolunteer.Reason != found.Reason || newBecomeVolunteer.Reason != null) { 
+                found.Reason = newBecomeVolunteer.Reason;
+            }
+        
+            _context.Update(found);
+            _context.SaveChanges();
+            return true;
+        }
+
+        public async Task MarkAsRead(long Id) 
+        { 
+            BecomeVolunteer? found = await _context.BecomeVolunteers.FindAsync(Id);
+
+            if(found == null) {
+                throw new KeyNotFoundException($"The request with id {Id} was not found!");
+            }
+
+            found.NewRequest = !found.NewRequest;
+
+            _context.Update(found);
+            _context.SaveChanges();
+
+            Console.WriteLine($"Request with ID {Id} has marked as read");
         }
     }
 }
