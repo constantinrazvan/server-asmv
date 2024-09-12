@@ -60,11 +60,13 @@ namespace ServerAsmv.Services {
         {
             List<BecomeVolunteer> becomeVolunteers = new List<BecomeVolunteer>();
 
-            for(int i = 0; i < _context.BecomeVolunteers.Count(); i++) {
-                becomeVolunteers.Add(_context.BecomeVolunteers.ElementAt(i));
+            foreach (var becomeVolunteer in _context.BecomeVolunteers)
+            {
+                becomeVolunteers.Add(becomeVolunteer);
             }
 
-            if(becomeVolunteers.Count == 0) {
+            if (becomeVolunteers.Count == 0)
+            {
                 throw new KeyNotFoundException("No BecomeVolunteers found");
             }
 
