@@ -7,7 +7,7 @@ namespace ServerAsmv.Interfaces {
         List<BecomeVolunteer> GetBecomeVolunteers();
         BecomeVolunteer GetBecomeVolunteer(long Id);
         void AddBecomeVolunteer(BecomeVolunteerDTO newBecomeVolunteer);
-        Task<bool> UpdateBecomeVolunteer(BecomeVolunteer newBecomeVolunteer, long Id);
+        Task<bool> UpdateBecomeVolunteer(BecomeVolunteerDTO newBecomeVolunteer, long Id);
         void DeleteBecomeVolunteer(long Id);
         Task MarkAsRead(long Id);
     }

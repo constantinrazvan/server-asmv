@@ -41,5 +41,35 @@ namespace ServerAsmv.Controllers
             _service.AddBecomeVolunteer(req);
             return req;
         }
+
+        [HttpGet("/all")]
+        public ActionResult<List<BecomeVolunteer>> GetAll() 
+        {
+            return _service.GetBecomeVolunteers();
+        }
+
+        [HttpPut("/update/{id}")]
+        public async Task<ActionResult<bool>> Update([FromRoute] long id, [FromBody] BecomeVolunteerDTO becomeVolunteer)
+        {
+            if (becomeVolunteer == null)
+            {
+                return null!;
+            }
+
+            bool updateResult = await _service.UpdateBecomeVolunteer(becomeVolunteer, id);
+            return Ok(updateResult);
+        }
+
+        [HttpPut("/markAsRead/{id}")]
+        public async Task<IActionResult> MarkAsRead([FromRoute] long Id) 
+        {
+            if(Id == 0) {
+                return BadRequest("Id is null!");
+            }
+
+            await _service.MarkAsRead(Id);
+            return Ok();
+        }
     }
 }
+ 

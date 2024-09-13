@@ -74,7 +74,7 @@ namespace ServerAsmv.Services {
             return becomeVolunteers;
         }
 
-        public async Task<bool> UpdateBecomeVolunteer(BecomeVolunteer newBecomeVolunteer, long Id)
+        public async Task<bool> UpdateBecomeVolunteer(BecomeVolunteerDTO newBecomeVolunteer, long Id)
         {
             BecomeVolunteer? found = await _context.BecomeVolunteers.FindAsync(Id);
         
@@ -102,16 +102,16 @@ namespace ServerAsmv.Services {
         public async Task MarkAsRead(long Id) 
         { 
             BecomeVolunteer? found = await _context.BecomeVolunteers.FindAsync(Id);
-
+        
             if(found == null) {
                 throw new KeyNotFoundException($"The request with id {Id} was not found!");
             }
-
+        
             found.NewRequest = !found.NewRequest;
-
+        
             _context.Update(found);
             _context.SaveChanges();
-
+        
             Console.WriteLine($"Request with ID {Id} has marked as read");
         }
     }
