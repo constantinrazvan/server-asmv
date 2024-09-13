@@ -1,8 +1,8 @@
 ﻿namespace ServerAsmv.DTOs {
     public class MessageDTO
     {
-        public string Fullname {get; set;}
-        public string Email { get; set; }
-        public string Text { get; set; }
+        public required string Fullname {get; set;}
+        public required string Email { get; set; }
+        public required string Text { get; set; }
     }   
 }
