@@ -9,6 +9,6 @@ namespace ServerAsmv.Interfaces {
         void AddBecomeVolunteer(BecomeVolunteerDTO newBecomeVolunteer);
         Task<bool> UpdateBecomeVolunteer(BecomeVolunteerDTO newBecomeVolunteer, long Id);
         void DeleteBecomeVolunteer(long Id);
-        Task MarkAsRead(long Id);
+        Task<string> MarkAsRead(long Id);
     }
 }

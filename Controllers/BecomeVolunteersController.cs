@@ -61,14 +61,21 @@ namespace ServerAsmv.Controllers
         }
 
         [HttpPut("/markAsRead/{id}")]
-        public async Task<IActionResult> MarkAsRead([FromRoute] long Id) 
+        public async Task<IActionResult> MarkAsRead(long id) 
         {
-            if(Id == 0) {
-                return BadRequest("Id is null!");
+            if (id <= 0) 
+            {
+                return BadRequest("Id must be a positive integer.");
             }
 
-            await _service.MarkAsRead(Id);
-            return Ok();
+            var resultMessage = await _service.MarkAsRead(id);
+            
+            if (resultMessage.Contains("not found"))
+            {
+                return NotFound(resultMessage);
+            }
+
+            return Ok(resultMessage);
         }
     }
 }

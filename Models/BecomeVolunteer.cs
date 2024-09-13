@@ -28,23 +28,23 @@ namespace AsmvBackend.Models
         [MaxLength(500)]
         public string Reason { get; set; }
 
-        public bool NewRequest { get; set; } = true;
+        public bool Readed { get; set; } = true;
 
         public BecomeVolunteer() { }
 
-        public BecomeVolunteer(string email, string fullname, string phone, string faculty, string reason, bool newRequest)
+        public BecomeVolunteer(string email, string fullname, string phone, string faculty, string reason, bool readed)
         {
             Fullname = fullname;
             Email = email;
             Phone = phone;
             Faculty = faculty;
             Reason = reason;
-            NewRequest = newRequest;
+            Readed = readed;
         }
 
         public override string ToString()
         {
-            return $"BecomeVolunteer{{ Id={Id}, Fullname='{Fullname}', Email='{Email}', Phone='{Phone}', Faculty='{Faculty}', Reason='{Reason}', NewRequest={NewRequest} }}";
+            return $"BecomeVolunteer{{ Id={Id}, Fullname='{Fullname}', Email='{Email}', Phone='{Phone}', Faculty='{Faculty}', Reason='{Reason}', Readed={Readed} }}";
         }
     }
 }

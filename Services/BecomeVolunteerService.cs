@@ -26,10 +26,11 @@ namespace ServerAsmv.Services {
                 phone: newBecomeVolunteer.Phone,
                 faculty: newBecomeVolunteer.Faculty,
                 reason: newBecomeVolunteer.Reason,
-                newRequest: true
+                readed: false
             );
 
             _context.BecomeVolunteers.Add(newVolunteer);
+            _context.SaveChanges();
             Console.WriteLine("newBecomeVolunteer has been added");
             Console.WriteLine($"{newBecomeVolunteer}");
         }
@@ -99,20 +100,21 @@ namespace ServerAsmv.Services {
             return true;
         }
 
-        public async Task MarkAsRead(long Id) 
+        public async Task<string> MarkAsRead(long id) 
         { 
-            BecomeVolunteer? found = await _context.BecomeVolunteers.FindAsync(Id);
-        
-            if(found == null) {
-                throw new KeyNotFoundException($"The request with id {Id} was not found!");
+            var found = await _context.BecomeVolunteers.FindAsync(id);
+
+            if (found == null) 
+            {
+                return $"The request with id {id} was not found.";
             }
-        
-            found.NewRequest = !found.NewRequest;
-        
+
+            bool wasMarkedAsRead = found.Readed;
+            found.Readed = !found.Readed;
             _context.Update(found);
-            _context.SaveChanges();
-        
-            Console.WriteLine($"Request with ID {Id} has marked as read");
+            await _context.SaveChangesAsync(); 
+
+            return wasMarkedAsRead ? "Marked as unread." : "Marked as read.";
         }
     }
 }
