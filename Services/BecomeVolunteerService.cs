@@ -31,6 +31,7 @@ namespace ServerAsmv.Services {
 
             _context.BecomeVolunteers.Add(newVolunteer);
             _context.SaveChanges();
+            
             Console.WriteLine("newBecomeVolunteer has been added");
             Console.WriteLine($"{newBecomeVolunteer}");
         }

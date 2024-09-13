@@ -17,6 +17,7 @@ namespace ServerAsmv.Services
             this._dbContext = dbContext;
             this.jwtUtil = jwtUtil;
         }
+        
         public string login(LoginDTO user)
         {
             User? find = _dbContext.Users.FirstOrDefault(u => u.Email == user.Email);
@@ -57,6 +58,16 @@ namespace ServerAsmv.Services
             _dbContext.SaveChanges();
 
             return true;
+        }
+
+        public User GetProfile(long Id) { 
+            User? found = _dbContext.Users.Find(Id);
+
+            if(found == null) {
+                return null!;
+            }
+
+            return found;
         }
     }
 }

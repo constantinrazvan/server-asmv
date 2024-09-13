@@ -1,3 +1,5 @@
+using AsmvBackend.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ServerAsmv.DTOs;
@@ -5,6 +7,7 @@ using ServerAsmv.Services;
 
 namespace ServerAsmv.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class AuthController : ControllerBase
@@ -16,6 +19,7 @@ namespace ServerAsmv.Controllers
             this._service = service;
         }
 
+        [AllowAnonymous]
         [HttpPost("/login")]
         public IActionResult Login([FromBody] LoginDTO user)
         {
@@ -34,6 +38,7 @@ namespace ServerAsmv.Controllers
             return Ok(token);
         }
 
+        [AllowAnonymous]
         [HttpPost("/register")]
         public IActionResult Register([FromBody] RegisterDTO register)
         {
@@ -52,6 +57,14 @@ namespace ServerAsmv.Controllers
             {
                 return BadRequest("User already exists!");
             }
+        }
+
+        public ActionResult<User> GetProfile(long Id) { 
+            if(Id <= 0) {
+                return null!;
+            }
+
+            return _service.GetProfile(Id);
         }
     }
 }

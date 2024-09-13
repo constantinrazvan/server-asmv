@@ -1,11 +1,13 @@
 using AsmvBackend.DTOs;
 using AsmvBackend.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ServerAsmv.Services;
 
 namespace ServerAsmv.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class BecomeVolunteersController : ControllerBase
@@ -32,6 +34,7 @@ namespace ServerAsmv.Controllers
             return found;
         }
 
+        [AllowAnonymous]
         [HttpPost("/new")]
         public ActionResult<BecomeVolunteerDTO> AddOne([FromBody] BecomeVolunteerDTO req) {
             if(req == null) {

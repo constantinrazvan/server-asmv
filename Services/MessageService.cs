@@ -12,7 +12,7 @@ namespace ServerAsmv.Services {
             _context = context;
         }
 
-        public bool AddMessage(MessageDTO message)
+        public bool AddMessage(Message message)
         {
             if (message == null)
             {
@@ -52,15 +52,14 @@ namespace ServerAsmv.Services {
             return found ?? throw new Exception("Message not found");
         }
 
-        public List<Message> GetMessages()
+        public Stack<Message> GetMessages()
         {
-            var messages = _context.Messages.ToList();
-        
-            if (!messages.Any())
-            {
-                throw new Exception("No messages found");
+            Stack<Message> messages = new Stack<Message>();
+            
+            for (int i = _context.Messages.Count() - 1; i >= 0; i--) {
+                messages.Push(_context.Messages.ElementAt(i));
             }
-        
+
             return messages;
         }
     }
