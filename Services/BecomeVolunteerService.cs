@@ -1,4 +1,5 @@
-﻿using AsmvBackend.Models;
+﻿using AsmvBackend.DTOs;
+using AsmvBackend.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 using ServerAsmv.Data;
 using ServerAsmv.Interfaces;
@@ -13,7 +14,7 @@ namespace ServerAsmv.Services {
             _context = context;
         }
 
-        public void AddBecomeVolunteer(BecomeVolunteer newBecomeVolunteer)
+        public void AddBecomeVolunteer(BecomeVolunteerDTO newBecomeVolunteer)
         {
             if(newBecomeVolunteer == null) {
                 throw new ArgumentNullException("Request cannot be null!");
