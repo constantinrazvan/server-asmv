@@ -35,37 +35,38 @@ namespace ServerAsmv.Controllers
         }
 
         [HttpDelete("/{id}")]
-        public ActionResult<Task<bool>> DeleteUser(long Id) 
+        public async Task<ActionResult<bool>> DeleteUser(long Id) 
         {
             if(Id <= 0) {
-                return BadRequest();
+                return BadRequest("Invalid ID.");
             }
 
-            return Ok(_service.DeleteUser(Id));
+            bool result = await _service.DeleteUser(Id);
+            return Ok(result);
         }
 
         [HttpPatch("/email/{id}")]
-        public async Task<ActionResult<string>> ModifyEmail(long id, [FromBody] string email)
+        public async Task<ActionResult<bool>> ModifyEmail(long id, [FromBody] string email)
         {
             if (id <= 0)
             {
                 return BadRequest("Invalid user ID. ID must be greater than 0.");
             }
-        
+
             if (string.IsNullOrWhiteSpace(email))
             {
                 return BadRequest("Email is required and cannot be empty.");
             }
-        
+
             bool modifiedEmail = await _service.ModifyEmail(id, email);
             return Ok(modifiedEmail);
         }
 
-        [HttpPatch("/password/P{id}")]
+        [HttpPatch("/password/{id}")]
         public async Task<ActionResult<bool>> ModifyPassword(long Id, [FromBody] string password) 
         {
             if(Id <= 0) {
-                return BadRequest("Invalid user ID. ID must be grater than 0.");
+                return BadRequest("Invalid user ID. ID must be greater than 0.");
             }
 
             if(string.IsNullOrWhiteSpace(password))
@@ -87,11 +88,11 @@ namespace ServerAsmv.Controllers
         public async Task<ActionResult<bool>> UpdateUser(long Id, [FromBody] User user)
         {
             if(Id <= 0) {
-                return BadRequest("Invalid user ID. ID must be grater than 0.");
+                return BadRequest("Invalid user ID. ID must be greater than 0.");
             }
 
             if(user == null) {
-                return BadRequest("Invalid user! User must be filled and not empty!");
+                return BadRequest("Invalid user! User must be filled and not empty.");
             }
 
             bool updatedUser = await _service.UpdateUser(Id, user);
