@@ -1,47 +1,45 @@
-﻿using AsmvBackend.Models;
+using AsmvBackend.Models;
 using ServerAsmv.Data;
 using ServerAsmv.Interfaces;
 
 namespace ServerAsmv.Services {
-    public class VolunteersService : IVolunteer
-    {
+    public class UsersService : IUser {
+        private readonly AppData _context; 
 
-        private readonly AppData _context;
-
-        public VolunteersService(AppData _context) {
-            this._context = _context;
+        public UsersService(AppData _context) { 
+            this._context =_context;
         }
 
-        public void AddVolunteer(Volunteer volunteer)
+        public Task<bool> DeleteUser(long Id)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteVolunteer(long Id)
+        public User GetUser(long Id)
         {
             throw new NotImplementedException();
         }
 
-        public Volunteer GetVolunteerById(int id)
+        public Task<bool> ModifyEmail(long Id, string email)
         {
             throw new NotImplementedException();
         }
 
-        public List<Volunteer> GetVolunteers()
+        public Task<bool> ModifyPassword(long Id, string password)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateVolunteer(long Id, Volunteer volunteer)
+        public Task<bool> UpdateUser(long Id)
         {
             throw new NotImplementedException();
         }
 
-        public int Count() 
+        public int Count()
         {
             int number = 0;
 
-            foreach(Volunteer v in _context.Volunteers) {
+            foreach(User u in _context.Users) {
                 number++;
             }
 

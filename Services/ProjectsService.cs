@@ -155,5 +155,16 @@ namespace ServerAsmv.Services {
         
             return true;
         }
+
+        public int Count()
+        {
+            int number = 0;
+
+            foreach(Project p in _context.Projects) {
+                number++;
+            }
+
+            return number;
+        }
     }
 }
