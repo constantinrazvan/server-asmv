@@ -10,29 +10,102 @@ namespace ServerAsmv.Services {
             this._context =_context;
         }
 
-        public Task<bool> DeleteUser(long Id)
+        public async Task<bool> DeleteUser(long Id)
         {
-            throw new NotImplementedException();
+            if (Id <= 0)
+            {
+                throw new ArgumentOutOfRangeException(nameof(Id), "Provide a higher ID!");
+            }
+        
+            User? user = await _context.Users.FindAsync(Id);
+        
+            if (user == null)
+            {
+                throw new KeyNotFoundException("ID was not found!");
+            }
+        
+            _context.Remove(user);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
         public User GetUser(long Id)
         {
-            throw new NotImplementedException();
+            User? user = _context.Users.Find(Id);
+
+            if(user == null) {
+                throw new KeyNotFoundException("User not found!");
+            }
+
+            return user;
         }
 
-        public Task<bool> ModifyEmail(long Id, string email)
+        public async Task<bool> ModifyEmail(long Id, string email)
         {
-            throw new NotImplementedException();
+            User? user = await _context.Users.FindAsync(Id);
+        
+            if (user == null)
+            {
+                throw new KeyNotFoundException("User not found!");
+            }
+        
+            if (user.Email != email)
+            {
+                user.Email = email;
+                _context.Update(user);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+        
+            return false;
         }
 
-        public Task<bool> ModifyPassword(long Id, string password)
+        public async Task<bool> ModifyPassword(long Id, string password)
         {
-            throw new NotImplementedException();
+            User? user = await _context.Users.FindAsync(Id);
+        
+            if (user == null)
+            {
+                throw new KeyNotFoundException("User not found!");
+            }
+        
+            string hash = BCrypt.Net.BCrypt.HashPassword(password);
+        
+            if (BCrypt.Net.BCrypt.Verify(user.Password, password))
+            {
+                return false;
+            }
+        
+            user.Password = hash;
+            _context.Update(user);
+            await _context.SaveChangesAsync();
+            return true;
         }
 
-        public Task<bool> UpdateUser(long Id)
+        public async Task<bool> UpdateUser(long Id, User user)
         {
-            throw new NotImplementedException();
+            User? userFound = await _context.Users.FindAsync(Id);
+
+            if(userFound == null) {
+                throw new KeyNotFoundException("User not found!");
+            } 
+
+            if(user.Firstname != userFound.Firstname && user.Firstname != null) {
+                userFound.Firstname = user.Firstname;
+            }
+
+            if(user.Lastname != userFound.Lastname && user.Lastname != null) {
+                userFound.Lastname = user.Lastname;
+            }
+
+            if(user.Role != userFound.Role && user.Role != null) {
+                userFound.Role = user.Role;
+            }
+
+            _context.Update(userFound);
+            await _context.SaveChangesAsync();
+
+            return true;
         }
 
         public int Count()
@@ -44,6 +117,17 @@ namespace ServerAsmv.Services {
             }
 
             return number;
+        }
+
+        public List<User> GetAll()
+        {
+            List<User> users = new List<User>();
+        
+            for(int i = 0; i < _context.Users.Count(); i++) {
+                users.Add(_context.Users.ElementAt(i));
+            }
+        
+            return users;
         }
     }
 }
