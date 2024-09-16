@@ -1,6 +1,5 @@
 using AsmvBackend.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ServerAsmv.DTOs;
 using ServerAsmv.Services;
@@ -20,7 +19,7 @@ namespace ServerAsmv.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("/login")]
+        [HttpPost("login")]
         public IActionResult Login([FromBody] LoginDTO user)
         {
             if (user == null)
@@ -39,7 +38,7 @@ namespace ServerAsmv.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost("/register")]
+        [HttpPost("register")]
         public IActionResult Register([FromBody] RegisterDTO register)
         {
             if (register == null)
@@ -59,12 +58,21 @@ namespace ServerAsmv.Controllers
             }
         }
 
-        public ActionResult<User> GetProfile(long Id) { 
-            if(Id <= 0) {
-                return null!;
+        [HttpGet("profile/{id}")]
+        public ActionResult<User> GetProfile(long id)
+        {
+            if (id <= 0)
+            {
+                return BadRequest("Invalid user id.");
             }
 
-            return _service.GetProfile(Id);
+            var profile = _service.GetProfile(id);
+            if (profile == null)
+            {
+                return NotFound("User not found.");
+            }
+
+            return Ok(profile);
         }
     }
 }

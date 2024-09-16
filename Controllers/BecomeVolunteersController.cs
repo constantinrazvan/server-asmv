@@ -1,7 +1,6 @@
 using AsmvBackend.DTOs;
 using AsmvBackend.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ServerAsmv.Services;
 
@@ -14,56 +13,61 @@ namespace ServerAsmv.Controllers
     {
         private readonly BecomeVolunteerService _service;
 
-        public BecomeVolunteersController(BecomeVolunteerService service) { 
+        public BecomeVolunteersController(BecomeVolunteerService service) 
+        { 
             this._service = service;
         }
 
-        [HttpGet("/{id}")]
-        public ActionResult<BecomeVolunteer> GetOne([FromBody] long Id)
+        [HttpGet("volunteer/{id}")]
+        public ActionResult<BecomeVolunteer> GetOne([FromRoute] long id)
         {
-            if(Id == 0) {
-                return null!;
+            if (id <= 0)
+            {
+                return BadRequest("Invalid ID.");
             }
 
-            BecomeVolunteer found = _service.GetBecomeVolunteer(Id);
-            
-            if(found == null) {
-                return null!;
+            BecomeVolunteer found = _service.GetBecomeVolunteer(id);
+
+            if (found == null)
+            {
+                return NotFound("Volunteer not found.");
             }
 
-            return found;
+            return Ok(found);
         }
 
         [AllowAnonymous]
-        [HttpPost("/new")]
-        public ActionResult<BecomeVolunteerDTO> AddOne([FromBody] BecomeVolunteerDTO req) {
-            if(req == null) {
-                return null!;
+        [HttpPost("new-application")]
+        public ActionResult<BecomeVolunteerDTO> AddOne([FromBody] BecomeVolunteerDTO req) 
+        {
+            if(req == null) 
+            {
+                return BadRequest("Request is null.");
             }
 
             _service.AddBecomeVolunteer(req);
             return req;
         }
 
-        [HttpGet("/all")]
+        [HttpGet("all-volunteers")]
         public ActionResult<List<BecomeVolunteer>> GetAll() 
         {
             return _service.GetBecomeVolunteers();
         }
 
-        [HttpPut("/update/{id}")]
+        [HttpPut("update/{id}")]
         public async Task<ActionResult<bool>> Update([FromRoute] long id, [FromBody] BecomeVolunteerDTO becomeVolunteer)
         {
             if (becomeVolunteer == null)
             {
-                return null!;
+                return BadRequest("Request is null.");
             }
 
             bool updateResult = await _service.UpdateBecomeVolunteer(becomeVolunteer, id);
             return Ok(updateResult);
         }
 
-        [HttpPut("/markAsRead/{id}")]
+        [HttpPut("mark-as-read/{id}")]
         public async Task<IActionResult> MarkAsRead(long id) 
         {
             if (id <= 0) 
@@ -82,4 +86,3 @@ namespace ServerAsmv.Controllers
         }
     }
 }
- 

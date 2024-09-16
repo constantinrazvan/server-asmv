@@ -1,51 +1,59 @@
 using AsmvBackend.Models;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using ServerAsmv.Services;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ServerAsmv.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
         private readonly UsersService _service; 
 
-        public UsersController(UsersService _service) {
-            this._service = _service;
+        public UsersController(UsersService service) 
+        {
+            this._service = service;
         }
 
-        [HttpGet("/{id}")]
-        public ActionResult<User> Get(long Id)
+        [HttpGet("user/{id}")]
+        public ActionResult<User> Get(long id) 
         {
-            if(Id <= 0) {
+            if (id <= 0)
+            {
                 return BadRequest("Id cannot be 0 or lower than 0!");
             }
 
-            return Ok(_service.GetUser(Id));
+            User user = _service.GetUser(id);
+
+            if (user == null)
+            {
+                return NotFound("User not found.");
+            }
+
+            return Ok(user);
         }
 
-        [HttpGet("/all")]
+        [HttpGet("all-users")]
         public ActionResult<List<User>> GetAll()
         {
             return Ok(_service.GetAll());
         }
 
-        [HttpDelete("/{id}")]
-        public async Task<ActionResult<bool>> DeleteUser(long Id) 
+        [HttpDelete("delete-user/{id}")]
+        public async Task<ActionResult<bool>> DeleteUser(long id) 
         {
-            if(Id <= 0) {
+            if (id <= 0) 
+            {
                 return BadRequest("Invalid ID.");
             }
 
-            bool result = await _service.DeleteUser(Id);
+            bool result = await _service.DeleteUser(id);
             return Ok(result);
         }
 
-        [HttpPatch("/email/{id}")]
+        [HttpPatch("update-email/{id}")]
         public async Task<ActionResult<bool>> ModifyEmail(long id, [FromBody] string email)
         {
             if (id <= 0)
@@ -53,50 +61,53 @@ namespace ServerAsmv.Controllers
                 return BadRequest("Invalid user ID. ID must be greater than 0.");
             }
 
-            if (string.IsNullOrWhiteSpace(email))
+            if (string.IsNullOrEmpty(email))
             {
-                return BadRequest("Email is required and cannot be empty.");
+                return BadRequest("Email cannot be null or empty.");
             }
 
-            bool modifiedEmail = await _service.ModifyEmail(id, email);
-            return Ok(modifiedEmail);
+            bool updateResult = await _service.ModifyEmail(id, email);
+            return Ok(updateResult);
         }
 
-        [HttpPatch("/password/{id}")]
-        public async Task<ActionResult<bool>> ModifyPassword(long Id, [FromBody] string password) 
+        [HttpPatch("update-password/{id}")]
+        public async Task<ActionResult<bool>> ModifyPassword(long id, [FromBody] string password)
         {
-            if(Id <= 0) {
+            if (id <= 0)
+            {
                 return BadRequest("Invalid user ID. ID must be greater than 0.");
             }
 
-            if(string.IsNullOrWhiteSpace(password))
+            if (string.IsNullOrEmpty(password))
             {
-                return BadRequest("Password is required and cannot be empty.");
+                return BadRequest("Password cannot be null or empty.");
             }
 
-            bool modifiedPassword = await _service.ModifyPassword(Id, password);
-            return Ok(modifiedPassword);
+            bool updateResult = await _service.ModifyPassword(id, password);
+            return Ok(updateResult);
         }
 
-        [HttpGet("/count")]
-        public int Count()
+        [HttpPut("update-user/{id}")]
+        public async Task<ActionResult<bool>> UpdateUser(long id, [FromBody] User userDto)
         {
-            return _service.Count();
-        }
-
-        [HttpPut("/update/{id}")]
-        public async Task<ActionResult<bool>> UpdateUser(long Id, [FromBody] User user)
-        {
-            if(Id <= 0) {
+            if (id <= 0)
+            {
                 return BadRequest("Invalid user ID. ID must be greater than 0.");
             }
 
-            if(user == null) {
-                return BadRequest("Invalid user! User must be filled and not empty.");
+            if (userDto == null)
+            {
+                return BadRequest("User data cannot be null.");
             }
 
-            bool updatedUser = await _service.UpdateUser(Id, user);
-            return Ok(updatedUser);
+            bool updateResult = await _service.UpdateUser(id, userDto);
+            return Ok(updateResult);
+        }
+
+        [HttpGet("users-count")]
+        public ActionResult<int> Count()
+        {
+            return Ok(_service.Count());
         }
     }
 }
