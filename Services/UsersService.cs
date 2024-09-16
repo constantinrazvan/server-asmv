@@ -110,13 +110,7 @@ namespace ServerAsmv.Services {
 
         public int Count()
         {
-            int number = 0;
-
-            foreach(User u in _context.Users) {
-                number++;
-            }
-
-            return number;
+            return _context.Users.Count();
         }
 
         public List<User> GetAll()

@@ -2,11 +2,20 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
 using ServerAsmv.Data;
 using ServerAsmv.Services;
 using ServerAsmv.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure Serilog
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .CreateLogger();
+
+builder.Host.UseSerilog(); // Use Serilog for logging
 
 var jwtSettingsSection = builder.Configuration.GetSection("JwtSettings");
 var secretKey = jwtSettingsSection.GetValue<string>("SecretKey");
@@ -42,6 +51,7 @@ builder.Services.AddScoped<BecomeVolunteerService>();
 builder.Services.AddScoped<MessageService>();
 builder.Services.AddScoped<ProjectsService>();
 builder.Services.AddScoped<VolunteersService>();
+builder.Services.AddScoped<UsersService>();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

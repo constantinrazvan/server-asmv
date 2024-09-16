@@ -1,0 +1,139 @@
+2024-09-16 17:32:36.889 +03:00 [INF] User profile is available. Using 'C:\Users\razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-16 17:32:36.994 +03:00 [WRN] The WebRootPath was not found: C:\Users\razvan\Desktop\ServerAsmv\ServerAsmv\wwwroot. Static files may be unavailable.
+2024-09-16 17:32:37.043 +03:00 [INF] Now listening on: http://localhost:5235
+2024-09-16 17:32:37.048 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-16 17:32:37.050 +03:00 [INF] Hosting environment: Development
+2024-09-16 17:32:37.053 +03:00 [INF] Content root path: C:\Users\razvan\Desktop\ServerAsmv\ServerAsmv
+2024-09-16 17:32:46.746 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/ - null null
+2024-09-16 17:32:46.826 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-09-16 17:32:46.875 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/ - 404 0 null 132.9133ms
+2024-09-16 17:32:46.889 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5235/, Response status code: 404
+2024-09-16 17:32:53.073 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-09-16 17:32:53.262 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 189.0826ms
+2024-09-16 17:32:53.760 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-09-16 17:32:53.956 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 196.3695ms
+2024-09-16 17:33:11.336 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/projects-count - null null
+2024-09-16 17:33:11.354 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv)'
+2024-09-16 17:33:11.397 +03:00 [INF] Route matched with {action = "CountProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] CountProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-16 17:33:13.256 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Projects" AS p
+2024-09-16 17:33:13.321 +03:00 [INF] Retrieved project count: 1.
+2024-09-16 17:33:13.338 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-09-16 17:33:13.370 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv) in 1955.5224ms
+2024-09-16 17:33:13.377 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv)'
+2024-09-16 17:33:13.406 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/projects-count - 200 null application/json; charset=utf-8 2070.3395ms
+2024-09-16 17:33:22.514 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/users-count - null null
+2024-09-16 17:33:22.538 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-09-16 17:33:22.554 +03:00 [INF] Route matched with {action = "Count", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-09-16 17:33:22.568 +03:00 [INF] Executed action ServerAsmv.Controllers.UsersController.Count (ServerAsmv) in 4.3112ms
+2024-09-16 17:33:22.579 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-09-16 17:33:22.587 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'ServerAsmv.Services.UsersService' while attempting to activate 'ServerAsmv.Controllers.UsersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method13(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-16 17:33:22.657 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/users-count - 500 null text/plain; charset=utf-8 143.2364ms
+2024-09-16 17:36:35.315 +03:00 [INF] Application is shutting down...
+2024-09-16 17:36:44.307 +03:00 [INF] User profile is available. Using 'C:\Users\razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-16 17:36:44.420 +03:00 [WRN] The WebRootPath was not found: C:\Users\razvan\Desktop\ServerAsmv\ServerAsmv\wwwroot. Static files may be unavailable.
+2024-09-16 17:36:44.470 +03:00 [INF] Now listening on: http://localhost:5235
+2024-09-16 17:36:44.474 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-16 17:36:44.477 +03:00 [INF] Hosting environment: Development
+2024-09-16 17:36:44.480 +03:00 [INF] Content root path: C:\Users\razvan\Desktop\ServerAsmv\ServerAsmv
+2024-09-16 17:36:45.733 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-09-16 17:36:45.974 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 243.5938ms
+2024-09-16 17:36:46.635 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-09-16 17:36:46.891 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 255.6264ms
+2024-09-16 17:36:58.327 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/projects-count - null null
+2024-09-16 17:36:58.345 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-09-16 17:36:58.408 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv)'
+2024-09-16 17:36:58.441 +03:00 [INF] Route matched with {action = "CountProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] CountProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-16 17:37:00.616 +03:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Projects" AS p
+2024-09-16 17:37:00.659 +03:00 [INF] Retrieved project count: 1.
+2024-09-16 17:37:00.672 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-09-16 17:37:00.699 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv) in 2243.3641ms
+2024-09-16 17:37:00.706 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv)'
+2024-09-16 17:37:00.732 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/projects-count - 200 null application/json; charset=utf-8 2404.9444ms
+2024-09-16 17:37:07.048 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/users-count - null null
+2024-09-16 17:37:07.064 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-09-16 17:37:07.073 +03:00 [INF] Route matched with {action = "Count", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-09-16 17:37:07.083 +03:00 [INF] Executed action ServerAsmv.Controllers.UsersController.Count (ServerAsmv) in 2.1739ms
+2024-09-16 17:37:07.090 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-09-16 17:37:07.097 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'ServerAsmv.Services.UsersService' while attempting to activate 'ServerAsmv.Controllers.UsersController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method13(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-09-16 17:37:07.147 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/users-count - 500 null text/plain; charset=utf-8 98.8997ms
+2024-09-16 17:37:50.820 +03:00 [INF] Application is shutting down...
+2024-09-16 17:38:27.066 +03:00 [INF] User profile is available. Using 'C:\Users\razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-16 17:38:27.199 +03:00 [WRN] The WebRootPath was not found: C:\Users\razvan\Desktop\ServerAsmv\ServerAsmv\wwwroot. Static files may be unavailable.
+2024-09-16 17:38:27.250 +03:00 [INF] Now listening on: http://localhost:5235
+2024-09-16 17:38:27.257 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-16 17:38:27.259 +03:00 [INF] Hosting environment: Development
+2024-09-16 17:38:27.261 +03:00 [INF] Content root path: C:\Users\razvan\Desktop\ServerAsmv\ServerAsmv
+2024-09-16 17:38:29.579 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-09-16 17:38:29.792 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 215.0533ms
+2024-09-16 17:38:30.428 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-09-16 17:38:30.663 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 234.6242ms
+2024-09-16 17:38:36.100 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/users-count - null null
+2024-09-16 17:38:36.117 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-09-16 17:38:36.174 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-09-16 17:38:36.203 +03:00 [INF] Route matched with {action = "Count", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-09-16 17:38:38.809 +03:00 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+2024-09-16 17:38:38.866 +03:00 [INF] Retrieved users count: 0.
+2024-09-16 17:38:38.882 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-09-16 17:38:38.912 +03:00 [INF] Executed action ServerAsmv.Controllers.UsersController.Count (ServerAsmv) in 2692.7191ms
+2024-09-16 17:38:38.918 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-09-16 17:38:38.945 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/users-count - 200 null application/json; charset=utf-8 2844.5745ms
+2024-09-16 17:38:45.569 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/projects-count - null null
+2024-09-16 17:38:45.582 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv)'
+2024-09-16 17:38:45.593 +03:00 [INF] Route matched with {action = "CountProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] CountProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-16 17:38:45.647 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Projects" AS p
+2024-09-16 17:38:45.655 +03:00 [INF] Retrieved project count: 1.
+2024-09-16 17:38:45.659 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-09-16 17:38:45.664 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv) in 64.9659ms
+2024-09-16 17:38:45.668 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv)'
+2024-09-16 17:38:45.673 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/projects-count - 200 null application/json; charset=utf-8 103.8247ms
+2024-09-16 17:38:46.648 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/projects-count - null null
+2024-09-16 17:38:46.662 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv)'
+2024-09-16 17:38:46.666 +03:00 [INF] Route matched with {action = "CountProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] CountProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-16 17:38:46.868 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Projects" AS p
+2024-09-16 17:38:46.875 +03:00 [INF] Retrieved project count: 1.
+2024-09-16 17:38:46.879 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-09-16 17:38:46.884 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv) in 211.8776ms
+2024-09-16 17:38:46.888 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv)'
+2024-09-16 17:38:46.922 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/projects-count - 200 null application/json; charset=utf-8 273.5608ms

@@ -1,6 +1,7 @@
 using AsmvBackend.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using ServerAsmv.DTOs;
 using ServerAsmv.Services;
 
@@ -12,10 +13,12 @@ namespace ServerAsmv.Controllers
     public class MessageController : ControllerBase
     {
         private readonly MessageService _service; 
+        private readonly ILogger<MessageController> _logger;
 
-        public MessageController(MessageService service) 
+        public MessageController(MessageService service, ILogger<MessageController> logger) 
         {
-            this._service = service;
+            _service = service;
+            _logger = logger;
         }
 
         [AllowAnonymous]
@@ -24,17 +27,29 @@ namespace ServerAsmv.Controllers
         {
             if (message == null)
             {
+                _logger.LogWarning("Add called with null message.");
                 return BadRequest("Message is null!");
             }
-        
-            Message newMessage = new Message
+
+            try
             {
-                Fullname = message.Fullname,
-                Email = message.Email,
-                Text = message.Text
-            };
-        
-            return _service.AddMessage(newMessage);
+                var newMessage = new Message
+                {
+                    Fullname = message.Fullname,
+                    Email = message.Email,
+                    Text = message.Text
+                };
+
+                bool result = _service.AddMessage(newMessage);
+                _logger.LogInformation("New message added successfully: {@Message}.", newMessage);
+
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while adding a new message.");
+                return StatusCode(500, "Internal server error");
+            }
         }
 
         [HttpGet("message/{id}")]
@@ -42,16 +57,44 @@ namespace ServerAsmv.Controllers
         {
             if (id <= 0) 
             {
+                _logger.LogWarning("GetOne called with invalid ID: {Id}.", id);
                 return BadRequest("Invalid ID.");
             }
 
-            return _service.GetMessageById(id);
+            try
+            {
+                var message = _service.GetMessageById(id);
+                if (message == null)
+                {
+                    _logger.LogWarning("Message with ID {Id} not found.", id);
+                    return NotFound("Message not found.");
+                }
+
+                _logger.LogInformation("Message with ID {Id} retrieved successfully.", id);
+                return Ok(message);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while retrieving message with ID {Id}.", id);
+                return StatusCode(500, "Internal server error");
+            }
         }
 
         [HttpGet("all-messages")]
         public ActionResult<Stack<Message>> GetAll() 
         {
-            return _service.GetMessages();
+            try
+            {
+                var messages = _service.GetMessages();
+                _logger.LogInformation("Retrieved all messages.");
+
+                return Ok(messages);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while retrieving all messages.");
+                return StatusCode(500, "Internal server error");
+            }
         }
     }
 }

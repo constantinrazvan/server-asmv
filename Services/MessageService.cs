@@ -65,13 +65,9 @@ namespace ServerAsmv.Services {
 
         public int Count()
         {
-            int number = 0;
-
-            foreach(Message m in _context.Messages) {
-                number++;
-            }
-
-            return number;
+            // Use LINQ Count method to get the number of messages
+            return _context.Messages.Count();
         }
+
     }
 }

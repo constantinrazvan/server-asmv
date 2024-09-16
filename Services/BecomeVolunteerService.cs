@@ -118,14 +118,11 @@ namespace ServerAsmv.Services {
             return wasMarkedAsRead ? "Marked as unread." : "Marked as read.";
         }
 
-        public int Count() {
-            int number = 0;
-        
-            foreach (BecomeVolunteer r in _context.BecomeVolunteers) {
-                number++;
-            }
-        
-            return number;
+        public int Count() 
+        {
+            // Use LINQ Count method to get the number of entries
+            int count = _context.BecomeVolunteers.Count();
+            return count;
         }
     }
 }

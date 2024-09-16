@@ -37,15 +37,9 @@ namespace ServerAsmv.Services {
             throw new NotImplementedException();
         }
 
-        public int Count() 
+       public int Count()
         {
-            int number = 0;
-
-            foreach(Volunteer v in _context.Volunteers) {
-                number++;
-            }
-
-            return number;
+            return _context.Volunteers.Count();
         }
     }
 }

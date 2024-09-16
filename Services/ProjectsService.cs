@@ -64,22 +64,23 @@ namespace ServerAsmv.Services
             var found = _context.Projects.Find(id);
             if (found == null) throw new KeyNotFoundException("Project not found!");
 
-            // Update project fields
-            if (!string.IsNullOrEmpty(project.Title) && project.Title != found.Title)
+            // Update project fields if they are provided
+            if (!string.IsNullOrEmpty(project.Title))
             {
                 found.Title = project.Title;
             }
 
-            if (!string.IsNullOrEmpty(project.Content) && project.Content != found.Content)
+            if (!string.IsNullOrEmpty(project.Content))
             {
                 found.Content = project.Content;
             }
 
-            if (!string.IsNullOrEmpty(project.Summary) && project.Summary != found.Summary)
+            if (!string.IsNullOrEmpty(project.Summary))
             {
                 found.Summary = project.Summary;
             }
 
+            // Handle image update
             if (project.Image != null && project.Image.Length > 0)
             {
                 // Delete old image if exists
@@ -105,6 +106,7 @@ namespace ServerAsmv.Services
 
             return true;
         }
+
 
         public bool DeleteProject(long id)
         {
