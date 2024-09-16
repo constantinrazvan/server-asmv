@@ -3,10 +3,10 @@ namespace AsmvBackend.Models
     public class Project
     {
         public long Id { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
-        public string Summary { get; set; }
-        public string Image { get; set; } // URL sau calea imaginii
+        public required string Title { get; set; }
+        public  required string Content { get; set; }
+        public required string Summary { get; set; }
+        public required string Image { get; set; } // URL sau calea imaginii
 
         // Constructor fără parametri
         public Project() { }
