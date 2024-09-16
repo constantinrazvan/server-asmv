@@ -137,3 +137,25 @@ FROM "Projects" AS p
 2024-09-16 17:38:46.884 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv) in 211.8776ms
 2024-09-16 17:38:46.888 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.CountProjects (ServerAsmv)'
 2024-09-16 17:38:46.922 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/projects-count - 200 null application/json; charset=utf-8 273.5608ms
+2024-09-16 17:42:30.322 +03:00 [INF] Application is shutting down...
+2024-09-16 19:29:30.568 +03:00 [INF] User profile is available. Using 'C:\Users\razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-16 19:29:30.755 +03:00 [WRN] The WebRootPath was not found: C:\Users\razvan\Desktop\ServerAsmv\ServerAsmv\wwwroot. Static files may be unavailable.
+2024-09-16 19:29:30.809 +03:00 [INF] Now listening on: http://localhost:5235
+2024-09-16 19:29:30.813 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-16 19:29:30.815 +03:00 [INF] Hosting environment: Development
+2024-09-16 19:29:30.816 +03:00 [INF] Content root path: C:\Users\razvan\Desktop\ServerAsmv\ServerAsmv
+2024-09-16 19:29:36.271 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/ - null null
+2024-09-16 19:29:36.347 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-09-16 19:29:36.396 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/ - 404 0 null 127.5377ms
+2024-09-16 19:29:36.415 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5235/, Response status code: 404
+2024-09-16 19:29:39.560 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-09-16 19:29:39.776 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 216.0951ms
+2024-09-16 19:29:40.255 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-09-16 19:29:40.455 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 199.5111ms
+2024-09-16 19:30:11.306 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/weatherforecast/ - null null
+2024-09-16 19:30:11.313 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/weatherforecast/ - 404 0 null 7.3234ms
+2024-09-16 19:30:11.320 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5235/weatherforecast/, Response status code: 404
+2024-09-16 22:45:11.969 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-09-16 22:45:12.169 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 206.9503ms
+2024-09-16 23:48:51.846 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-09-16 23:48:51.970 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 128.9894ms

@@ -123,5 +123,10 @@ namespace ServerAsmv.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+        [HttpGet("/countRequests")]
+        public int Count() { 
+            return _service.Count();
+        }
     }
 }
