@@ -8,6 +8,6 @@ namespace ServerAsmv.Interfaces {
         void AddVolunteer(VolunteerDTO volunteer);
         void DeleteVolunteer(long Id);
         void UpdateVolunteer(long Id, Volunteer volunteer);
-        Volunteer GetVolunteerById(int id);
+        Volunteer GetVolunteerById(long Id);
     }
 }
