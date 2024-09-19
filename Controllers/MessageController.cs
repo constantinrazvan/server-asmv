@@ -7,7 +7,7 @@ using ServerAsmv.Services;
 
 namespace ServerAsmv.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class MessageController : ControllerBase
@@ -81,13 +81,14 @@ namespace ServerAsmv.Controllers
         }
 
         [HttpGet("all-messages")]
-        public ActionResult<Stack<Message>> GetAll() 
+        public ActionResult<List<Message>> GetAll()
         {
             try
             {
-                var messages = _service.GetMessages();
-                _logger.LogInformation("Retrieved all messages.");
+                // Obține toate mesajele direct
+                var messages = _service.GetMessages().ToList();
 
+                _logger.LogInformation("Retrieved all messages.");
                 return Ok(messages);
             }
             catch (Exception ex)
@@ -96,6 +97,27 @@ namespace ServerAsmv.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+        [HttpPatch("markAsRead/{id:long}")]
+        public async Task<ActionResult<bool>> MarkAsRead(long id) 
+        {
+            if (id <= 0)
+            {
+                return BadRequest("Invalid message ID.");
+            }
+
+            try 
+            {
+                var newRequestStatus = await _service.MarkAsReadAsync(id);
+                
+                return Ok(newRequestStatus); 
+            } 
+            catch (Exception ex) 
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
 
         [HttpGet("/countMessages")]
         public ActionResult<int> Count() {

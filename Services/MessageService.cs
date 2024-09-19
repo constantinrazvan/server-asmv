@@ -55,9 +55,11 @@ namespace ServerAsmv.Services {
         public Stack<Message> GetMessages()
         {
             Stack<Message> messages = new Stack<Message>();
-            
-            for (int i = _context.Messages.Count() - 1; i >= 0; i--) {
-                messages.Push(_context.Messages.ElementAt(i));
+
+            var allMessages = _context.Messages.ToList();
+            for (int i = allMessages.Count - 1; i >= 0; i--)
+            {
+                messages.Push(allMessages[i]);
             }
 
             return messages;
@@ -65,8 +67,24 @@ namespace ServerAsmv.Services {
 
         public int Count()
         {
-            // Use LINQ Count method to get the number of messages
             return _context.Messages.Count();
+        }
+
+        public async Task<bool> MarkAsReadAsync(long id)
+        {
+            var message = await _context.Messages.FindAsync(id);
+
+            if (message == null) 
+            {
+                throw new KeyNotFoundException($"Sorry, but message with ID {id} was not found.");
+            }
+
+            message.NewRequest = !message.NewRequest;
+
+            _context.Messages.Update(message);
+            await _context.SaveChangesAsync();
+
+            return message.NewRequest;
         }
 
     }

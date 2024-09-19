@@ -1,13 +1,17 @@
-﻿using AsmvBackend.Models;
-using ServerAsmv.DTOs;
+﻿using ServerAsmv.DTOs;
+using AsmvBackend.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace ServerAsmv.Interfaces {
-
-    public interface IProjects {
-        bool AddProject(ProjectDTO project);
-        bool UpdateProject(long Id, ProjectDTO project);
-        bool DeleteProject(long Id);
-        Project GetProject(long Id);
+namespace ServerAsmv.Interfaces
+{
+    public interface IProjects
+    {
+        Task<bool> AddProject(ProjectDTO project);
+        Task<bool> UpdateProject(long id, ProjectDTO project);
+        Task<bool> DeleteProject(long id);
+        Project? GetProject(long id);
         List<Project> GetProjects();
+        int Count();
     }
 }

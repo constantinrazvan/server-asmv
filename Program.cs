@@ -6,17 +6,20 @@ using Serilog;
 using ServerAsmv.Data;
 using ServerAsmv.Services;
 using ServerAsmv.Utils;
+using CloudinaryDotNet;
+using Microsoft.Extensions.FileProviders; // Nu uita să adaugi această directivă using pentru Cloudinary
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configure Serilog
+// Configurarea Serilog
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
     .CreateLogger();
 
-builder.Host.UseSerilog(); // Use Serilog for logging
+builder.Host.UseSerilog(); // Folosește Serilog pentru logging
 
+// Configurarea JWT
 var jwtSettingsSection = builder.Configuration.GetSection("JwtSettings");
 var secretKey = jwtSettingsSection.GetValue<string>("SecretKey");
 var issuer = jwtSettingsSection.GetValue<string>("Issuer");
@@ -71,9 +74,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("AllowAll"); 
+app.UseCors("AllowAll");
 
-app.UseStaticFiles();
+app.UseStaticFiles(); // Servirea fișierelor din wwwroot
+
+// Servește fișiere statice din folderul 'uploaded_images'
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "uploaded_images")),
+    RequestPath = "/uploaded_images"
+});
+
 app.UseHttpsRedirection();
 
 app.UseAuthentication();  

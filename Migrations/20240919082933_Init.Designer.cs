@@ -12,7 +12,7 @@ using ServerAsmv.Data;
 namespace ServerAsmv.Migrations
 {
     [DbContext(typeof(AppData))]
-    [Migration("20240913143511_Init")]
+    [Migration("20240919082933_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -48,13 +48,13 @@ namespace ServerAsmv.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
-                    b.Property<bool>("NewRequest")
-                        .HasColumnType("boolean");
-
                     b.Property<string>("Phone")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("character varying(20)");
+
+                    b.Property<bool>("Readed")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Reason")
                         .IsRequired()

@@ -7,7 +7,7 @@ using ServerAsmv.Services;
 
 namespace ServerAsmv.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class AuthController : ControllerBase

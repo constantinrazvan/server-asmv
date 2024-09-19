@@ -45,13 +45,13 @@ namespace ServerAsmv.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
-                    b.Property<bool>("NewRequest")
-                        .HasColumnType("boolean");
-
                     b.Property<string>("Phone")
                         .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("character varying(20)");
+
+                    b.Property<bool>("Readed")
+                        .HasColumnType("boolean");
 
                     b.Property<string>("Reason")
                         .IsRequired()

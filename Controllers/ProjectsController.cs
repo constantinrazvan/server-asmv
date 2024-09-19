@@ -1,11 +1,14 @@
 using AsmvBackend.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Logging;
 using ServerAsmv.DTOs;
 using ServerAsmv.Services;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ServerAsmv.Controllers
 {
@@ -21,6 +24,7 @@ namespace ServerAsmv.Controllers
             _service = service;
             _logger = logger;
         }
+        
 
         [HttpGet("all-projects")]
         public ActionResult<List<Project>> GetAllProjects()
@@ -44,36 +48,38 @@ namespace ServerAsmv.Controllers
             }
         }
 
-        [HttpGet("project/{id}")]
-        public ActionResult<Project> GetProject(long id)
+        [HttpGet("project/{id}/image")]
+        public async Task<IActionResult> GetProjectImage(long id)
         {
-            if (id <= 0)
+            var project = _service.GetProject(id);
+            if (project == null || string.IsNullOrEmpty(project.Image))
             {
-                _logger.LogWarning("GetProject called with invalid ID: {Id}.", id);
-                return BadRequest("Invalid ID.");
+                _logger.LogWarning("Project with ID {Id} or image not found.", id);
+                return NotFound($"Project with id {id} or image not found.");
             }
 
-            try
-            {
-                var project = _service.GetProject(id);
-                if (project == null)
-                {
-                    _logger.LogWarning("Project with ID {Id} not found.", id);
-                    return NotFound($"Project with id {id} not found.");
-                }
+            var imagePath = Path.Combine("UploadedImages", Path.GetFileName(project.Image));
 
-                _logger.LogInformation("Project with ID {Id} retrieved successfully.", id);
-                return Ok(project);
-            }
-            catch (Exception ex)
+            if (!System.IO.File.Exists(imagePath))
             {
-                _logger.LogError(ex, "An error occurred while retrieving project with ID {Id}.", id);
-                return StatusCode(500, "Internal server error");
+                _logger.LogWarning("Image file not found at path {Path}.", imagePath);
+                return NotFound("Image file not found.");
             }
+
+            var imageFile = await System.IO.File.ReadAllBytesAsync(imagePath);
+            
+            var provider = new FileExtensionContentTypeProvider();
+            if (!provider.TryGetContentType(Path.GetExtension(imagePath), out var contentType))
+            {
+                contentType = "application/octet-stream";
+            }
+
+            return File(imageFile, contentType);
         }
 
+
         [HttpPost("new-project")]
-        public ActionResult<Project> NewProject([FromForm] ProjectDTO projectDto)
+        public async Task<ActionResult<Project>> NewProject([FromForm] ProjectDTO projectDto)
         {
             if (projectDto == null)
             {
@@ -83,7 +89,7 @@ namespace ServerAsmv.Controllers
 
             try
             {
-                bool isAdded = _service.AddProject(projectDto);
+                var isAdded = await _service.AddProject(projectDto);
                 if (!isAdded)
                 {
                     _logger.LogWarning("Failed to add project: {@ProjectDto}.", projectDto);
@@ -101,7 +107,7 @@ namespace ServerAsmv.Controllers
         }
 
         [HttpPut("update-project/{id}")]
-        public ActionResult UpdateProject(long id, [FromForm] ProjectDTO projectDto)
+        public async Task<ActionResult> UpdateProject(long id, [FromForm] ProjectDTO projectDto)
         {
             if (projectDto == null)
             {
@@ -111,7 +117,7 @@ namespace ServerAsmv.Controllers
 
             try
             {
-                bool isUpdated = _service.UpdateProject(id, projectDto);
+                var isUpdated = await _service.UpdateProject(id, projectDto);
                 if (!isUpdated)
                 {
                     _logger.LogWarning("Failed to update project with ID {Id}.", id);
@@ -134,7 +140,7 @@ namespace ServerAsmv.Controllers
         }
 
         [HttpDelete("delete-project/{id}")]
-        public ActionResult DeleteProject(long id)
+        public async Task<ActionResult> DeleteProject(long id)
         {
             if (id <= 0)
             {
@@ -144,7 +150,7 @@ namespace ServerAsmv.Controllers
 
             try
             {
-                bool isDeleted = _service.DeleteProject(id);
+                var isDeleted = await _service.DeleteProject(id);
                 if (!isDeleted)
                 {
                     _logger.LogWarning("Project with ID {Id} not found for deletion.", id);
@@ -157,22 +163,6 @@ namespace ServerAsmv.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "An error occurred while deleting project with ID {Id}.", id);
-                return StatusCode(500, "Internal server error");
-            }
-        }
-
-        [HttpGet("projects-count")]
-        public ActionResult<int> CountProjects()
-        {
-            try
-            {
-                int count = _service.Count();
-                _logger.LogInformation("Retrieved project count: {Count}.", count);
-                return Ok(count);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occurred while counting projects.");
                 return StatusCode(500, "Internal server error");
             }
         }

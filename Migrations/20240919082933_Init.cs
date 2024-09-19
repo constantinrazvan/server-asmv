@@ -23,7 +23,7 @@ namespace ServerAsmv.Migrations
                     Phone = table.Column<string>(type: "character varying(20)", maxLength: 20, nullable: false),
                     Faculty = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     Reason = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: false),
-                    NewRequest = table.Column<bool>(type: "boolean", nullable: false)
+                    Readed = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
