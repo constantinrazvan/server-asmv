@@ -1,14 +1,12 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ServerAsmv.DTOs;
 using ServerAsmv.Services;
 using ServerAsmv.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ServerAsmv.Controllers
 {
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class VolunteersController : ControllerBase

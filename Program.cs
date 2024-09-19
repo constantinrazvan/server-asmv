@@ -6,20 +6,19 @@ using Serilog;
 using ServerAsmv.Data;
 using ServerAsmv.Services;
 using ServerAsmv.Utils;
-using CloudinaryDotNet;
-using Microsoft.Extensions.FileProviders; // Nu uita să adaugi această directivă using pentru Cloudinary
+
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurarea Serilog
+// Configure Serilog
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
     .CreateLogger();
 
-builder.Host.UseSerilog(); // Folosește Serilog pentru logging
+builder.Host.UseSerilog(); // Use Serilog for logging
 
-// Configurarea JWT
+// Configure JWT
 var jwtSettingsSection = builder.Configuration.GetSection("JwtSettings");
 var secretKey = jwtSettingsSection.GetValue<string>("SecretKey");
 var issuer = jwtSettingsSection.GetValue<string>("Issuer");
@@ -27,6 +26,7 @@ var audience = jwtSettingsSection.GetValue<string>("Audience");
 
 builder.Services.AddControllers();
 
+// Add authentication but don't require it for the VolunteersController
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -42,12 +42,16 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-builder.Services.AddAuthorization();
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AllowAll", policy => policy.RequireAssertion(context => true)); // Allows all requests
+});
 
 builder.Services.AddDbContext<AppData>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
+// Add your services here
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<JwtUtil>(provider => new JwtUtil(secretKey!, issuer!, audience!));
 builder.Services.AddScoped<BecomeVolunteerService>();
@@ -60,10 +64,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Configure CORS to allow all origins, methods, and headers
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder =>
-        builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader());
 });
 
 var app = builder.Build();
@@ -74,16 +81,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("AllowAll");
-
-app.UseStaticFiles(); // Servirea fișierelor din wwwroot
-
-// Servește fișiere statice din folderul 'uploaded_images'
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "uploaded_images")),
-    RequestPath = "/uploaded_images"
-});
+app.UseCors("AllowAll"); // Apply CORS policy
 
 app.UseHttpsRedirection();
 

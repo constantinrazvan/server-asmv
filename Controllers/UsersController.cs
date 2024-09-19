@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace ServerAsmv.Controllers
 {
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase

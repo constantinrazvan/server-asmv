@@ -2,6 +2,7 @@
 using ServerAsmv.Data;
 using ServerAsmv.Interfaces;
 using ServerAsmv.DTOs;
+using Microsoft.EntityFrameworkCore;
 
 namespace ServerAsmv.Services {
     public class VolunteersService : IVolunteer
