@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AsmvBackend.Models
+namespace ServerAsmv.Models
 {
     [Table("become_volunteer")]
     public class BecomeVolunteer

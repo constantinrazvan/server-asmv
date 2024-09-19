@@ -1,4 +1,4 @@
-namespace AsmvBackend.Models
+namespace ServerAsmv.Models
 {
     public class Project
     {

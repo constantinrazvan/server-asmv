@@ -1,4 +1,4 @@
-namespace AsmvBackend.DTOs
+namespace ServerAsmv.DTOs
 {
     public class VolunteerDTO
     {
