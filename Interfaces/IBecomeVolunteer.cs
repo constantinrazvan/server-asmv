@@ -1,5 +1,5 @@
-﻿using AsmvBackend.DTOs;
-using AsmvBackend.Models;
+﻿using ServerAsmv.DTOs;
+using ServerAsmv.Models;
 
 namespace ServerAsmv.Interfaces {
     public interface IBecomeVolunteer

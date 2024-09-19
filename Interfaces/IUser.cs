@@ -1,4 +1,4 @@
-using AsmvBackend.Models;
+using ServerAsmv.Models;
 
 namespace ServerAsmv.Interfaces { 
     public interface IUser { 

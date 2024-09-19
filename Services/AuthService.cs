@@ -1,10 +1,9 @@
-﻿using AsmvBackend.Models;
+﻿using ServerAsmv.Models; // Ensure this namespace contains the User class
 using ServerAsmv.DTOs;
 using ServerAsmv.Interfaces;
 using ServerAsmv.Data;
-using System.Linq;
-using ServerAsmv.Controllers;
 using ServerAsmv.Utils;
+using System.Linq; // Ensure you have the correct LINQ namespace
 
 namespace ServerAsmv.Services
 {
@@ -43,7 +42,7 @@ namespace ServerAsmv.Services
                 return false;
             }
 
-            User newUser = new();
+            User newUser = new User(); // Ensure the correct class is used
             string password = BCrypt.Net.BCrypt.HashPassword(user.Password, BCrypt.Net.BCrypt.GenerateSalt());
 
             newUser.Firstname = user.Firstname;
@@ -53,19 +52,15 @@ namespace ServerAsmv.Services
             newUser.Role = user.Role;
             newUser.CreatedAt = DateTime.Now;
 
-            newUser.ToString();
             _dbContext.Users.Add(newUser);
             _dbContext.SaveChanges();
 
             return true;
         }
 
-        public User GetProfile(long Id) { 
+        public User? GetProfile(long Id) // Return User? for nullability
+        { 
             User? found = _dbContext.Users.Find(Id);
-
-            if(found == null) {
-                return null!;
-            }
 
             return found;
         }

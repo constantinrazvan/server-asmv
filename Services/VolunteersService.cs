@@ -1,6 +1,7 @@
-﻿using AsmvBackend.Models;
+﻿using ServerAsmv.Models;
 using ServerAsmv.Data;
 using ServerAsmv.Interfaces;
+using ServerAsmv.DTOs;
 
 namespace ServerAsmv.Services {
     public class VolunteersService : IVolunteer
@@ -12,7 +13,7 @@ namespace ServerAsmv.Services {
             this._context = _context;
         }
 
-        public void AddVolunteer(Volunteer volunteer)
+        public void AddVolunteer(VolunteerDTO volunteer)
         {
             throw new NotImplementedException();
         }
@@ -35,11 +36,6 @@ namespace ServerAsmv.Services {
         public void UpdateVolunteer(long Id, Volunteer volunteer)
         {
             throw new NotImplementedException();
-        }
-
-       public int Count()
-        {
-            return _context.Volunteers.Count();
         }
     }
 }

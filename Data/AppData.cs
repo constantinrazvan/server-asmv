@@ -1,4 +1,4 @@
-using AsmvBackend.Models;
+using ServerAsmv.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace ServerAsmv.Data

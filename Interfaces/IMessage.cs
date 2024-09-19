@@ -1,4 +1,4 @@
-﻿using AsmvBackend.Models;
+﻿using ServerAsmv.Models;
 using ServerAsmv.DTOs;
 
 namespace ServerAsmv.Interfaces {
