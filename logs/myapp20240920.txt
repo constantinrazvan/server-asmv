@@ -9562,3 +9562,4 @@ FROM "Users" AS u
 2024-09-20 16:25:02.878 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/count-volunteers - 200 null application/json; charset=utf-8 188.4288ms
 2024-09-20 16:25:02.880 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
 2024-09-20 16:25:02.886 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/users-count - 200 null application/json; charset=utf-8 133.5235ms
+2024-09-20 16:38:16.806 +03:00 [INF] Application is shutting down...
