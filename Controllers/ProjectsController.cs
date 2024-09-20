@@ -167,5 +167,11 @@ namespace ServerAsmv.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+        [HttpGet("count-projects")]
+        public int Count()
+        {
+            return _service.Count();
+        }
     }
 }

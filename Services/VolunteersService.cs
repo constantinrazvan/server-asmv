@@ -121,5 +121,11 @@ namespace ServerAsmv.Services {
             _context.SaveChanges();
         }
 
+        public int Count() 
+        {
+            int count = _context.BecomeVolunteers.Count();
+            return count;
+        }
+
     }
 }
