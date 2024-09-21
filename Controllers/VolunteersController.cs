@@ -29,7 +29,7 @@ namespace ServerAsmv.Controllers
             try
             {
                 _service.AddVolunteer(volunteer);
-                return Ok("Volunteer added successfully.");
+                return Ok(new { message = "Volunteer added successfully." });
             }
             catch (Exception ex)
             {
@@ -122,7 +122,7 @@ namespace ServerAsmv.Controllers
             try
             {
                 _service.DeleteVolunteer(id);
-                return Ok("Volunteer deleted successfully.");
+                return Ok(new { message = "Volunteer deleted successfully." });
             }
             catch (KeyNotFoundException)
             {

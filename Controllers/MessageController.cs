@@ -98,7 +98,7 @@ namespace ServerAsmv.Controllers
             }
         }
 
-        [HttpPatch("markAsRead/{id:long}")]
+        [HttpPatch("markAsRead/{id}")]
         public async Task<ActionResult<bool>> MarkAsRead(long id) 
         {
             if (id <= 0)
