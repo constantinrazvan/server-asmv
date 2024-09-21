@@ -124,5 +124,21 @@ namespace ServerAsmv.Services {
             int count = _context.BecomeVolunteers.Count();
             return count;
         }
+
+        public bool Delete(long id) 
+        {
+            BecomeVolunteer? found = _context.BecomeVolunteers.Find(id);
+
+            if (found == null) 
+            {
+                return false;
+            }
+
+            _context.BecomeVolunteers.Remove(found);
+
+            int deletedCount = _context.SaveChanges();
+
+            return deletedCount > 0;
+        }
     }
 }

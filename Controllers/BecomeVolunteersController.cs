@@ -128,5 +128,15 @@ namespace ServerAsmv.Controllers
         public int Count() { 
             return _service.Count();
         }
+
+        [HttpDelete("/{id}")]
+        public ActionResult<bool> Delete(long Id)
+        {
+            if(Id <= 0) { 
+                return false; 
+            }
+
+            return _service.Delete(Id);
+        }
     }
 }
