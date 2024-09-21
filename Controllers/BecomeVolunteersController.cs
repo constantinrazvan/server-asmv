@@ -95,7 +95,7 @@ namespace ServerAsmv.Controllers
             }
         }
 
-        [HttpPut("mark-as-read/{id}")]
+        [HttpPatch("mark-as-read/{id}")]
         public async Task<IActionResult> MarkAsRead([FromRoute] long id) 
         {
             if (id <= 0) 
