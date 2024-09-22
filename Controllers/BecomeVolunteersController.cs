@@ -56,12 +56,12 @@ namespace ServerAsmv.Controllers
             {
                 _service.AddBecomeVolunteer(req); // Assuming this method does not return an ID
                 _logger.LogInformation("New volunteer application added successfully.");
-                return StatusCode(201, "Volunteer application submitted successfully."); // 201 Created
+                return Ok(new { message = "Volunteer application submitted successfully."} ); // 201 Created
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "An error occurred while adding a new volunteer application.");
-                return StatusCode(500, "Internal server error");
+                return BadRequest("Internal server error");
             }
         }
 
@@ -129,7 +129,7 @@ namespace ServerAsmv.Controllers
             return _service.Count();
         }
 
-        [HttpDelete("/{id}")]
+        [HttpDelete("delete/{id}")]
         public ActionResult<bool> Delete(long Id)
         {
             if(Id <= 0) { 
