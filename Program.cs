@@ -1,9 +1,12 @@
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
 using ServerAsmv.Data;
+using ServerAsmv.Helpers;
+using ServerAsmv.Interfaces;
 using ServerAsmv.Services;
 using ServerAsmv.Utils;
 
@@ -59,10 +62,18 @@ builder.Services.AddScoped<MessageService>();
 builder.Services.AddScoped<ProjectsService>();
 builder.Services.AddScoped<VolunteersService>();
 builder.Services.AddScoped<UsersService>();
+builder.Services.AddScoped<PhotoService>();
+
+builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.Configure<FormOptions>(options =>
+{
+    options.MultipartBodyLengthLimit = 104857600; 
+});
 
 // Configure CORS to allow all origins, methods, and headers
 builder.Services.AddCors(options =>

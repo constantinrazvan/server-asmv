@@ -17,21 +17,22 @@ namespace ServerAsmv.Services
             this.jwtUtil = jwtUtil;
         }
         
-        public string login(LoginDTO user)
+       public string? login(LoginDTO user)
         {
             User? find = _dbContext.Users.FirstOrDefault(u => u.Email == user.Email);
 
-            if(find == null) {
-                return "User not found";
+            if (find == null)
+            {
+                return null; // User not found
             }
 
-            if(!BCrypt.Net.BCrypt.Verify(user.Password, find.Password)) {
-                return "Wrong password";
+            if (!BCrypt.Net.BCrypt.Verify(user.Password, find.Password))
+            {
+                return null; // Wrong password
             }
 
-            string token = jwtUtil.GenerateToken(find.Id.ToString(), find.Firstname, find.Lastname, find.Email, find.Role);        
-
-            return token;
+            string token = jwtUtil.GenerateToken(find.Id.ToString(), find.Firstname, find.Lastname, find.Email, find.Role);
+            return token; // Return the generated token
         }
 
         public bool register(RegisterDTO user)
@@ -39,6 +40,10 @@ namespace ServerAsmv.Services
             User? find = _dbContext.Users.FirstOrDefault(u => u.Email == user.Email);
 
             if(find != null) { 
+                return false;
+            }
+
+            if(user.AccessKey != "asmv2024!#") {
                 return false;
             }
 
@@ -50,7 +55,7 @@ namespace ServerAsmv.Services
             newUser.Email = user.Email;
             newUser.Password = password;
             newUser.Role = user.Role;
-            newUser.CreatedAt = DateTime.Now;
+            newUser.CreatedAt = DateTime.UtcNow;
 
             _dbContext.Users.Add(newUser);
             _dbContext.SaveChanges();

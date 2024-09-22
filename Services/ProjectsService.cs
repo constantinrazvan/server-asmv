@@ -8,55 +8,75 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace ServerAsmv.Services
 {
     public class ProjectsService : IProjects
     {
         private readonly AppData _context;
-        private readonly string _imageFolderPath;
+        private readonly PhotoService _photoService;
 
-        public ProjectsService(AppData context)
+        public ProjectsService(AppData context, PhotoService photoService)
         {
             _context = context;
-            _imageFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "uploaded_images");
-            if (!Directory.Exists(_imageFolderPath))
+            _photoService = photoService;
+        }
+
+        public async Task<bool> AddProject(ProjectDTO project, IFormFile photo)
+        {
+            if (project == null) throw new ArgumentNullException(nameof(project));
+            if (string.IsNullOrEmpty(project.Title) || string.IsNullOrEmpty(project.Content))
             {
-                Directory.CreateDirectory(_imageFolderPath);
+                throw new ArgumentException("Title and Content cannot be null or empty.");
+            }
+
+            try
+            {
+                var found = _context.Projects.FirstOrDefault(p => p.Title == project.Title);
+                if (found != null)
+                {
+                    throw new Exception("Project already exists!");
+                }
+
+                string? imagePath = null;
+                if (photo != null && photo.Length > 0)
+                {
+                    // Verifică tipul de fișier
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
+                    var extension = Path.GetExtension(photo.FileName).ToLower();
+                    if (!allowedExtensions.Contains(extension))
+                    {
+                        throw new ArgumentException("Invalid image type. Allowed types are: jpg, jpeg, png.");
+                    }
+
+                    var uploadResult = await _photoService.AddPhotoAsync(photo);
+                    imagePath = uploadResult.Url.ToString();
+                }
+
+                var newProject = new Project
+                {
+                    Title = project.Title!,
+                    Content = project.Content!,
+                    Summary = project.Summary!,
+                    ProjectImage = new ProjectImage { Url = imagePath } // Set image reference
+                };
+
+                _context.Add(newProject);
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // Loghează eroarea
+                throw new Exception("Error while adding project: " + ex.Message, ex);
             }
         }
 
-        public async Task<bool> AddProject(ProjectDTO project)
+        public async Task<bool> UpdateProject(long id, ProjectDTO project, IFormFile photo)
         {
-            var found = _context.Projects.FirstOrDefault(p => p.Title == project.Title);
-            if (found != null)
-            {
-                throw new Exception("Project already exists!");
-            }
-
-            string? imagePath = null;
-            if (project.Image != null && project.Image.Length > 0)
-            {
-                imagePath = await SaveImage(project.Image);
-            }
-
-            var newProject = new Project
-            {
-                Title = project.Title!,
-                Content = project.Content!,
-                Summary = project.Summary!,
-                Image = imagePath ?? string.Empty
-            };
-
-            _context.Add(newProject);
-            await _context.SaveChangesAsync();
-
-            return true;
-        }
-
-        public async Task<bool> UpdateProject(long id, ProjectDTO project)
-        {
-            var found = await _context.Projects.FindAsync(id);
+            var found = await _context.Projects.Include(p => p.ProjectImage).FirstOrDefaultAsync(p => p.Id == id);
             if (found == null) throw new KeyNotFoundException("Project not found!");
 
             if (!string.IsNullOrEmpty(project.Title))
@@ -74,15 +94,15 @@ namespace ServerAsmv.Services
                 found.Summary = project.Summary;
             }
 
-            if (project.Image != null && project.Image.Length > 0)
+            if (photo != null && photo.Length > 0)
             {
-                if (!string.IsNullOrEmpty(found.Image))
+                if (found.ProjectImage != null)
                 {
-                    DeleteImage(found.Image);
+                    await _photoService.DeletePhotoAsync(found.ProjectImage.Url); // Delete the old image
                 }
 
-                var newImagePath = await SaveImage(project.Image);
-                found.Image = newImagePath;
+                var uploadResult = await _photoService.AddPhotoAsync(photo);
+                found.ProjectImage = new ProjectImage { Url = uploadResult.Url.ToString(), ProjectId = found.Id }; // Update the image reference
             }
 
             await _context.SaveChangesAsync();
@@ -92,50 +112,39 @@ namespace ServerAsmv.Services
 
         public async Task<bool> DeleteProject(long id)
         {
-            var found = await _context.Projects.FindAsync(id);
+            var found = await _context.Projects.Include(p => p.ProjectImage).FirstOrDefaultAsync(p => p.Id == id);
             if (found == null) return false;
 
-            if (!string.IsNullOrEmpty(found.Image))
+            // Șterge imaginea de pe Cloudinary (sau alt serviciu de stocare)
+            if (found.ProjectImage != null && !string.IsNullOrEmpty(found.ProjectImage.Url))
             {
-                DeleteImage(found.Image);
+                var publicId = ExtractPublicId(found.ProjectImage.Url);
+                await _photoService.DeletePhotoAsync(publicId);
             }
 
+            // Șterge proiectul din baza de date
             _context.Remove(found);
             await _context.SaveChangesAsync();
 
             return true;
         }
 
-        private async Task<string> SaveImage(IFormFile imageFile)
+        private string ExtractPublicId(string imageUrl)
         {
-            var fileName = Path.GetFileName(imageFile.FileName);
-            var filePath = Path.Combine(_imageFolderPath, fileName);
+            var uri = new Uri(imageUrl);
+            var segments = uri.Segments;
 
-            using (var stream = new FileStream(filePath, FileMode.Create))
-            {
-                await imageFile.CopyToAsync(stream);
-            }
-
-            return Path.Combine("uploaded_images", fileName); // Path relative to the server root
-        }
-
-        private void DeleteImage(string imagePath)
-        {
-            var fullPath = Path.Combine(_imageFolderPath, Path.GetFileName(imagePath));
-            if (File.Exists(fullPath))
-            {
-                File.Delete(fullPath);
-            }
+            return segments[segments.Length - 1].Split('.')[0]; 
         }
 
         public Project? GetProject(long id)
         {
-            return _context.Projects.Find(id);
+            return _context.Projects.Include(p => p.ProjectImage).FirstOrDefault(p => p.Id == id);
         }
 
         public List<Project> GetProjects()
         {
-            return _context.Projects.ToList();
+            return _context.Projects.Include(p => p.ProjectImage).ToList();
         }
 
         public int Count()
@@ -145,13 +154,13 @@ namespace ServerAsmv.Services
 
         public async Task<byte[]> GetProjectImage(long id)
         {
-            var project = await _context.Projects.FindAsync(id);
-            if (project == null || string.IsNullOrEmpty(project.Image))
+            var project = await _context.Projects.Include(p => p.ProjectImage).FirstOrDefaultAsync(p => p.Id == id);
+            if (project == null || project.ProjectImage == null || string.IsNullOrEmpty(project.ProjectImage.Url))
             {
                 throw new FileNotFoundException("Project or image not found.");
             }
 
-            var imagePath = Path.Combine("UploadedImages", Path.GetFileName(project.Image)); // Adjust path if needed
+            var imagePath = Path.Combine("UploadedImages", Path.GetFileName(project.ProjectImage.Url)); // Adjust path if needed
 
             if (!System.IO.File.Exists(imagePath))
             {

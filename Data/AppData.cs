@@ -12,5 +12,15 @@ namespace ServerAsmv.Data
         public DbSet<Volunteer> Volunteers { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Project> Projects { get; set; }
+
+         public DbSet<ProjectImage> ProjectImages { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Project>()
+                .HasOne(p => p.ProjectImage)
+                .WithOne(pi => pi.Project)
+                .HasForeignKey<ProjectImage>(pi => pi.ProjectId);
+        }
     }
 }

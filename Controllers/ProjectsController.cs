@@ -25,7 +25,6 @@ namespace ServerAsmv.Controllers
             _service = service;
             _logger = logger;
         }
-        
 
         [HttpGet("all-projects")]
         public ActionResult<List<Project>> GetAllProjects()
@@ -53,13 +52,13 @@ namespace ServerAsmv.Controllers
         public async Task<IActionResult> GetProjectImage(long id)
         {
             var project = _service.GetProject(id);
-            if (project == null || string.IsNullOrEmpty(project.Image))
+            if (project == null || project.ProjectImage == null || string.IsNullOrEmpty(project.ProjectImage.Url))
             {
                 _logger.LogWarning("Project with ID {Id} or image not found.", id);
                 return NotFound($"Project with id {id} or image not found.");
             }
 
-            var imagePath = Path.Combine("UploadedImages", Path.GetFileName(project.Image));
+            var imagePath = Path.Combine("UploadedImages", Path.GetFileName(project.ProjectImage.Url));
 
             if (!System.IO.File.Exists(imagePath))
             {
@@ -78,19 +77,25 @@ namespace ServerAsmv.Controllers
             return File(imageFile, contentType);
         }
 
-
         [HttpPost("new-project")]
-        public async Task<ActionResult<Project>> NewProject([FromForm] ProjectDTO projectDto)
+        public async Task<ActionResult<Project>> NewProject([FromForm] ProjectDTO projectDto, IFormFile photo)
         {
-            if (projectDto == null)
+            if (!ModelState.IsValid)
             {
-                _logger.LogWarning("NewProject called with null ProjectDTO.");
-                return BadRequest("Project data is null.");
+                // Log the errors in the ModelState
+                foreach (var error in ModelState)
+                {
+                    foreach (var subError in error.Value.Errors)
+                    {
+                        _logger.LogWarning("ModelState Error: {Key} - {Error}", error.Key, subError.ErrorMessage);
+                    }
+                }
+                return BadRequest(ModelState);
             }
 
             try
             {
-                var isAdded = await _service.AddProject(projectDto);
+                var isAdded = await _service.AddProject(projectDto, photo);
                 if (!isAdded)
                 {
                     _logger.LogWarning("Failed to add project: {@ProjectDto}.", projectDto);
@@ -98,7 +103,7 @@ namespace ServerAsmv.Controllers
                 }
 
                 _logger.LogInformation("Project added successfully: {@ProjectDto}.", projectDto);
-                return Ok("Project added successfully.");
+                return Ok(new { Message = "Project added successfully.", Project = projectDto });
             }
             catch (Exception ex)
             {
@@ -108,7 +113,7 @@ namespace ServerAsmv.Controllers
         }
 
         [HttpPut("update-project/{id}")]
-        public async Task<ActionResult> UpdateProject(long id, [FromForm] ProjectDTO projectDto)
+        public async Task<ActionResult> UpdateProject(long id, [FromForm] ProjectDTO projectDto, IFormFile photo)
         {
             if (projectDto == null)
             {
@@ -118,7 +123,7 @@ namespace ServerAsmv.Controllers
 
             try
             {
-                var isUpdated = await _service.UpdateProject(id, projectDto);
+                var isUpdated = await _service.UpdateProject(id, projectDto, photo);
                 if (!isUpdated)
                 {
                     _logger.LogWarning("Failed to update project with ID {Id}.", id);
@@ -169,7 +174,7 @@ namespace ServerAsmv.Controllers
         }
 
         [HttpGet("count-projects")]
-        public int Count()
+        public ActionResult<int> Count()
         {
             return _service.Count();
         }

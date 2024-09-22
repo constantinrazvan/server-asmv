@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ServerAsmv.DTOs;
 using ServerAsmv.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace ServerAsmv.Controllers
 {
@@ -33,16 +34,16 @@ namespace ServerAsmv.Controllers
 
             try
             {
-                string token = _service.login(user);
+                string? token = _service.login(user);
 
-                if (string.IsNullOrEmpty(token))
+                if (token == null)
                 {
-                    _logger.LogWarning("Login failed for user {UserId}.", user.Email); // Assuming user.Username or similar is available
-                    return BadRequest("Something happened!");
+                    _logger.LogWarning("Login failed for user {UserId}.", user.Email); // Logging based on email
+                    return BadRequest(new { message = "Invalid credentials!" }); // More structured response
                 }
 
-                _logger.LogInformation("User {UserId} logged in successfully.", user.Email); // Assuming user.Username or similar is available
-                return Ok(token);
+                _logger.LogInformation("User {UserId} logged in successfully.", user.Email);
+                return Ok(token); // Return the token in a structured response
             }
             catch (Exception ex)
             {
@@ -58,7 +59,7 @@ namespace ServerAsmv.Controllers
             if (register == null)
             {
                 _logger.LogWarning("Registration attempt with null register data.");
-                return BadRequest("Invalid request! User is null!");
+                return BadRequest(new { message = "Invalid request! User data cannot be null." });
             }
 
             try
@@ -67,21 +68,27 @@ namespace ServerAsmv.Controllers
 
                 if (result)
                 {
-                    _logger.LogInformation("User {UserId} registered successfully.", register.Email); // Assuming register.Username or similar is available
-                    return Ok("User created successfully!");
+                    _logger.LogInformation("User {Email} registered successfully.", register.Email);
+                    return Ok(new { message = "User created successfully!" });
                 }
                 else
                 {
-                    _logger.LogWarning("Registration failed. User {UserId} already exists.", register.Email); // Assuming register.Username or similar is available
-                    return BadRequest("User already exists!");
+                    _logger.LogWarning("Registration failed. User {Email} already exists.", register.Email);
+                    return Conflict(new { message = "User already exists!" }); // Use 409 Conflict for existing users
                 }
+            }
+            catch (DbUpdateException dbEx)
+            {
+                _logger.LogError(dbEx, "Database error occurred during registration.");
+                return StatusCode(500, new { message = "Database error. Please try again later." });
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "An error occurred during registration.");
-                return StatusCode(500, "Internal server error");
+                _logger.LogError(ex, "An unexpected error occurred during registration.");
+                return StatusCode(500, new { message = "Internal server error. Please try again later." });
             }
         }
+
 
         [HttpGet("profile/{id}")]
         public ActionResult<User> GetProfile(long id)
