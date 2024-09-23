@@ -1,18 +1,10 @@
-using System.ComponentModel.DataAnnotations;
-
-namespace ServerAsmv.DTOs
-{
-    public class ProjectDTO
+namespace ServerAsmv.DTOs {
+    public class ProjectResponseDTO
     {
-        [Required]
+        public long Id { get; set; }
         public string Title { get; set; }
-
-        [Required]
         public string Content { get; set; }
-
-        [Required]
         public string Summary { get; set; }
-    
         public string? ImageUrl { get; set; }
     }
 }

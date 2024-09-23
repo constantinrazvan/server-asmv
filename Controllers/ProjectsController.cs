@@ -27,11 +27,21 @@ namespace ServerAsmv.Controllers
         }
 
         [HttpGet("all-projects")]
-        public ActionResult<List<Project>> GetAllProjects()
+        public ActionResult<List<ProjectResponseDTO>> GetAllProjects()
         {
             try
             {
-                var projects = _service.GetProjects();
+                var projects = _service.GetProjects()
+                    .Select(p => new ProjectResponseDTO
+                    {
+                        Id = p.Id,
+                        Title = p.Title,
+                        Content = p.Content,
+                        Summary = p.Summary,
+                        ImageUrl = p.ProjectImage?.Url // Handle potential null
+                    })
+                    .ToList();
+
                 if (projects == null || !projects.Any())
                 {
                     _logger.LogWarning("No projects found.");
@@ -46,6 +56,29 @@ namespace ServerAsmv.Controllers
                 _logger.LogError(ex, "An error occurred while retrieving all projects.");
                 return StatusCode(500, "Internal server error");
             }
+        }
+
+        [HttpGet("project/{id}")]
+        public ActionResult<ProjectResponseDTO> GetProject(long id)
+        {
+            var project = _service.GetProject(id);
+            if (project == null)
+            {
+                _logger.LogWarning("Project with ID {Id} not found.", id);
+                return NotFound($"Project with id {id} not found.");
+            }
+
+            var projectResponse = new ProjectResponseDTO
+            {
+                Id = project.Id,
+                Title = project.Title,
+                Content = project.Content,
+                Summary = project.Summary,
+                ImageUrl = project.ProjectImage?.Url // Handle potential null
+            };
+
+            _logger.LogInformation("Retrieved project with ID {Id} successfully.", id);
+            return Ok(projectResponse);
         }
 
         [HttpGet("project/{id}/image")]
@@ -78,11 +111,14 @@ namespace ServerAsmv.Controllers
         }
 
         [HttpPost("new-project")]
-        public async Task<ActionResult<Project>> NewProject([FromForm] ProjectDTO projectDto, IFormFile photo)
+        public async Task<ActionResult<ProjectDTO>> NewProject([FromForm] ProjectDTO projectDto, IFormFile photo)
         {
+            // Log incoming data
+            _logger.LogInformation("Received NewProject request with Title: {Title}, Content: {Content}, Summary: {Summary}, Photo: {PhotoName}",
+                projectDto.Title, projectDto.Content, projectDto.Summary, photo?.FileName);
+
             if (!ModelState.IsValid)
             {
-                // Log the errors in the ModelState
                 foreach (var error in ModelState)
                 {
                     foreach (var subError in error.Value.Errors)
@@ -102,8 +138,17 @@ namespace ServerAsmv.Controllers
                     return BadRequest("Failed to add the project.");
                 }
 
+                var addedProject = _service.GetProjects().FirstOrDefault(p => p.Title == projectDto.Title);
+                var projectResponse = new ProjectDTO
+                {
+                    Title = addedProject?.Title!,
+                    Content = addedProject?.Content!,
+                    Summary = addedProject?.Summary!,
+                    ImageUrl = addedProject?.ProjectImage?.Url
+                };
+
                 _logger.LogInformation("Project added successfully: {@ProjectDto}.", projectDto);
-                return Ok(new { Message = "Project added successfully.", Project = projectDto });
+                return Ok(new { Message = "Project added successfully.", Project = projectResponse });
             }
             catch (Exception ex)
             {
@@ -115,6 +160,10 @@ namespace ServerAsmv.Controllers
         [HttpPut("update-project/{id}")]
         public async Task<ActionResult> UpdateProject(long id, [FromForm] ProjectDTO projectDto, IFormFile photo)
         {
+            // Log incoming data
+            _logger.LogInformation("Received UpdateProject request for ID: {Id} with Title: {Title}, Content: {Content}, Summary: {Summary}, Photo: {PhotoName}",
+                id, projectDto.Title, projectDto.Content, projectDto.Summary, photo?.FileName);
+
             if (projectDto == null)
             {
                 _logger.LogWarning("UpdateProject called with null ProjectDTO for ID: {Id}.", id);

@@ -42,7 +42,6 @@ namespace ServerAsmv.Services
                 string? imagePath = null;
                 if (photo != null && photo.Length > 0)
                 {
-                    // Verifică tipul de fișier
                     var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
                     var extension = Path.GetExtension(photo.FileName).ToLower();
                     if (!allowedExtensions.Contains(extension))
@@ -59,7 +58,7 @@ namespace ServerAsmv.Services
                     Title = project.Title!,
                     Content = project.Content!,
                     Summary = project.Summary!,
-                    ProjectImage = new ProjectImage { Url = imagePath } // Set image reference
+                    ProjectImage = new ProjectImage { Url = imagePath }
                 };
 
                 _context.Add(newProject);
@@ -69,7 +68,6 @@ namespace ServerAsmv.Services
             }
             catch (Exception ex)
             {
-                // Loghează eroarea
                 throw new Exception("Error while adding project: " + ex.Message, ex);
             }
         }
@@ -139,12 +137,19 @@ namespace ServerAsmv.Services
 
         public Project? GetProject(long id)
         {
-            return _context.Projects.Include(p => p.ProjectImage).FirstOrDefault(p => p.Id == id);
+            return _context.Projects
+                .Include(p => p.ProjectImage) // Include the related ProjectImage entity
+                .FirstOrDefault(p => p.Id == id); // Find the project by its Id
         }
 
         public List<Project> GetProjects()
         {
-            return _context.Projects.Include(p => p.ProjectImage).ToList();
+            var projects = _context.Projects.Include(p => p.ProjectImage).ToList();
+            if (projects == null || !projects.Any())
+            {
+                Console.WriteLine("No projects found in the database.");
+            }
+            return projects;
         }
 
         public int Count()

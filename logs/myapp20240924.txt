@@ -1,0 +1,300 @@
+2024-09-24 00:02:36.663 +03:00 [INF] User profile is available. Using 'C:\Users\razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-24 00:02:36.890 +03:00 [INF] Now listening on: http://localhost:5235
+2024-09-24 00:02:36.897 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-24 00:02:36.900 +03:00 [INF] Hosting environment: Development
+2024-09-24 00:02:36.903 +03:00 [INF] Content root path: C:\Users\razvan\Desktop\server-asmv
+2024-09-24 00:03:49.430 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-09-24 00:03:49.638 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 209.8702ms
+2024-09-24 00:03:50.240 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-09-24 00:03:50.475 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 235.2257ms
+2024-09-24 00:03:56.151 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:03:56.163 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-09-24 00:03:56.215 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:03:56.243 +03:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:03:58.072 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-09-24 00:03:58.229 +03:00 [INF] Retrieved all projects successfully.
+2024-09-24 00:03:58.240 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-24 00:03:58.280 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 2026.4871ms
+2024-09-24 00:03:58.282 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:03:58.302 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 2150.792ms
+2024-09-24 00:04:06.283 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:04:06.295 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:04:06.299 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 16.0558ms
+2024-09-24 00:04:06.317 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:04:06.325 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:04:06.425 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:04:06.428 +03:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:04:06.465 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-09-24 00:04:06.470 +03:00 [INF] Retrieved all projects successfully.
+2024-09-24 00:04:06.472 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-24 00:04:06.477 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 46.0345ms
+2024-09-24 00:04:06.479 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:04:06.482 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 164.9282ms
+2024-09-24 00:04:58.168 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:04:58.173 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:04:58.176 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 7.9191ms
+2024-09-24 00:04:58.184 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:04:58.198 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:04:58.207 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:04:58.215 +03:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:04:58.376 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-09-24 00:04:58.381 +03:00 [INF] Retrieved all projects successfully.
+2024-09-24 00:04:58.382 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-24 00:04:58.385 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 164.7323ms
+2024-09-24 00:04:58.388 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:04:58.390 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 206.0532ms
+2024-09-24 00:08:51.856 +03:00 [INF] Application is shutting down...
+2024-09-24 00:09:00.875 +03:00 [INF] User profile is available. Using 'C:\Users\razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-24 00:09:01.091 +03:00 [INF] Now listening on: http://localhost:5235
+2024-09-24 00:09:01.097 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-24 00:09:01.100 +03:00 [INF] Hosting environment: Development
+2024-09-24 00:09:01.103 +03:00 [INF] Content root path: C:\Users\razvan\Desktop\server-asmv
+2024-09-24 00:09:08.188 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:09:08.265 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:09:08.274 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 89.1583ms
+2024-09-24 00:09:08.291 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:09:08.312 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:09:08.315 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-09-24 00:09:08.497 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:09:08.522 +03:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:09:09.409 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-09-24 00:09:09.583 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 173.6547ms
+2024-09-24 00:09:09.949 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-09-24 00:09:10.145 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 195.7311ms
+2024-09-24 00:09:10.786 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-09-24 00:09:10.922 +03:00 [INF] Retrieved all projects successfully.
+2024-09-24 00:09:10.930 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-24 00:09:10.965 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 2434.3815ms
+2024-09-24 00:09:10.968 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:09:10.987 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 2696.2411ms
+2024-09-24 00:09:17.328 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:09:17.335 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:09:17.338 +03:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:09:17.405 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-09-24 00:09:17.410 +03:00 [INF] Retrieved all projects successfully.
+2024-09-24 00:09:17.414 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-24 00:09:17.417 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 47.9509ms
+2024-09-24 00:09:17.420 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:09:17.422 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 94.4411ms
+2024-09-24 00:09:33.935 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/project/9 - null null
+2024-09-24 00:09:33.942 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv)'
+2024-09-24 00:09:33.990 +03:00 [INF] Route matched with {action = "GetProject", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[ServerAsmv.DTOs.ProjectResponseDTO] GetProject(Int64) on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:09:34.166 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+WHERE p."Id" = @__id_0
+LIMIT 1
+2024-09-24 00:09:34.170 +03:00 [INF] Retrieved project with ID 9 successfully.
+2024-09-24 00:09:34.172 +03:00 [INF] Executing OkObjectResult, writing value of type 'ServerAsmv.DTOs.ProjectResponseDTO'.
+2024-09-24 00:09:34.175 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv) in 181.3464ms
+2024-09-24 00:09:34.177 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv)'
+2024-09-24 00:09:34.179 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/project/9 - 200 null application/json; charset=utf-8 243.792ms
+2024-09-24 00:16:53.492 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:16:53.497 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:16:53.499 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 7.213ms
+2024-09-24 00:16:53.508 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:16:53.513 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:16:53.521 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:16:53.523 +03:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:16:53.645 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-09-24 00:16:53.649 +03:00 [INF] Retrieved all projects successfully.
+2024-09-24 00:16:53.651 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-24 00:16:53.654 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 127.2506ms
+2024-09-24 00:16:53.656 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:16:53.658 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 150.0566ms
+2024-09-24 00:18:43.632 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/project/9 - null null
+2024-09-24 00:18:43.713 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:18:43.715 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv)'
+2024-09-24 00:18:43.722 +03:00 [INF] Route matched with {action = "GetProject", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[ServerAsmv.DTOs.ProjectResponseDTO] GetProject(Int64) on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:18:43.748 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+WHERE p."Id" = @__id_0
+LIMIT 1
+2024-09-24 00:18:43.753 +03:00 [INF] Retrieved project with ID 9 successfully.
+2024-09-24 00:18:43.755 +03:00 [INF] Executing OkObjectResult, writing value of type 'ServerAsmv.DTOs.ProjectResponseDTO'.
+2024-09-24 00:18:43.758 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv) in 32.169ms
+2024-09-24 00:18:43.760 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv)'
+2024-09-24 00:18:43.763 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/project/9 - 200 null application/json; charset=utf-8 130.9018ms
+2024-09-24 00:19:11.476 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:19:11.482 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:19:11.484 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 8.6323ms
+2024-09-24 00:19:11.490 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:19:11.496 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:19:11.502 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:19:11.504 +03:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:19:11.514 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-09-24 00:19:11.519 +03:00 [INF] Retrieved all projects successfully.
+2024-09-24 00:19:11.522 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-24 00:19:11.525 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 16.3462ms
+2024-09-24 00:19:11.528 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:19:11.533 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 42.6336ms
+2024-09-24 00:19:12.967 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/project/9 - null null
+2024-09-24 00:19:12.972 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:19:12.974 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv)'
+2024-09-24 00:19:12.976 +03:00 [INF] Route matched with {action = "GetProject", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[ServerAsmv.DTOs.ProjectResponseDTO] GetProject(Int64) on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:19:12.986 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+WHERE p."Id" = @__id_0
+LIMIT 1
+2024-09-24 00:19:12.992 +03:00 [INF] Retrieved project with ID 9 successfully.
+2024-09-24 00:19:12.996 +03:00 [INF] Executing OkObjectResult, writing value of type 'ServerAsmv.DTOs.ProjectResponseDTO'.
+2024-09-24 00:19:13.000 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv) in 18.4945ms
+2024-09-24 00:19:13.004 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv)'
+2024-09-24 00:19:13.008 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/project/9 - 200 null application/json; charset=utf-8 39.4512ms
+2024-09-24 00:19:33.358 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/projects/project/9 - null null
+2024-09-24 00:19:33.366 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:19:33.369 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv)'
+2024-09-24 00:19:33.372 +03:00 [INF] Route matched with {action = "GetProject", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[ServerAsmv.DTOs.ProjectResponseDTO] GetProject(Int64) on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:19:33.390 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+WHERE p."Id" = @__id_0
+LIMIT 1
+2024-09-24 00:19:33.411 +03:00 [INF] Retrieved project with ID 9 successfully.
+2024-09-24 00:19:33.415 +03:00 [INF] Executing OkObjectResult, writing value of type 'ServerAsmv.DTOs.ProjectResponseDTO'.
+2024-09-24 00:19:33.421 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv) in 40.8851ms
+2024-09-24 00:19:33.425 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv)'
+2024-09-24 00:19:33.428 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/projects/project/9 - 200 null application/json; charset=utf-8 69.5344ms
+2024-09-24 00:19:43.967 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:19:43.972 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:19:43.976 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 9.3525ms
+2024-09-24 00:19:43.985 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:19:43.993 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:19:43.997 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:19:44.000 +03:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:19:44.010 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-09-24 00:19:44.015 +03:00 [INF] Retrieved all projects successfully.
+2024-09-24 00:19:44.017 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-24 00:19:44.021 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 15.4282ms
+2024-09-24 00:19:44.024 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:19:44.028 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 42.2291ms
+2024-09-24 00:19:45.159 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/projects/project/9 - null null
+2024-09-24 00:19:45.164 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:19:45.166 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv)'
+2024-09-24 00:19:45.172 +03:00 [INF] Route matched with {action = "GetProject", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[ServerAsmv.DTOs.ProjectResponseDTO] GetProject(Int64) on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:19:45.183 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+WHERE p."Id" = @__id_0
+LIMIT 1
+2024-09-24 00:19:45.188 +03:00 [INF] Retrieved project with ID 9 successfully.
+2024-09-24 00:19:45.193 +03:00 [INF] Executing OkObjectResult, writing value of type 'ServerAsmv.DTOs.ProjectResponseDTO'.
+2024-09-24 00:19:45.198 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv) in 17.9579ms
+2024-09-24 00:19:45.200 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv)'
+2024-09-24 00:19:45.202 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/projects/project/9 - 200 null application/json; charset=utf-8 43.0731ms
+2024-09-24 00:19:47.819 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:19:47.823 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:19:47.826 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:19:47.829 +03:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:19:47.842 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-09-24 00:19:47.846 +03:00 [INF] Retrieved all projects successfully.
+2024-09-24 00:19:47.848 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-24 00:19:47.852 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 19.0134ms
+2024-09-24 00:19:47.856 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:19:47.858 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 39.8278ms
+2024-09-24 00:20:05.498 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/new-project - null null
+2024-09-24 00:20:05.502 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:20:05.505 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/new-project - 204 null null 6.9884ms
+2024-09-24 00:20:05.512 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/Projects/new-project - multipart/form-data; boundary=----WebKitFormBoundarykTSUAlWFFhdX2hBI 368
+2024-09-24 00:20:05.517 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:20:05.519 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.NewProject (ServerAsmv)'
+2024-09-24 00:20:05.543 +03:00 [INF] Route matched with {action = "NewProject", controller = "Projects"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ServerAsmv.DTOs.ProjectDTO]] NewProject(ServerAsmv.DTOs.ProjectDTO, Microsoft.AspNetCore.Http.IFormFile) on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:20:05.603 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-09-24 00:20:05.643 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.NewProject (ServerAsmv) in 95.8181ms
+2024-09-24 00:20:05.645 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.NewProject (ServerAsmv)'
+2024-09-24 00:20:05.646 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/Projects/new-project - 400 null application/problem+json; charset=utf-8 134.7867ms
+2024-09-24 00:20:50.562 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/new-project - null null
+2024-09-24 00:20:50.566 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:20:50.567 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/new-project - 204 null null 5.792ms
+2024-09-24 00:20:50.572 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/Projects/new-project - multipart/form-data; boundary=----WebKitFormBoundaryQABzTB0zd9pggwZo 12133
+2024-09-24 00:20:50.597 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:20:50.600 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.NewProject (ServerAsmv)'
+2024-09-24 00:20:50.602 +03:00 [INF] Route matched with {action = "NewProject", controller = "Projects"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ServerAsmv.DTOs.ProjectDTO]] NewProject(ServerAsmv.DTOs.ProjectDTO, Microsoft.AspNetCore.Http.IFormFile) on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:20:50.634 +03:00 [INF] Received NewProject request with Title: jnsdkjsndsdioiqowdas6iail, Content: difjsaidjiodasjdasjdajdajd, Summary: dfnsidsfdsjfjsidajoasidjdao, Photo: random-grid.jpg
+2024-09-24 00:20:50.666 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__project_Title_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title"
+FROM "Projects" AS p
+WHERE p."Title" = @__project_Title_0
+LIMIT 1
+2024-09-24 00:20:52.597 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@p0='?', @p1='?', @p2='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Projects" ("Content", "Summary", "Title")
+VALUES (@p0, @p1, @p2)
+RETURNING "Id";
+2024-09-24 00:20:52.639 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p3='?' (DbType = Int64), @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ProjectImages" ("ProjectId", "Url")
+VALUES (@p3, @p4)
+RETURNING "Id";
+2024-09-24 00:20:52.678 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-09-24 00:20:52.688 +03:00 [INF] Project added successfully: {"Title":"jnsdkjsndsdioiqowdas6iail","Content":"difjsaidjiodasjdasjdajdajd","Summary":"dfnsidsfdsjfjsidajoasidjdao","ImageUrl":null,"$type":"ProjectDTO"}.
+2024-09-24 00:20:52.703 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[ServerAsmv.DTOs.ProjectDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-24 00:20:52.720 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.NewProject (ServerAsmv) in 2110.4059ms
+2024-09-24 00:20:52.723 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.NewProject (ServerAsmv)'
+2024-09-24 00:20:52.728 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/Projects/new-project - 200 null application/json; charset=utf-8 2155.2112ms
+2024-09-24 00:20:56.640 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:20:56.646 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:20:56.648 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 7.8959ms
+2024-09-24 00:20:56.658 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-09-24 00:20:56.663 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:20:56.666 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:20:56.671 +03:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:20:56.679 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-09-24 00:20:56.686 +03:00 [INF] Retrieved all projects successfully.
+2024-09-24 00:20:56.688 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-24 00:20:56.690 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 14.1977ms
+2024-09-24 00:20:56.692 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-09-24 00:20:56.694 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 36.5584ms
+2024-09-24 00:20:59.426 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/projects/project/10 - null null
+2024-09-24 00:20:59.431 +03:00 [INF] CORS policy execution successful.
+2024-09-24 00:20:59.440 +03:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv)'
+2024-09-24 00:20:59.444 +03:00 [INF] Route matched with {action = "GetProject", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[ServerAsmv.DTOs.ProjectResponseDTO] GetProject(Int64) on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-09-24 00:20:59.457 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+WHERE p."Id" = @__id_0
+LIMIT 1
+2024-09-24 00:20:59.462 +03:00 [INF] Retrieved project with ID 10 successfully.
+2024-09-24 00:20:59.468 +03:00 [INF] Executing OkObjectResult, writing value of type 'ServerAsmv.DTOs.ProjectResponseDTO'.
+2024-09-24 00:20:59.476 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv) in 22.3892ms
+2024-09-24 00:20:59.492 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetProject (ServerAsmv)'
+2024-09-24 00:20:59.496 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/projects/project/10 - 200 null application/json; charset=utf-8 69.1946ms

@@ -6,6 +6,7 @@ namespace ServerAsmv.Models
         public string Title { get; set; }
         public string Content { get; set; }
         public string Summary { get; set; }
+        
 
         // Navigation property for related image
         public ProjectImage ProjectImage { get; set; }
