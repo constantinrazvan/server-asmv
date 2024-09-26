@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ServerAsmv.Controllers
 {
-    [Authorize]
+    // [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class AuthController : ControllerBase

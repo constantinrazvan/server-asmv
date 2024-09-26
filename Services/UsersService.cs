@@ -1,6 +1,7 @@
 using ServerAsmv.Models;
 using ServerAsmv.Data;
 using ServerAsmv.Interfaces;
+using BCrypt.Net;
 
 namespace ServerAsmv.Services {
     public class UsersService : IUser {
@@ -60,23 +61,20 @@ namespace ServerAsmv.Services {
             return false;
         }
 
-        public async Task<bool> ModifyPassword(long Id, string password)
+        public async Task<bool> ModifyPassword(long Id, string newPassword)
         {
             User? user = await _context.Users.FindAsync(Id);
-        
+            
             if (user == null)
             {
                 throw new KeyNotFoundException("User not found!");
             }
-        
-            string hash = BCrypt.Net.BCrypt.HashPassword(password);
-        
-            if (BCrypt.Net.BCrypt.Verify(user.Password, password))
-            {
-                return false;
-            }
-        
-            user.Password = hash;
+
+            // Hash the new password
+            string newHash = BCrypt.Net.BCrypt.HashPassword(newPassword, BCrypt.Net.BCrypt.GenerateSalt());
+
+            // Update the user's password
+            user.Password = newHash;
             _context.Update(user);
             await _context.SaveChangesAsync();
             return true;

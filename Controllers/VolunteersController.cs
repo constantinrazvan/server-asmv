@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ServerAsmv.Controllers
 {
-    [Authorize]
+    // [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class VolunteersController : ControllerBase
