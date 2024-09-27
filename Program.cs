@@ -99,12 +99,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseCors("AllowAll"); // Apply CORS policy
+// app.UseCors("AllowAll"); // Apply CORS policy
 
 app.UseHttpsRedirection();
 
 app.UseAuthentication();  
 app.UseAuthorization();
+app.UseCors("AllowAll"); // Apply CORS policy
 
 app.MapControllers();
 
