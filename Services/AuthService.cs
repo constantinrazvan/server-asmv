@@ -31,7 +31,7 @@ namespace ServerAsmv.Services
                 return null; // Wrong password
             }
 
-            string token = jwtUtil.GenerateToken(find.Id.ToString(), find.Firstname, find.Lastname, find.Email, find.Role);
+            string token = jwtUtil.GenerateToken(find.Id.ToString(), find.Firstname, find.Lastname, find.Email, find.Role, find.CreatedAt);
             return token; // Return the generated token
         }
 

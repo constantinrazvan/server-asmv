@@ -113,13 +113,8 @@ namespace ServerAsmv.Services {
 
         public List<User> GetAll()
         {
-            List<User> users = new List<User>();
         
-            for(int i = 0; i < _context.Users.Count(); i++) {
-                users.Add(_context.Users.ElementAt(i));
-            }
-        
-            return users;
+            return _context.Users.ToList();
         }
     }
 }

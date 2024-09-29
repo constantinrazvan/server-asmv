@@ -11,7 +11,6 @@ using ServerAsmv.Interfaces;
 using ServerAsmv.Services;
 using ServerAsmv.Utils;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure Serilog
@@ -101,7 +100,7 @@ if (app.Environment.IsDevelopment())
 
 // app.UseCors("AllowAll"); // Apply CORS policy
 
-// app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseAuthentication();  
 app.UseAuthorization();

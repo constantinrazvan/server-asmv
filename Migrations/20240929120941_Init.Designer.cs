@@ -12,7 +12,7 @@ using ServerAsmv.Data;
 namespace ServerAsmv.Migrations
 {
     [DbContext(typeof(AppData))]
-    [Migration("20240919082933_Init")]
+    [Migration("20240929120941_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace ServerAsmv.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("AsmvBackend.Models.BecomeVolunteer", b =>
+            modelBuilder.Entity("ServerAsmv.Models.BecomeVolunteer", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -66,7 +66,7 @@ namespace ServerAsmv.Migrations
                     b.ToTable("become_volunteer");
                 });
 
-            modelBuilder.Entity("AsmvBackend.Models.Message", b =>
+            modelBuilder.Entity("ServerAsmv.Models.Message", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -94,7 +94,7 @@ namespace ServerAsmv.Migrations
                     b.ToTable("Messages");
                 });
 
-            modelBuilder.Entity("AsmvBackend.Models.Project", b =>
+            modelBuilder.Entity("ServerAsmv.Models.Project", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -103,10 +103,6 @@ namespace ServerAsmv.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
                     b.Property<string>("Content")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Image")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -123,7 +119,30 @@ namespace ServerAsmv.Migrations
                     b.ToTable("Projects");
                 });
 
-            modelBuilder.Entity("AsmvBackend.Models.User", b =>
+            modelBuilder.Entity("ServerAsmv.Models.ProjectImage", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
+
+                    b.Property<long>("ProjectId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProjectId")
+                        .IsUnique();
+
+                    b.ToTable("ProjectImages");
+                });
+
+            modelBuilder.Entity("ServerAsmv.Models.User", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -159,7 +178,7 @@ namespace ServerAsmv.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("AsmvBackend.Models.Volunteer", b =>
+            modelBuilder.Entity("ServerAsmv.Models.Volunteer", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -198,6 +217,23 @@ namespace ServerAsmv.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Volunteers");
+                });
+
+            modelBuilder.Entity("ServerAsmv.Models.ProjectImage", b =>
+                {
+                    b.HasOne("ServerAsmv.Models.Project", "Project")
+                        .WithOne("ProjectImage")
+                        .HasForeignKey("ServerAsmv.Models.ProjectImage", "ProjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Project");
+                });
+
+            modelBuilder.Entity("ServerAsmv.Models.Project", b =>
+                {
+                    b.Navigation("ProjectImage")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

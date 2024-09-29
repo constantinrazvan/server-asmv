@@ -1631,3 +1631,31 @@ LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
 2024-09-27 02:43:35.009 +03:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 508.5724ms
 2024-09-27 02:43:35.011 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
 2024-09-27 02:43:35.014 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 1638.2476ms
+2024-09-27 22:16:46.834 +03:00 [INF] User profile is available. Using 'C:\Users\razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-27 22:16:47.253 +03:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-09-27 22:16:47.260 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 22:16:47.262 +03:00 [INF] Hosting environment: Development
+2024-09-27 22:16:47.264 +03:00 [INF] Content root path: C:\Users\razvan\Desktop\ASMV-Fullstack\server-asmv
+2024-09-27 22:16:49.116 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger - null null
+2024-09-27 22:16:49.581 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger - 301 0 null 468.1137ms
+2024-09-27 22:16:49.601 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-09-27 22:16:49.829 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 227.5565ms
+2024-09-27 22:16:49.941 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 22:16:49.948 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-09-27 22:16:49.956 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 15.1705ms
+2024-09-27 22:16:50.228 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 279.6286ms
+2024-09-27 22:16:50.977 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-09-27 22:16:51.473 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 495.4004ms
+2024-09-27 22:21:29.298 +03:00 [INF] User profile is available. Using 'C:\Users\razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-27 22:21:29.612 +03:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-09-27 22:21:29.617 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-27 22:21:29.620 +03:00 [INF] Hosting environment: Development
+2024-09-27 22:21:29.621 +03:00 [INF] Content root path: C:\Users\razvan\Desktop\ASMV-Fullstack\server-asmv
+2024-09-27 22:21:30.754 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-09-27 22:21:31.166 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 413.9955ms
+2024-09-27 22:21:31.230 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-09-27 22:21:31.238 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-09-27 22:21:31.247 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 17.5495ms
+2024-09-27 22:21:31.950 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 711.0301ms
+2024-09-27 22:21:32.109 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-09-27 22:21:32.517 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 408.1588ms

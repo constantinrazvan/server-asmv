@@ -54,8 +54,7 @@ namespace ServerAsmv.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Title = table.Column<string>(type: "text", nullable: false),
                     Content = table.Column<string>(type: "text", nullable: false),
-                    Summary = table.Column<string>(type: "text", nullable: false),
-                    Image = table.Column<string>(type: "text", nullable: false)
+                    Summary = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -98,6 +97,32 @@ namespace ServerAsmv.Migrations
                 {
                     table.PrimaryKey("PK_Volunteers", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "ProjectImages",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Url = table.Column<string>(type: "text", nullable: false),
+                    ProjectId = table.Column<long>(type: "bigint", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ProjectImages", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_ProjectImages_Projects_ProjectId",
+                        column: x => x.ProjectId,
+                        principalTable: "Projects",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProjectImages_ProjectId",
+                table: "ProjectImages",
+                column: "ProjectId",
+                unique: true);
         }
 
         /// <inheritdoc />
@@ -110,13 +135,16 @@ namespace ServerAsmv.Migrations
                 name: "Messages");
 
             migrationBuilder.DropTable(
-                name: "Projects");
+                name: "ProjectImages");
 
             migrationBuilder.DropTable(
                 name: "Users");
 
             migrationBuilder.DropTable(
                 name: "Volunteers");
+
+            migrationBuilder.DropTable(
+                name: "Projects");
         }
     }
 }

@@ -20,7 +20,7 @@ namespace ServerAsmv.Utils
         }
 
         // Method to generate a JWT token
-        public string GenerateToken(string userId, string firstname, string lastname, string email, string role)
+        public string GenerateToken(string userId, string firstname, string lastname, string email, string role, DateTime joined_date)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.UTF8.GetBytes(_secretKey); // Use UTF8 encoding
@@ -29,10 +29,11 @@ namespace ServerAsmv.Utils
                 Subject = new ClaimsIdentity(new[]
                 {
                     new Claim("firstname", firstname), // Asigură-te că este corect
-new Claim("lastname", lastname),
-new Claim("email", email),
-new Claim("role", role),
-new Claim("userId", userId) // Asigură-te că userId este inclus
+                    new Claim("lastname", lastname),
+                    new Claim("email", email),
+                    new Claim("role", role),
+                    new Claim("userId", userId), // Asigură-te că userId este inclus
+                    new Claim("joinedDate", joined_date.ToString("o")) // Aici se folosește formatul ISO 8601
                 }),
                 Expires = DateTime.UtcNow.AddHours(1),
                 Issuer = _issuer,

@@ -173,6 +173,18 @@ namespace ServerAsmv.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            CreatedAt = new DateTime(2024, 9, 29, 12, 11, 36, 801, DateTimeKind.Utc).AddTicks(7199),
+                            Email = "admin@asmv.com",
+                            Firstname = "Admin",
+                            Lastname = "Admin",
+                            Password = "$2a$11$cT2s9Rg13x3QLejtSTpZVeg0iRsTn4xw3zliin6RIDbkfSG92Gow.",
+                            Role = "admin"
+                        });
                 });
 
             modelBuilder.Entity("ServerAsmv.Models.Volunteer", b =>
