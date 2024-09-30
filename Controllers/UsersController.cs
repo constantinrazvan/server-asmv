@@ -102,47 +102,47 @@ namespace ServerAsmv.Controllers
         }
 
         [HttpPatch("update-password/{id}")]
-public async Task<ActionResult<bool>> ModifyPassword(long id, [FromBody] string password)
-{
-    // Verifică ID-ul utilizatorului
-    if (id <= 0)
-    {
-        _logger.LogWarning("ModifyPassword called with invalid user ID: {Id}.", id);
-        return BadRequest("Invalid user ID. ID must be greater than 0.");
-    }
-
-    // Verifică dacă parola este validă
-    if (string.IsNullOrEmpty(password))
-    {
-        _logger.LogWarning("ModifyPassword called with empty password for user ID: {Id}.", id);
-        return BadRequest("Password cannot be null or empty.");
-    }
-
-    try
-    {
-        // Apelează serviciul pentru a actualiza parola
-        bool updateResult = await _service.ModifyPassword(id, password);
-
-        // Verifică rezultatul actualizării
-        if (!updateResult)
+        public async Task<ActionResult<bool>> ModifyPassword(long id, [FromBody] string password)
         {
-            _logger.LogWarning("Failed to update password for user ID {Id}.", id);
-            return NotFound("User not found or password update failed.");
-        }
+            // Verifică ID-ul utilizatorului
+            if (id <= 0)
+            {
+                _logger.LogWarning("ModifyPassword called with invalid user ID: {Id}.", id);
+                return BadRequest("Invalid user ID. ID must be greater than 0.");
+            }
 
-        _logger.LogInformation("Password for user with ID {Id} updated successfully.", id);
-        return Ok(updateResult);
-    }
-    catch (Exception ex)
-    {
-        _logger.LogError(ex, "An error occurred while updating password for user with ID {Id}.", id);
-        return StatusCode(500, "Internal server error");
-    }
-}
+            // Verifică dacă parola este validă
+            if (string.IsNullOrEmpty(password))
+            {
+                _logger.LogWarning("ModifyPassword called with empty password for user ID: {Id}.", id);
+                return BadRequest("Password cannot be null or empty.");
+            }
+
+            try
+            {
+                // Apelează serviciul pentru a actualiza parola
+                bool updateResult = await _service.ModifyPassword(id, password);
+
+                // Verifică rezultatul actualizării
+                if (!updateResult)
+                {
+                    _logger.LogWarning("Failed to update password for user ID {Id}.", id);
+                    return NotFound("User not found or password update failed.");
+                }
+
+                _logger.LogInformation("Password for user with ID {Id} updated successfully.", id);
+                return Ok(updateResult);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred while updating password for user with ID {Id}.", id);
+                return StatusCode(500, "Internal server error");
+            }
+        }
 
 
         [HttpPut("update-user/{id}")]
-        public async Task<ActionResult<bool>> UpdateUser(long id, [FromBody] User userDto)
+        public async Task<ActionResult<User>> UpdateUser(long id, [FromBody] User userDto)
         {
             if (id <= 0)
             {
@@ -156,11 +156,29 @@ public async Task<ActionResult<bool>> ModifyPassword(long id, [FromBody] string 
                 return BadRequest("User data cannot be null.");
             }
 
+            // Validate userDto fields
+            if (string.IsNullOrWhiteSpace(userDto.Firstname))
+            {
+                return BadRequest("First name cannot be empty.");
+            }
+
+            if (string.IsNullOrWhiteSpace(userDto.Lastname))
+            {
+                return BadRequest("Last name cannot be empty.");
+            }
+
             try
             {
-                bool updateResult = await _service.UpdateUser(id, userDto);
+                User updatedUser = await _service.UpdateUser(id, userDto);
+
+                // Log the successful update
                 _logger.LogInformation("User with ID {Id} updated successfully.", id);
-                return Ok(updateResult);
+                return Ok(updatedUser); // Return the updated user
+            }
+            catch (KeyNotFoundException knfEx)
+            {
+                _logger.LogWarning(knfEx, "User with ID {Id} not found during update.", id);
+                return NotFound(knfEx.Message);
             }
             catch (Exception ex)
             {
@@ -168,6 +186,7 @@ public async Task<ActionResult<bool>> ModifyPassword(long id, [FromBody] string 
                 return StatusCode(500, "Internal server error");
             }
         }
+
 
         [HttpGet("users-count")]
         public ActionResult<int> Count()

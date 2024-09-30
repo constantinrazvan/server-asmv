@@ -6,9 +6,11 @@ using BCrypt.Net;
 namespace ServerAsmv.Services {
     public class UsersService : IUser {
         private readonly AppData _context; 
+        private readonly ILogger<UsersService> _logger;
 
-        public UsersService(AppData _context) { 
+        public UsersService(AppData _context, ILogger<UsersService> logger) { 
             this._context =_context;
+            this._logger = logger;
         }
 
         public async Task<bool> DeleteUser(long Id)
@@ -80,30 +82,46 @@ namespace ServerAsmv.Services {
             return true;
         }
 
-        public async Task<bool> UpdateUser(long Id, User user)
+        public async Task<User> UpdateUser(long id, User user)
         {
-            User? userFound = await _context.Users.FindAsync(Id);
+           User? found = await _context.Users.FindAsync(id);
 
-            if(userFound == null) {
-                throw new KeyNotFoundException("User not found!");
-            } 
+           if(found == null) 
+           {
+            return null!;
+           }
 
-            if(user.Firstname != userFound.Firstname && user.Firstname != null) {
-                userFound.Firstname = user.Firstname;
-            }
+           if(found.Firstname != user.Firstname && user.Firstname != null){
+                found.Firstname = user.Firstname;
+           } else {
+                found.Firstname = found.Firstname;
+           }
 
-            if(user.Lastname != userFound.Lastname && user.Lastname != null) {
-                userFound.Lastname = user.Lastname;
-            }
+           if(found.Lastname != user.Lastname && user.Lastname != null) {
+                found.Lastname = user.Lastname;      
+           } else {
+                found.Lastname = found.Lastname;
+           }
 
-            if(user.Role != userFound.Role && user.Role != null) {
-                userFound.Role = user.Role;
-            }
+           if(found.Email != user.Email && user.Email != null) {
+                found.Email = user.Email;
+           } else {
+                found.Email = found.Email;
+           }
 
-            _context.Update(userFound);
-            await _context.SaveChangesAsync();
+           if(found.Role != user.Role && user.Role != null) {
+                found.Role = user.Role;
+           } else { 
+                found.Role = found.Role;
+           }
 
-            return true;
+           _context.Update(found);
+           _context.Users.Update(found);
+           await _context.SaveChangesAsync();
+
+           User? updatedUser = await _context.Users.FindAsync(id);
+
+           return updatedUser!;
         }
 
         public int Count()

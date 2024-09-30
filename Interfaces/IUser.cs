@@ -6,6 +6,6 @@ namespace ServerAsmv.Interfaces {
         Task<bool> ModifyPassword(long Id, string password);
         Task<bool> ModifyEmail(long Id, string email);
         Task<bool> DeleteUser(long Id);
-        Task<bool> UpdateUser(long Id, User user);
+        Task<User> UpdateUser(long Id, User user);
     }
 }
