@@ -12,6 +12,7 @@ namespace ServerAsmv.Models
         public string City { get; set; }
         public string Status { get; set; }
         public string JoinedDate { get; set; }
+        public VolunteerImage VolunteerImage { get; set; }
 
         // Constructor fără parametri
         public Volunteer() { }

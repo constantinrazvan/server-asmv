@@ -2849,3 +2849,4 @@ LIMIT 1
 2024-09-30 04:38:35.110 +03:00 [INF] Executed action ServerAsmv.Controllers.UsersController.Get (ServerAsmv) in 14.4581ms
 2024-09-30 04:38:35.111 +03:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Get (ServerAsmv)'
 2024-09-30 04:38:35.113 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/user/3 - 200 null application/json; charset=utf-8 36.5615ms
+2024-09-30 04:41:00.509 +03:00 [INF] Application is shutting down...

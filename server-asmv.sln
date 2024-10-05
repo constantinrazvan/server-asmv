@@ -5,8 +5,6 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServerAsmv", "ServerAsmv.csproj", "{9E3A5BD9-EFF5-42EA-B9AB-C1081955B43A}"
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "FrontendAsmv", "..\FrontendAsmv\FrontendAsmv.esproj", "{7145A937-E006-43F2-A0CC-03B620BBA1E5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

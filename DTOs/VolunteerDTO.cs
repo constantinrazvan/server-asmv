@@ -9,5 +9,7 @@ namespace ServerAsmv.DTOs
         public required string City { get; set; }
         public required string Status { get; set; }
         public required string JoinedDate { get; set; }
+        public string? ImageUrl { get; set; }
+
     }
 }

@@ -3,35 +3,66 @@ using ServerAsmv.Data;
 using ServerAsmv.Interfaces;
 using ServerAsmv.DTOs;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.CompilerServices;
 
 namespace ServerAsmv.Services {
     public class VolunteersService : IVolunteer
     {
-
         private readonly AppData _context;
+        private readonly PhotoService _photoService;
 
-        public VolunteersService(AppData _context) {
+        public VolunteersService(AppData _context, PhotoService _service) {
             this._context = _context;
+            this._photoService = _service;
         }
 
-        public void AddVolunteer(VolunteerDTO volunteer)
+        public async Task AddVolunteer(VolunteerDTO volunteer, IFormFile photo)
         {
             if(volunteer == null) {
-                throw new ArgumentNullException("Volunteer cannot be null!");
+                throw new ArgumentNullException(nameof(volunteer));
+            }
+            if(string.IsNullOrEmpty(volunteer.Firstname) || string.IsNullOrEmpty(volunteer.Lastname) || string.IsNullOrEmpty(volunteer.Email) || string.IsNullOrEmpty(volunteer.Phone) || string.IsNullOrEmpty(volunteer.JoinedDate) || string.IsNullOrEmpty(volunteer.City)) {
+                throw new ArgumentException("All fields should be filled!");
             }
 
-            Volunteer newVolunteer = new Volunteer();
+            try { 
+                var found = _context.Volunteers.FirstOrDefault(v => v.Email == volunteer.Email);
+                if(found != null) 
+                {
+                    throw new Exception("Volunteer already exists!");
+                }
 
-            newVolunteer.Firstname = volunteer.Firstname;
-            newVolunteer.Lastname = volunteer.Lastname;
-            newVolunteer.Email = volunteer.Email;
-            newVolunteer.Status = volunteer.Status;
-            newVolunteer.City = volunteer.City;
-            newVolunteer.Phone = volunteer.Phone;
-            newVolunteer.JoinedDate = volunteer.JoinedDate;
+                string? imagePath = null; 
 
-            _context.Volunteers.Add(newVolunteer);
-            _context.SaveChanges();
+                if(photo != null && photo.Length > 0)
+                {
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png"};
+                    var extension = Path.GetExtension(photo.FileName).ToLower();
+                    if(!allowedExtensions.Contains(extension))
+                    {
+                        throw new ArgumentException("Invalid image type. Allowed types are: jpg, jpeg, png.");
+                    }
+
+                    var uploadResult = await _photoService.AddPhotoAsync(photo);
+                    imagePath = uploadResult.Url.ToString();
+                }
+
+                var newVolunteer = new Volunteer
+                {
+                    Firstname = volunteer.Firstname!,
+                    Lastname = volunteer.Lastname!,
+                    Email = volunteer.Email!,
+                    Phone = volunteer.Phone!,
+                    Status = volunteer.Status!,
+                    JoinedDate = volunteer.JoinedDate!
+                };
+
+                _context.Add(newVolunteer);
+                await _context.SaveChangesAsync();
+            } catch(Exception ex)
+            {
+                throw new Exception("Error while adding volunteer: " + ex.Message);
+            }
         }
 
         public void DeleteVolunteer(long Id)
