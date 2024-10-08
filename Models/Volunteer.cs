@@ -14,10 +14,8 @@ namespace ServerAsmv.Models
         public string JoinedDate { get; set; }
         public VolunteerImage VolunteerImage { get; set; }
 
-        // Constructor fără parametri
         public Volunteer() { }
 
-        // Constructor cu parametri
         public Volunteer(string firstname, string lastname, string email, string phone, string city, string status, string joinedDate)
         {
             Firstname = firstname;
@@ -29,7 +27,6 @@ namespace ServerAsmv.Models
             JoinedDate = joinedDate;
         }
 
-        // Suprascrierea metodei ToString pentru a afișa obiectul
         public override string ToString()
         {
             return $"Volunteer{{ id={Id}, firstname='{Firstname}', lastname='{Lastname}', email='{Email}', phone='{Phone}', city='{City}', status='{Status}', joinedDate='{JoinedDate}' }}";

@@ -19,7 +19,7 @@ namespace ServerAsmv.Controllers
         }
 
         [HttpPost("/new-volunteer")]
-        public ActionResult AddVolunteer([FromBody] VolunteerDTO volunteer)
+        public async Task<ActionResult> AddVolunteer([FromForm] VolunteerDTO volunteer, IFormFile image)
         {
             if (volunteer == null)
             {
@@ -28,7 +28,7 @@ namespace ServerAsmv.Controllers
 
             try
             {
-                _service.AddVolunteer(volunteer);
+                await _service.AddVolunteer(volunteer, image);
                 return Ok(new { message = "Volunteer added successfully." });
             }
             catch (Exception ex)
@@ -37,6 +37,7 @@ namespace ServerAsmv.Controllers
                 return BadRequest("Something went wrong!");
             }
         }
+
 
         [HttpGet("/volunteers")]
         public ActionResult<List<Volunteer>> GetVolunteers()

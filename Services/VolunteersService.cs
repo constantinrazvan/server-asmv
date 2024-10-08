@@ -43,7 +43,7 @@ namespace ServerAsmv.Services {
                         throw new ArgumentException("Invalid image type. Allowed types are: jpg, jpeg, png.");
                     }
 
-                    var uploadResult = await _photoService.AddPhotoAsync(photo);
+                    var uploadResult = await _photoService.AddPhotoAsync(photo); // Add photo using a photo service
                     imagePath = uploadResult.Url.ToString();
                 }
 
@@ -53,13 +53,16 @@ namespace ServerAsmv.Services {
                     Lastname = volunteer.Lastname!,
                     Email = volunteer.Email!,
                     Phone = volunteer.Phone!,
+                    City = volunteer.City!,
                     Status = volunteer.Status!,
-                    JoinedDate = volunteer.JoinedDate!
+                    JoinedDate = volunteer.JoinedDate!,
+                    VolunteerImage = new VolunteerImage { Url = imagePath } // Save the image URL
                 };
 
                 _context.Add(newVolunteer);
                 await _context.SaveChangesAsync();
-            } catch(Exception ex)
+            } 
+            catch(Exception ex)
             {
                 throw new Exception("Error while adding volunteer: " + ex.Message);
             }

@@ -6,10 +6,9 @@ namespace ServerAsmv.DTOs
         public required string Lastname { get; set; }
         public required string Email { get; set; }
         public required string Phone { get; set; }
-        public required string City { get; set; }
+        public required string City { get; set; } 
         public required string Status { get; set; }
         public required string JoinedDate { get; set; }
-        public string? ImageUrl { get; set; }
-
+        public string? ImageUrl { get; set; } // To store the URL of the uploaded image
     }
 }
