@@ -8,6 +8,6 @@ namespace ServerAsmv.Interfaces {
         Task AddVolunteer(VolunteerDTO volunteer, IFormFile photo);
         void DeleteVolunteer(long Id);
         void UpdateVolunteer(long Id, Volunteer volunteer);
-        Volunteer GetVolunteerById(long Id);
+        Volunteer? GetVolunteer(long Id);
     }
 }

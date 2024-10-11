@@ -11,12 +11,13 @@ namespace ServerAsmv.Models
         public string Phone { get; set; }
         public string City { get; set; }
         public string Status { get; set; }
+        public string Ocupation { get; set; }
         public string JoinedDate { get; set; }
         public VolunteerImage VolunteerImage { get; set; }
 
         public Volunteer() { }
 
-        public Volunteer(string firstname, string lastname, string email, string phone, string city, string status, string joinedDate)
+        public Volunteer(string firstname, string lastname, string email, string phone, string city, string status, string ocupation, string joinedDate)
         {
             Firstname = firstname;
             Lastname = lastname;
@@ -24,6 +25,7 @@ namespace ServerAsmv.Models
             Phone = phone;
             City = city;
             Status = status;
+            Ocupation = ocupation;
             JoinedDate = joinedDate;
         }
 

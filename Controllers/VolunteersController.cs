@@ -12,15 +12,28 @@ namespace ServerAsmv.Controllers
     public class VolunteersController : ControllerBase
     {
         private readonly VolunteersService _service;
+        private readonly ILogger<VolunteersController> _logger;
 
-        public VolunteersController(VolunteersService service)
+        public VolunteersController(VolunteersService service, ILogger<VolunteersController> logger)
         {
             _service = service;
+            _logger = logger;
         }
 
         [HttpPost("/new-volunteer")]
         public async Task<ActionResult> AddVolunteer([FromForm] VolunteerDTO volunteer, IFormFile image)
         {
+
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+                _logger.LogError("Model state errors: {Errors}", string.Join(", ", errors));
+                return BadRequest(ModelState);
+            }
+
             if (volunteer == null)
             {
                 return BadRequest("Volunteer cannot be null!");
@@ -64,7 +77,7 @@ namespace ServerAsmv.Controllers
 
             try
             {
-                var volunteer = _service.GetVolunteerById(id);
+                var volunteer = _service.GetVolunteer(id);
                 return Ok(volunteer);
             }
             catch (KeyNotFoundException)

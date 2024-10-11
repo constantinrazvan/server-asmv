@@ -47,6 +47,7 @@ namespace ServerAsmv.Services {
                     imagePath = uploadResult.Url.ToString();
                 }
 
+#pragma warning disable CS8601 // Possible null reference assignment.
                 var newVolunteer = new Volunteer
                 {
                     Firstname = volunteer.Firstname!,
@@ -55,9 +56,11 @@ namespace ServerAsmv.Services {
                     Phone = volunteer.Phone!,
                     City = volunteer.City!,
                     Status = volunteer.Status!,
+                    Ocupation = volunteer.Ocupation,
                     JoinedDate = volunteer.JoinedDate!,
                     VolunteerImage = new VolunteerImage { Url = imagePath } // Save the image URL
                 };
+#pragma warning restore CS8601 // Possible null reference assignment.
 
                 _context.Add(newVolunteer);
                 await _context.SaveChangesAsync();
@@ -84,19 +87,11 @@ namespace ServerAsmv.Services {
             _context.SaveChanges();
         }
 
-        public Volunteer GetVolunteerById(long Id)
+        public Volunteer? GetVolunteer(long id)
         {
-            if(Id <= 0) {
-                throw new ArgumentException("Id cannot be <= 0 !");
-            }
-
-            Volunteer? volunteer = _context.Volunteers.Find(Id);
-
-            if(volunteer == null) {
-                throw new KeyNotFoundException("Volunteer with id doesnt exist!");
-            }
-
-            return volunteer;
+            return _context.Volunteers
+                .Include(v => v.VolunteerImage)
+                .FirstOrDefault(v => v.Id == id);
         }
 
         public List<Volunteer> GetVolunteers()

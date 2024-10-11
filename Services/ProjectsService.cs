@@ -53,6 +53,7 @@ namespace ServerAsmv.Services
                     imagePath = uploadResult.Url.ToString();
                 }
 
+#pragma warning disable CS8601 // Possible null reference assignment.
                 var newProject = new Project
                 {
                     Title = project.Title!,
@@ -60,6 +61,7 @@ namespace ServerAsmv.Services
                     Summary = project.Summary!,
                     ProjectImage = new ProjectImage { Url = imagePath }
                 };
+#pragma warning restore CS8601 // Possible null reference assignment.
 
                 _context.Add(newProject);
                 await _context.SaveChangesAsync();
@@ -149,7 +151,9 @@ namespace ServerAsmv.Services
             {
                 Console.WriteLine("No projects found in the database.");
             }
+#pragma warning disable CS8603 // Possible null reference return.
             return projects;
+#pragma warning restore CS8603 // Possible null reference return.
         }
 
         public int Count()
