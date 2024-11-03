@@ -655,3 +655,49 @@ WHERE "Id" = 2;
 2024-11-04 01:10:01.435 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
 VALUES ('20241103230835_DeletedDescriptionFromActivity', '7.0.11');
+2024-11-04 01:23:35.824 +02:00 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-11-04 01:23:36.042 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-11-04 01:23:36.074 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-11-04 01:23:36.118 +02:00 [INF] Applying migration '20241103232310_AddedActivityUserJoinTable'.
+2024-11-04 01:23:36.271 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Users" DROP CONSTRAINT "FK_Users_Activities_ActivityId";
+2024-11-04 01:23:36.278 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP INDEX "IX_Users_ActivityId";
+2024-11-04 01:23:36.284 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Users" DROP COLUMN "ActivityId";
+2024-11-04 01:23:36.328 +02:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Activities" ALTER COLUMN "Id" TYPE bigint;
+2024-11-04 01:23:36.347 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ActivityUser" (
+    "ActivityId" bigint NOT NULL,
+    "UserId" bigint NOT NULL,
+    CONSTRAINT "PK_ActivityUser" PRIMARY KEY ("ActivityId", "UserId"),
+    CONSTRAINT "FK_ActivityUser_Activities_ActivityId" FOREIGN KEY ("ActivityId") REFERENCES "Activities" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_ActivityUser_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE
+);
+2024-11-04 01:23:36.358 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-03 23:23:09.607883Z', "Password" = '$2a$11$FBnUTdvRMn6RKzce7xYskuKIx3uBTH4mSzXvszeBuZH6oByolCJy.'
+WHERE "Id" = 1;
+2024-11-04 01:23:36.363 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-03 23:23:09.89691Z', "Password" = '$2a$11$iOrfIQZ6fVobC4MidTl0T.0feK.yoe5QgxF3BMOYoZ2o2OC/Fa2d6'
+WHERE "Id" = 2;
+2024-11-04 01:23:36.371 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ActivityUser_UserId" ON "ActivityUser" ("UserId");
+2024-11-04 01:23:36.377 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241103232310_AddedActivityUserJoinTable', '7.0.11');
