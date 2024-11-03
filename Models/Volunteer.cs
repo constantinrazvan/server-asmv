@@ -1,37 +1,41 @@
-using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ServerAsmv.Models
-{
-    public class Volunteer
-    {
-        public long Id { get; set; }
-        public string Firstname { get; set; }
-        public string Lastname { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
-        public string City { get; set; }
-        public string Status { get; set; }
-        public string Ocupation { get; set; }
-        public string JoinedDate { get; set; }
-        public VolunteerImage VolunteerImage { get; set; }
+namespace ServerAsmv.Models {
+    [Table("volunteers")]
+    public class Volunteer { 
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public long Id { get; set;}
+        public string Firstname {get; set;}
+        public string Lastname {get; set;} 
+        public string Email {get; set;} 
+        public string JoinedDate {get; set;} 
+        public bool President {get; set;}
+        public bool VicePresident {get; set;}
+        public string Department {get; set;}
+        public VolunteerImage? VolunteerImage {get; set;}
+        public string PhoneNumber {get; set;}
+    
+        public Volunteer() {}
 
-        public Volunteer() { }
 
-        public Volunteer(string firstname, string lastname, string email, string phone, string city, string status, string ocupation, string joinedDate)
+        public Volunteer(string firstname, string lastname, string email, string joinedDate, string department, bool president, bool vicepresident, string phoneNumber)
         {
             Firstname = firstname;
-            Lastname = lastname;
+            Lastname = lastname; 
             Email = email;
-            Phone = phone;
-            City = city;
-            Status = status;
-            Ocupation = ocupation;
             JoinedDate = joinedDate;
+            President = president; 
+            VicePresident = vicepresident;
+            Department = department;
+            PhoneNumber = phoneNumber;
         }
 
         public override string ToString()
         {
-            return $"Volunteer{{ id={Id}, firstname='{Firstname}', lastname='{Lastname}', email='{Email}', phone='{Phone}', city='{City}', status='{Status}', joinedDate='{JoinedDate}' }}";
+            return $"Volunteer: {Firstname} {Lastname}, Email: {Email}, Joined Date: {JoinedDate}, President: {President}, Vice President: {VicePresident}, Department: {Department}";
         }
+
     }
 }

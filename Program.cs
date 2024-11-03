@@ -21,15 +21,18 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog(); // Use Serilog for logging
 
-// Configure JWT
+// Configure JWT settings
 var jwtSettingsSection = builder.Configuration.GetSection("JwtSettings");
 var secretKey = jwtSettingsSection.GetValue<string>("SecretKey");
 var issuer = jwtSettingsSection.GetValue<string>("Issuer");
 var audience = jwtSettingsSection.GetValue<string>("Audience");
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
+    });
 
-// Add authentication but don't require it for the VolunteersController
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -43,42 +46,57 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidAudience = audience,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!))
         };
-    });
+        options.Events = new JwtBearerEvents
+        {
+            OnAuthenticationFailed = context =>
+            {
+                if (context.Exception.GetType() == typeof(SecurityTokenExpiredException))
+                {
+                    context.Response.Headers.Append("Token-Expired", "true");
+                    context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+                }
+                return Task.CompletedTask;
+            }
+        };
+    }
+);
+
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+    options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+});
 
 builder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("AllowAll", policy => policy.RequireAssertion(context => true)); // Allows all requests
+    options.AddPolicy("AllowAll", policy => policy.RequireAssertion(context => true));
 });
 
 builder.Services.AddDbContext<AppData>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
-builder.Services.AddControllers()
-    .AddJsonOptions(options =>
-    {
-        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve;
-    });
-
-// Add your services here
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<JwtUtil>(provider => new JwtUtil(secretKey!, issuer!, audience!));
 builder.Services.AddScoped<BecomeVolunteerService>();
 builder.Services.AddScoped<MessageService>();
 builder.Services.AddScoped<ProjectsService>();
-builder.Services.AddScoped<VolunteersService>();
+builder.Services.AddScoped<VolunteerService>();
 builder.Services.AddScoped<UsersService>();
 builder.Services.AddScoped<PhotoService>();
+builder.Services.AddScoped<ActivityService>();
 
+// Configure Cloudinary settings
 builder.Services.Configure<CloudinarySettings>(builder.Configuration.GetSection("CloudinarySettings"));
 
-builder.Services.AddControllers();
+// Configure Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Configure file upload limit
 builder.Services.Configure<FormOptions>(options =>
 {
-    options.MultipartBodyLengthLimit = 104857600; 
+    options.MultipartBodyLengthLimit = 104857600; // Limit to 100MB
 });
 
 // Configure CORS to allow all origins, methods, and headers
@@ -98,13 +116,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// app.UseCors("AllowAll"); // Apply CORS policy
-
 app.UseHttpsRedirection();
-
-app.UseAuthentication();  
+app.UseStaticFiles();
+app.UseAuthentication();
 app.UseAuthorization();
-app.UseCors("AllowAll"); // Apply CORS policy
+app.UseCors("AllowAll");
 
 app.MapControllers();
 

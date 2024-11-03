@@ -1,0 +1,657 @@
+2024-11-04 00:06:19.343 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:06:19.602 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:19.624 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 281.9022ms
+2024-11-04 00:06:31.256 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - null null
+2024-11-04 00:06:31.262 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countRequests - null null
+2024-11-04 00:06:31.262 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countMessages - null null
+2024-11-04 00:06:31.265 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - null null
+2024-11-04 00:06:31.266 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - null null
+2024-11-04 00:06:31.268 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - null null
+2024-11-04 00:06:31.273 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:31.275 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:31.291 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:31.295 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:31.314 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:31.330 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:31.332 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - 204 null null 75.8793ms
+2024-11-04 00:06:31.340 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countRequests - 204 null null 78.1115ms
+2024-11-04 00:06:31.342 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countMessages - 204 null null 80.4902ms
+2024-11-04 00:06:31.347 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - 204 null null 81.7636ms
+2024-11-04 00:06:31.353 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - 204 null null 86.4339ms
+2024-11-04 00:06:31.353 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - 204 null null 85.1334ms
+2024-11-04 00:06:31.362 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/count-volunteers - null null
+2024-11-04 00:06:31.370 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/users-count - null null
+2024-11-04 00:06:31.383 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - null null
+2024-11-04 00:06:31.395 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countMessages - null null
+2024-11-04 00:06:31.410 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - null null
+2024-11-04 00:06:31.418 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countRequests - null null
+2024-11-04 00:06:31.495 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/3/2024 10:01:13 PM', Current time (UTC): '11/3/2024 10:06:31 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-04 00:06:31.495 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/3/2024 10:01:13 PM', Current time (UTC): '11/3/2024 10:06:31 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-04 00:06:31.495 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/3/2024 10:01:13 PM', Current time (UTC): '11/3/2024 10:06:31 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-04 00:06:31.501 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/3/2024 10:01:13 PM', Current time (UTC): '11/3/2024 10:06:31 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-04 00:06:31.549 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/3/2024 10:01:13 PM', Current time (UTC): '11/3/2024 10:06:31 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-04 00:06:31.563 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/3/2024 10:01:13 PM', Current time (UTC): '11/3/2024 10:06:31 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-04 00:06:31.648 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/3/2024 10:01:13 PM', Current time (UTC): '11/3/2024 10:06:31 PM'.
+2024-11-04 00:06:31.648 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/3/2024 10:01:13 PM', Current time (UTC): '11/3/2024 10:06:31 PM'.
+2024-11-04 00:06:31.649 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/3/2024 10:01:13 PM', Current time (UTC): '11/3/2024 10:06:31 PM'.
+2024-11-04 00:06:31.655 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/3/2024 10:01:13 PM', Current time (UTC): '11/3/2024 10:06:31 PM'.
+2024-11-04 00:06:31.666 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/3/2024 10:01:13 PM', Current time (UTC): '11/3/2024 10:06:31 PM'.
+2024-11-04 00:06:31.685 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/3/2024 10:01:13 PM', Current time (UTC): '11/3/2024 10:06:31 PM'.
+2024-11-04 00:06:31.687 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:31.798 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:31.801 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:31.804 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:31.838 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:31.841 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:31.844 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-04 00:06:31.857 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/count-volunteers - 404 0 null 494.2014ms
+2024-11-04 00:06:31.869 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-04 00:06:31.876 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-04 00:06:31.877 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-04 00:06:31.879 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-04 00:06:31.915 +02:00 [INF] Route matched with {action = "Count", controller = "BecomeVolunteers"}. Executing controller action with signature Int32 Count() on controller ServerAsmv.Controllers.BecomeVolunteersController (ServerAsmv).
+2024-11-04 00:06:31.904 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5235/count-volunteers, Response status code: 404
+2024-11-04 00:06:31.908 +02:00 [INF] Route matched with {action = "Count", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:06:31.909 +02:00 [INF] Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-04 00:06:31.912 +02:00 [INF] Route matched with {action = "GetAll", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Message]] GetAll() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-04 00:06:31.894 +02:00 [INF] Route matched with {action = "Count", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-04 00:06:32.362 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Messages" AS m
+2024-11-04 00:06:32.362 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."Fullname", m."NewRequest", m."Text"
+FROM "Messages" AS m
+2024-11-04 00:06:32.365 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM become_volunteer AS b
+2024-11-04 00:06:32.377 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-04 00:06:32.382 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Projects" AS p
+2024-11-04 00:06:32.393 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+2024-11-04 00:06:32.413 +02:00 [INF] Retrieved all messages.
+2024-11-04 00:06:32.442 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-04 00:06:32.451 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-04 00:06:32.451 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.Count (ServerAsmv) in 413.6473ms
+2024-11-04 00:06:32.464 +02:00 [INF] Retrieved users count: 2.
+2024-11-04 00:06:32.466 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Message, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:06:32.470 +02:00 [INF] Executed action ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv) in 541.0265ms
+2024-11-04 00:06:32.480 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv) in 424.0454ms
+2024-11-04 00:06:32.482 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-04 00:06:32.488 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-04 00:06:32.507 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.Count (ServerAsmv) in 473.8845ms
+2024-11-04 00:06:32.496 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-04 00:06:32.499 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-04 00:06:32.502 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countMessages - 200 null application/json; charset=utf-8 1107.4059ms
+2024-11-04 00:06:32.492 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv) in 450.5795ms
+2024-11-04 00:06:32.529 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-04 00:06:32.727 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countRequests - 401 null application/json; charset=utf-8 1307.9922ms
+2024-11-04 00:06:32.728 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - 200 null application/json; charset=utf-8 1345.2554ms
+2024-11-04 00:06:32.736 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:06:32.760 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-04 00:06:32.851 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/users-count - 200 null application/json; charset=utf-8 1480.1278ms
+2024-11-04 00:06:33.587 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:33.589 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - 200 null application/json; charset=utf-8 2179.461ms
+2024-11-04 00:06:33.632 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 895.7723ms
+2024-11-04 00:06:39.386 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Auth/login - null null
+2024-11-04 00:06:39.654 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:39.656 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Auth/login - 204 null null 270.2513ms
+2024-11-04 00:06:39.675 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/Auth/login - application/json 49
+2024-11-04 00:06:39.695 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:39.703 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.AuthController.Login (ServerAsmv)'
+2024-11-04 00:06:39.906 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ServerAsmv.LoginDTO) on controller ServerAsmv.Controllers.AuthController (ServerAsmv).
+2024-11-04 00:06:42.849 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/Auth/login - application/json 49
+2024-11-04 00:06:42.864 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:42.927 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.AuthController.Login (ServerAsmv)'
+2024-11-04 00:06:42.999 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ServerAsmv.LoginDTO) on controller ServerAsmv.Controllers.AuthController (ServerAsmv).
+2024-11-04 00:06:43.017 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@__user_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__user_Email_0
+LIMIT 1
+2024-11-04 00:06:43.347 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__user_Email_0
+LIMIT 1
+2024-11-04 00:06:44.088 +02:00 [INF] User admin@asmv.com logged in successfully.
+2024-11-04 00:06:44.088 +02:00 [INF] User admin@asmv.com logged in successfully.
+2024-11-04 00:06:44.090 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-04 00:06:44.091 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-04 00:06:44.096 +02:00 [INF] Executed action ServerAsmv.Controllers.AuthController.Login (ServerAsmv) in 763.7527ms
+2024-11-04 00:06:44.096 +02:00 [INF] Executed action ServerAsmv.Controllers.AuthController.Login (ServerAsmv) in 4137.1909ms
+2024-11-04 00:06:44.101 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.AuthController.Login (ServerAsmv)'
+2024-11-04 00:06:44.106 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.AuthController.Login (ServerAsmv)'
+2024-11-04 00:06:44.107 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/Auth/login - 200 null text/plain; charset=utf-8 1258.0948ms
+2024-11-04 00:06:44.111 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/Auth/login - 200 null text/plain; charset=utf-8 4436.3536ms
+2024-11-04 00:06:44.183 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - null null
+2024-11-04 00:06:44.193 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countRequests - null null
+2024-11-04 00:06:44.209 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:44.350 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:44.449 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - 204 null null 265.7219ms
+2024-11-04 00:06:44.460 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countRequests - 204 null null 267.8198ms
+2024-11-04 00:06:44.521 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - null null
+2024-11-04 00:06:44.526 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - null null
+2024-11-04 00:06:44.526 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - null null
+2024-11-04 00:06:44.527 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countRequests - null null
+2024-11-04 00:06:44.528 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countMessages - null null
+2024-11-04 00:06:44.551 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - null null
+2024-11-04 00:06:44.575 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:44.598 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:44.603 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:44.617 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:44.633 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:44.645 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:44.647 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - 204 null null 126.6814ms
+2024-11-04 00:06:44.649 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-04 00:06:44.655 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - 204 null null 129.8023ms
+2024-11-04 00:06:44.664 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-04 00:06:44.677 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countMessages - 204 null null 149.4886ms
+2024-11-04 00:06:44.677 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - 204 null null 126.2585ms
+2024-11-04 00:06:44.689 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/users-count - null null
+2024-11-04 00:06:44.692 +02:00 [INF] Route matched with {action = "GetAll", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Message]] GetAll() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-04 00:06:44.778 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/count-volunteers - null null
+2024-11-04 00:06:44.782 +02:00 [INF] Route matched with {action = "Count", controller = "BecomeVolunteers"}. Executing controller action with signature Int32 Count() on controller ServerAsmv.Controllers.BecomeVolunteersController (ServerAsmv).
+2024-11-04 00:06:44.800 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - null null
+2024-11-04 00:06:44.813 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countMessages - null null
+2024-11-04 00:06:44.865 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:44.885 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."Fullname", m."NewRequest", m."Text"
+FROM "Messages" AS m
+2024-11-04 00:06:44.896 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:44.910 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM become_volunteer AS b
+2024-11-04 00:06:44.915 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:44.918 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:44.920 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-04 00:06:45.086 +02:00 [INF] Retrieved all messages.
+2024-11-04 00:06:45.133 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/count-volunteers - 404 0 null 355.638ms
+2024-11-04 00:06:45.220 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-04 00:06:45.221 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-04 00:06:45.224 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-04 00:06:45.226 +02:00 [INF] Route matched with {action = "Count", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:06:45.228 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Message, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:06:45.240 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5235/count-volunteers, Response status code: 404
+2024-11-04 00:06:45.242 +02:00 [INF] Executed action ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv) in 339.3357ms
+2024-11-04 00:06:45.246 +02:00 [INF] Route matched with {action = "Count", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-04 00:06:45.248 +02:00 [INF] Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-04 00:06:45.268 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+2024-11-04 00:06:45.289 +02:00 [INF] Retrieved users count: 2.
+2024-11-04 00:06:45.274 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-04 00:06:45.288 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Messages" AS m
+2024-11-04 00:06:45.268 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv) in 390.1846ms
+2024-11-04 00:06:45.292 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-04 00:06:45.292 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Projects" AS p
+2024-11-04 00:06:45.296 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countRequests - 200 null application/json; charset=utf-8 769.0639ms
+2024-11-04 00:06:45.303 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-04 00:06:45.334 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.Count (ServerAsmv) in 49.5701ms
+2024-11-04 00:06:45.315 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-04 00:06:45.363 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv) in 85.264ms
+2024-11-04 00:06:45.358 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-04 00:06:45.306 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-04 00:06:46.985 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - 200 null application/json; charset=utf-8 2458.7844ms
+2024-11-04 00:06:46.979 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-04 00:06:46.982 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countMessages - 200 null application/json; charset=utf-8 2169.7101ms
+2024-11-04 00:06:46.189 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.Count (ServerAsmv) in 935.7626ms
+2024-11-04 00:06:47.328 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-04 00:06:47.261 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - 200 null application/json; charset=utf-8 2461.7189ms
+2024-11-04 00:06:47.341 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/users-count - 200 null application/json; charset=utf-8 2652.5332ms
+2024-11-04 00:06:49.229 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:06:49.236 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:49.238 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 9.0987ms
+2024-11-04 00:06:49.275 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:06:49.282 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:06:49.284 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:06:49.292 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:06:49.311 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:06:49.316 +02:00 [INF] Retrieved all users.
+2024-11-04 00:06:49.319 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:06:49.351 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 54.8985ms
+2024-11-04 00:06:49.354 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:06:49.363 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 87.6658ms
+2024-11-04 00:07:12.753 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:07:12.757 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:07:12.759 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 6.109ms
+2024-11-04 00:07:12.772 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:07:12.776 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:07:12.778 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:07:12.779 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:07:12.789 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:07:12.793 +02:00 [INF] Retrieved all users.
+2024-11-04 00:07:12.794 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:07:12.797 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 13.6174ms
+2024-11-04 00:07:12.800 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:07:12.882 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 110.3257ms
+2024-11-04 00:07:35.690 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:07:35.928 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:07:35.932 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 241.7724ms
+2024-11-04 00:07:36.208 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:07:36.572 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:07:36.811 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:07:37.254 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:07:38.053 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:07:38.058 +02:00 [INF] Retrieved all users.
+2024-11-04 00:07:38.060 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:07:38.075 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 33.0987ms
+2024-11-04 00:07:38.078 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:07:38.081 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 499 null application/json; charset=utf-8 1872.619ms
+2024-11-04 00:07:39.866 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:07:40.277 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:07:40.362 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:07:40.414 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:07:40.473 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:07:40.478 +02:00 [INF] Retrieved all users.
+2024-11-04 00:07:40.480 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:07:40.483 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 14.8232ms
+2024-11-04 00:07:40.485 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:07:40.487 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 621.4029ms
+2024-11-04 00:09:46.339 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - null null
+2024-11-04 00:09:46.339 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countMessages - null null
+2024-11-04 00:09:46.337 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - null null
+2024-11-04 00:09:46.340 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countRequests - null null
+2024-11-04 00:09:46.417 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - null null
+2024-11-04 00:09:46.465 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - null null
+2024-11-04 00:09:49.946 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:49.946 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:49.946 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:49.946 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:49.946 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:49.952 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:49.959 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - 204 null null 3619.1158ms
+2024-11-04 00:09:49.959 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countMessages - 204 null null 3629.9634ms
+2024-11-04 00:09:49.959 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - 204 null null 3540.7536ms
+2024-11-04 00:09:49.960 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - 204 null null 3621.512ms
+2024-11-04 00:09:49.972 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countRequests - 204 null null 3631.8697ms
+2024-11-04 00:09:49.975 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - 204 null null 3516.5574ms
+2024-11-04 00:09:49.984 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - null null
+2024-11-04 00:09:49.988 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - null null
+2024-11-04 00:09:49.993 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countMessages - null null
+2024-11-04 00:09:50.001 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:09:50.007 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/users-count - null null
+2024-11-04 00:09:50.013 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countRequests - null null
+2024-11-04 00:09:50.034 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:50.042 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:50.042 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:50.042 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:50.043 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:50.050 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:50.052 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 50.9415ms
+2024-11-04 00:09:50.057 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-04 00:09:50.059 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-04 00:09:50.061 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-04 00:09:50.063 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-04 00:09:50.065 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-04 00:09:50.077 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/count-volunteers - null null
+2024-11-04 00:09:50.088 +02:00 [INF] Route matched with {action = "GetAll", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Message]] GetAll() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-04 00:09:50.089 +02:00 [INF] Route matched with {action = "Count", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:09:50.091 +02:00 [INF] Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-04 00:09:50.102 +02:00 [INF] Route matched with {action = "Count", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-04 00:09:50.102 +02:00 [INF] Route matched with {action = "Count", controller = "BecomeVolunteers"}. Executing controller action with signature Int32 Count() on controller ServerAsmv.Controllers.BecomeVolunteersController (ServerAsmv).
+2024-11-04 00:09:50.115 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:50.184 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Messages" AS m
+2024-11-04 00:09:50.184 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Projects" AS p
+2024-11-04 00:09:50.184 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+2024-11-04 00:09:50.185 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."Fullname", m."NewRequest", m."Text"
+FROM "Messages" AS m
+2024-11-04 00:09:50.194 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/count-volunteers - 404 0 null 117.0582ms
+2024-11-04 00:09:50.197 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM become_volunteer AS b
+2024-11-04 00:09:50.204 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-04 00:09:50.204 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-04 00:09:50.244 +02:00 [INF] Retrieved users count: 2.
+2024-11-04 00:09:50.321 +02:00 [INF] Retrieved all messages.
+2024-11-04 00:09:50.905 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Message, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:09:50.888 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-04 00:09:50.891 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv) in 732.1239ms
+2024-11-04 00:09:50.903 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.Count (ServerAsmv) in 766.7166ms
+2024-11-04 00:09:50.904 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-04 00:09:50.532 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5235/count-volunteers, Response status code: 404
+2024-11-04 00:09:50.910 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv) in 798.4618ms
+2024-11-04 00:09:50.911 +02:00 [INF] Executed action ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv) in 720.7824ms
+2024-11-04 00:09:50.917 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-04 00:09:50.923 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-04 00:09:50.926 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.Count (ServerAsmv) in 801.0817ms
+2024-11-04 00:09:50.956 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-04 00:09:50.958 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/users-count - 200 null application/json; charset=utf-8 950.4458ms
+2024-11-04 00:09:50.934 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:09:50.937 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-04 00:09:50.942 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-04 00:09:50.949 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - 200 null application/json; charset=utf-8 965.5388ms
+2024-11-04 00:09:50.953 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countMessages - 200 null application/json; charset=utf-8 959.6327ms
+2024-11-04 00:09:50.987 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - 200 null application/json; charset=utf-8 998.3223ms
+2024-11-04 00:09:50.987 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:09:51.018 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countRequests - 200 null application/json; charset=utf-8 1005.0997ms
+2024-11-04 00:09:51.058 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:09:51.074 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:09:51.081 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:09:51.092 +02:00 [INF] Retrieved all users.
+2024-11-04 00:09:51.095 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:09:51.099 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 22.1138ms
+2024-11-04 00:09:51.105 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:09:51.107 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 172.8486ms
+2024-11-04 00:14:11.976 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:14:12.012 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:14:12.018 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 44.1765ms
+2024-11-04 00:14:12.030 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:14:12.079 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:14:12.082 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:14:12.097 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:14:12.445 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:14:12.625 +02:00 [INF] Retrieved all users.
+2024-11-04 00:14:12.661 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:14:12.740 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 638.3772ms
+2024-11-04 00:14:12.748 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:14:12.750 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 720.4015ms
+2024-11-04 00:18:11.750 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:18:11.818 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:18:11.820 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 80.4065ms
+2024-11-04 00:18:11.901 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:18:12.197 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:18:12.199 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:18:12.330 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:18:12.583 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:18:12.597 +02:00 [INF] Retrieved all users.
+2024-11-04 00:18:12.642 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:18:12.766 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 227.5586ms
+2024-11-04 00:18:12.769 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:18:12.789 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 889.4749ms
+2024-11-04 00:20:22.263 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:20:22.273 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:20:22.276 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 14.096ms
+2024-11-04 00:20:22.285 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:20:22.298 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:20:22.305 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:20:22.320 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:20:22.558 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:20:22.567 +02:00 [INF] Retrieved all users.
+2024-11-04 00:20:22.570 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:20:22.574 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 232.4954ms
+2024-11-04 00:20:22.576 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:20:22.578 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 293.0301ms
+2024-11-04 00:24:10.182 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:24:10.215 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:24:10.216 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 34.1098ms
+2024-11-04 00:24:10.225 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:24:10.235 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:24:10.239 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:24:10.242 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:24:10.257 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:24:10.267 +02:00 [INF] Retrieved all users.
+2024-11-04 00:24:10.270 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:24:10.275 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 26.2519ms
+2024-11-04 00:24:10.278 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:24:10.280 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 55.5838ms
+2024-11-04 00:25:41.635 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:25:41.644 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:25:41.649 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 14.4302ms
+2024-11-04 00:25:41.660 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:25:41.670 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:25:41.674 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:25:41.678 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:25:41.840 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:25:41.844 +02:00 [INF] Retrieved all users.
+2024-11-04 00:25:41.846 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:25:41.850 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 162.9405ms
+2024-11-04 00:25:41.857 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:25:41.860 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 200.2714ms
+2024-11-04 00:29:13.728 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:29:13.743 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:29:13.746 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 18.2545ms
+2024-11-04 00:29:13.753 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:29:13.765 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:29:13.767 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:29:13.772 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:29:13.837 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:29:13.859 +02:00 [INF] Retrieved all users.
+2024-11-04 00:29:13.863 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:29:13.867 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 59.7523ms
+2024-11-04 00:29:13.874 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:29:13.878 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 125.1467ms
+2024-11-04 00:33:38.084 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:33:38.100 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:33:38.103 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 19.8229ms
+2024-11-04 00:33:38.123 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:33:38.139 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:33:38.142 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:33:38.149 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:33:38.374 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:33:38.407 +02:00 [INF] Retrieved all users.
+2024-11-04 00:33:38.409 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:33:38.445 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 286.866ms
+2024-11-04 00:33:38.513 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:33:38.524 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 400.9807ms
+2024-11-04 00:36:15.813 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:36:15.839 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:36:15.841 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 28.0232ms
+2024-11-04 00:36:15.858 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:36:15.865 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:36:15.869 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:36:15.872 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:36:15.889 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:36:15.896 +02:00 [INF] Retrieved all users.
+2024-11-04 00:36:15.898 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:36:15.901 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 24.3986ms
+2024-11-04 00:36:15.904 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:36:15.906 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 48.0592ms
+2024-11-04 00:36:42.245 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:36:42.603 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:36:42.606 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 361.1753ms
+2024-11-04 00:36:42.823 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:36:42.850 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:36:42.936 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:36:42.942 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:36:42.984 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:36:43.008 +02:00 [INF] Retrieved all users.
+2024-11-04 00:36:43.012 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:36:43.028 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 48.084ms
+2024-11-04 00:36:43.146 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:36:43.179 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 355.6688ms
+2024-11-04 00:36:43.848 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:36:43.860 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:36:43.889 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:36:43.900 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:36:43.914 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:36:43.920 +02:00 [INF] Retrieved all users.
+2024-11-04 00:36:43.922 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:36:43.926 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 15.3456ms
+2024-11-04 00:36:43.930 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:36:43.932 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 83.7634ms
+2024-11-04 00:37:16.031 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:37:16.770 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:37:16.772 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 741.2051ms
+2024-11-04 00:37:16.823 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:37:16.855 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:37:16.858 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:37:16.861 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:37:16.893 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:37:16.898 +02:00 [INF] Retrieved all users.
+2024-11-04 00:37:16.899 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:37:16.902 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 12.3153ms
+2024-11-04 00:37:16.905 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:37:16.907 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 84.3335ms
+2024-11-04 00:37:23.050 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:37:23.056 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:37:23.058 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 8.5844ms
+2024-11-04 00:37:23.068 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:37:23.077 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:37:23.080 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:37:23.084 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:37:23.102 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:37:23.109 +02:00 [INF] Retrieved all users.
+2024-11-04 00:37:23.112 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:37:23.126 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 30.1481ms
+2024-11-04 00:37:23.129 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:37:23.132 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 63.3459ms
+2024-11-04 00:40:41.037 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:40:41.075 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:40:41.093 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 56.1285ms
+2024-11-04 00:40:41.116 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-04 00:40:41.140 +02:00 [INF] CORS policy execution successful.
+2024-11-04 00:40:41.143 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:40:41.151 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-04 00:40:41.349 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-04 00:40:41.359 +02:00 [INF] Retrieved all users.
+2024-11-04 00:40:41.362 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-04 00:40:41.367 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 211.6727ms
+2024-11-04 00:40:41.370 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-04 00:40:41.372 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 255.7758ms
+2024-11-04 01:02:50.278 +02:00 [INF] Application is shutting down...
+2024-11-04 01:06:46.149 +02:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-11-04 01:06:46.336 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-11-04 01:06:46.381 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-11-04 01:06:46.423 +02:00 [INF] Applying migration '20241103230511_AddedActivitiesToDB'.
+2024-11-04 01:06:46.552 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Users" ADD "ActivityId" integer NULL;
+2024-11-04 01:06:46.618 +02:00 [INF] Executed DbCommand (61ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Activities" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "Date" timestamp with time zone NOT NULL,
+    "CoordinatorId" bigint NOT NULL,
+    "Description" text NOT NULL,
+    CONSTRAINT "PK_Activities" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Activities_Users_CoordinatorId" FOREIGN KEY ("CoordinatorId") REFERENCES "Users" ("Id") ON DELETE CASCADE
+);
+2024-11-04 01:06:46.646 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "ActivityId" = NULL, "CreatedAt" = TIMESTAMPTZ '2024-11-03 23:05:11.262619Z', "Password" = '$2a$11$zKY1rzaNsMhR74x2CV8wXe3FY0C7lxRpKynY4/j50ZaZni2lJ1.Yu'
+WHERE "Id" = 1;
+2024-11-04 01:06:46.651 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "ActivityId" = NULL, "CreatedAt" = TIMESTAMPTZ '2024-11-03 23:05:11.51308Z', "Password" = '$2a$11$59UzWdMovFxOq9Ij8WS9l.gyeRAgOYMWEA3td5erkFO.e7EFdPMQy'
+WHERE "Id" = 2;
+2024-11-04 01:06:46.662 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Users_ActivityId" ON "Users" ("ActivityId");
+2024-11-04 01:06:46.670 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Activities_CoordinatorId" ON "Activities" ("CoordinatorId");
+2024-11-04 01:06:46.680 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Users" ADD CONSTRAINT "FK_Users_Activities_ActivityId" FOREIGN KEY ("ActivityId") REFERENCES "Activities" ("Id");
+2024-11-04 01:06:46.686 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241103230511_AddedActivitiesToDB', '7.0.11');
+2024-11-04 01:10:01.105 +02:00 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-11-04 01:10:01.252 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-11-04 01:10:01.279 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-11-04 01:10:01.312 +02:00 [INF] Applying migration '20241103230835_DeletedDescriptionFromActivity'.
+2024-11-04 01:10:01.417 +02:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Activities" DROP COLUMN "Description";
+2024-11-04 01:10:01.426 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-03 23:08:35.175962Z', "Password" = '$2a$11$cnXnqEgV6bH3hhCsPIqqbOUQb5NeCRDeIqTVmtvRoBihf1x0S.Xri'
+WHERE "Id" = 1;
+2024-11-04 01:10:01.430 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-03 23:08:35.435681Z', "Password" = '$2a$11$QXFPUUkqdG08y8jImOqg4enRuHGrMBV0/mFycrsQuHPQDr/GpUEXy'
+WHERE "Id" = 2;
+2024-11-04 01:10:01.435 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241103230835_DeletedDescriptionFromActivity', '7.0.11');

@@ -4,14 +4,9 @@ namespace ServerAsmv.DTOs
 {
     public class ProjectDTO
     {
-        [Required]
-        public string Title { get; set; }
-
-        [Required]
-        public string Content { get; set; }
-
-        [Required]
-        public string Summary { get; set; }
+        public required string Title { get; set; }
+        public required string Content { get; set; }
+        public required string Summary { get; set; }
     
         public string? ImageUrl { get; set; }
     }
