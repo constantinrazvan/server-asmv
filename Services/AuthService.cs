@@ -3,7 +3,8 @@ using ServerAsmv.DTOs;
 using ServerAsmv.Interfaces;
 using ServerAsmv.Data;
 using ServerAsmv.Utils;
-using System.Linq; // Ensure you have the correct LINQ namespace
+using System.Linq;
+using Microsoft.EntityFrameworkCore; // Ensure you have the correct LINQ namespace
 
 namespace ServerAsmv.Services
 {
@@ -16,8 +17,10 @@ namespace ServerAsmv.Services
             this._dbContext = dbContext;
             this.jwtUtil = jwtUtil;
         }
-        
-       public string? login(LoginDTO user)
+
+#pragma warning disable CS8766 // Nullability of reference types in return type doesn't match implicitly implemented member (possibly because of nullability attributes).
+        public string? login(LoginDTO user)
+#pragma warning restore CS8766 // Nullability of reference types in return type doesn't match implicitly implemented member (possibly because of nullability attributes).
         {
             User? find = _dbContext.Users.FirstOrDefault(u => u.Email == user.Email);
 
@@ -68,6 +71,38 @@ namespace ServerAsmv.Services
             User? found = _dbContext.Users.Find(Id);
 
             return found;
+        }
+
+        public async Task<(bool Success, string Message)> ChangePassword(long Id, ChangePasswordDTO requestPass)
+        {
+            try
+            {
+                User? find = await _dbContext.Users.FindAsync(Id);
+                
+                if (find == null)
+                {
+                    return (false, "Utilizatorul nu a fost găsit.");
+                }
+
+                bool checkPasswords = BCrypt.Net.BCrypt.Verify(requestPass.CurrentPassword, find.Password);
+
+                if (!checkPasswords)
+                {
+                    return (false, "Parola curentă este incorectă.");
+                }
+
+                find.Password = BCrypt.Net.BCrypt.HashPassword(requestPass.NewPassword); // Hash the new password
+                
+                _dbContext.Users.Update(find);
+                await _dbContext.SaveChangesAsync();
+
+                return (true, "Parola a fost actualizată cu succes.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Eroare la actualizarea parolei: {ex.Message}");
+                return (false, $"A apărut o eroare la actualizarea parolei: {ex.Message}");
+            }
         }
     }
 }

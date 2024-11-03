@@ -15,12 +15,17 @@ namespace ServerAsmv.Services
     public class ProjectsService : IProjects
     {
         private readonly AppData _context;
-        private readonly PhotoService _photoService;
+        private readonly string _imageDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "projects");
 
-        public ProjectsService(AppData context, PhotoService photoService)
+        public ProjectsService(AppData context)
         {
             _context = context;
-            _photoService = photoService;
+
+            // Ensure the images directory exists
+            if (!Directory.Exists(_imageDirectory))
+            {
+                Directory.CreateDirectory(_imageDirectory);
+            }
         }
 
         public async Task<bool> AddProject(ProjectDTO project, IFormFile photo)
@@ -49,8 +54,16 @@ namespace ServerAsmv.Services
                         throw new ArgumentException("Invalid image type. Allowed types are: jpg, jpeg, png.");
                     }
 
-                    var uploadResult = await _photoService.AddPhotoAsync(photo);
-                    imagePath = uploadResult.Url.ToString();
+                    // Generate a unique file name for the image
+                    var fileName = Guid.NewGuid().ToString() + extension;
+                    var filePath = Path.Combine(_imageDirectory, fileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await photo.CopyToAsync(stream);
+                    }
+
+                    imagePath = $"/images/projects/{fileName}"; // Save the relative path for database storage
                 }
 
                 var newProject = new Project
@@ -94,13 +107,27 @@ namespace ServerAsmv.Services
 
             if (photo != null && photo.Length > 0)
             {
-                if (found.ProjectImage != null)
+                // Delete the existing image file, if present
+                if (found.ProjectImage != null && !string.IsNullOrEmpty(found.ProjectImage.Url))
                 {
-                    await _photoService.DeletePhotoAsync(found.ProjectImage.Url); // Delete the old image
+                    var existingFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", found.ProjectImage.Url.TrimStart('/'));
+                    if (File.Exists(existingFilePath))
+                    {
+                        File.Delete(existingFilePath);
+                    }
                 }
 
-                var uploadResult = await _photoService.AddPhotoAsync(photo);
-                found.ProjectImage = new ProjectImage { Url = uploadResult.Url.ToString(), ProjectId = found.Id }; // Update the image reference
+                // Save the new image
+                var extension = Path.GetExtension(photo.FileName).ToLower();
+                var fileName = Guid.NewGuid().ToString() + extension;
+                var filePath = Path.Combine(_imageDirectory, fileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await photo.CopyToAsync(stream);
+                }
+
+                found.ProjectImage = new ProjectImage { Url = $"/images/projects/{fileName}", ProjectId = found.Id };
             }
 
             await _context.SaveChangesAsync();
@@ -113,66 +140,37 @@ namespace ServerAsmv.Services
             var found = await _context.Projects.Include(p => p.ProjectImage).FirstOrDefaultAsync(p => p.Id == id);
             if (found == null) return false;
 
-            // Șterge imaginea de pe Cloudinary (sau alt serviciu de stocare)
+            // Delete the associated image from the file system
             if (found.ProjectImage != null && !string.IsNullOrEmpty(found.ProjectImage.Url))
             {
-                var publicId = ExtractPublicId(found.ProjectImage.Url);
-                await _photoService.DeletePhotoAsync(publicId);
+                var imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", found.ProjectImage.Url.TrimStart('/'));
+                if (File.Exists(imagePath))
+                {
+                    File.Delete(imagePath);
+                }
             }
 
-            // Șterge proiectul din baza de date
             _context.Remove(found);
             await _context.SaveChangesAsync();
 
             return true;
         }
 
-        private string ExtractPublicId(string imageUrl)
-        {
-            var uri = new Uri(imageUrl);
-            var segments = uri.Segments;
-
-            return segments[segments.Length - 1].Split('.')[0]; 
-        }
-
         public Project? GetProject(long id)
         {
             return _context.Projects
-                .Include(p => p.ProjectImage) // Include the related ProjectImage entity
-                .FirstOrDefault(p => p.Id == id); // Find the project by its Id
+                .Include(p => p.ProjectImage)
+                .FirstOrDefault(p => p.Id == id);
         }
 
         public List<Project> GetProjects()
         {
-            var projects = _context.Projects.Include(p => p.ProjectImage).ToList();
-            if (projects == null || !projects.Any())
-            {
-                Console.WriteLine("No projects found in the database.");
-            }
-            return projects;
+            return _context.Projects.Include(p => p.ProjectImage).ToList();
         }
 
         public int Count()
         {
             return _context.Projects.Count();
-        }
-
-        public async Task<byte[]> GetProjectImage(long id)
-        {
-            var project = await _context.Projects.Include(p => p.ProjectImage).FirstOrDefaultAsync(p => p.Id == id);
-            if (project == null || project.ProjectImage == null || string.IsNullOrEmpty(project.ProjectImage.Url))
-            {
-                throw new FileNotFoundException("Project or image not found.");
-            }
-
-            var imagePath = Path.Combine("UploadedImages", Path.GetFileName(project.ProjectImage.Url)); // Adjust path if needed
-
-            if (!System.IO.File.Exists(imagePath))
-            {
-                throw new FileNotFoundException("Image file not found.");
-            }
-
-            return await System.IO.File.ReadAllBytesAsync(imagePath);
         }
     }
 }

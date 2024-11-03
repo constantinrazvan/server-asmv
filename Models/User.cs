@@ -11,6 +11,7 @@ namespace ServerAsmv.Models
         public string Password { get; set; }
         public string Role { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public List<ActivityUser> AssignedActivities { get; set; } = new List<ActivityUser>();
 
         // Constructor fără parametri
         public User() { }

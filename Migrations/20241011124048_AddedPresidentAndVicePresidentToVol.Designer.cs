@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using ServerAsmv.Data;
@@ -11,9 +12,11 @@ using ServerAsmv.Data;
 namespace ServerAsmv.Migrations
 {
     [DbContext(typeof(AppData))]
-    partial class AppDataModelSnapshot : ModelSnapshot
+    [Migration("20241011124048_AddedPresidentAndVicePresidentToVol")]
+    partial class AddedPresidentAndVicePresidentToVol
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,31 +24,6 @@ namespace ServerAsmv.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
-
-            modelBuilder.Entity("ServerAsmv.Models.Activity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<long>("CoordinatorId")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CoordinatorId");
-
-                    b.ToTable("Activities");
-                });
 
             modelBuilder.Entity("ServerAsmv.Models.BecomeVolunteer", b =>
                 {
@@ -172,9 +150,6 @@ namespace ServerAsmv.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
-                    b.Property<int?>("ActivityId")
-                        .HasColumnType("integer");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
@@ -200,30 +175,18 @@ namespace ServerAsmv.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ActivityId");
-
                     b.ToTable("Users");
 
                     b.HasData(
                         new
                         {
                             Id = 1L,
-                            CreatedAt = new DateTime(2024, 11, 3, 23, 8, 35, 175, DateTimeKind.Utc).AddTicks(9622),
+                            CreatedAt = new DateTime(2024, 10, 11, 12, 40, 48, 599, DateTimeKind.Utc).AddTicks(1865),
                             Email = "admin@asmv.com",
                             Firstname = "Admin",
                             Lastname = "Admin",
-                            Password = "$2a$11$cnXnqEgV6bH3hhCsPIqqbOUQb5NeCRDeIqTVmtvRoBihf1x0S.Xri",
+                            Password = "$2a$11$GmvFmCSDnLaNNEekOydQneCLctdhjpFeu0thXVM7xZz0YJVsNVgCa",
                             Role = "admin"
-                        },
-                        new
-                        {
-                            Id = 2L,
-                            CreatedAt = new DateTime(2024, 11, 3, 23, 8, 35, 435, DateTimeKind.Utc).AddTicks(6815),
-                            Email = "razvanpana20@gmail.com",
-                            Firstname = "Razvan",
-                            Lastname = "Constantin",
-                            Password = "$2a$11$QXFPUUkqdG08y8jImOqg4enRuHGrMBV0/mFycrsQuHPQDr/GpUEXy",
-                            Role = "Membru Voluntar"
                         });
                 });
 
@@ -235,7 +198,7 @@ namespace ServerAsmv.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("Id"));
 
-                    b.Property<string>("Department")
+                    b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -255,19 +218,27 @@ namespace ServerAsmv.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("PhoneNumber")
+                    b.Property<string>("Ocupation")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<bool>("President")
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<bool?>("President")
                         .HasColumnType("boolean");
 
-                    b.Property<bool>("VicePresident")
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<bool?>("VicePresident")
                         .HasColumnType("boolean");
 
                     b.HasKey("Id");
 
-                    b.ToTable("volunteers");
+                    b.ToTable("Volunteers");
                 });
 
             modelBuilder.Entity("ServerAsmv.Models.VolunteerImage", b =>
@@ -290,18 +261,7 @@ namespace ServerAsmv.Migrations
                     b.HasIndex("VolunteerId")
                         .IsUnique();
 
-                    b.ToTable("VolunteerImages");
-                });
-
-            modelBuilder.Entity("ServerAsmv.Models.Activity", b =>
-                {
-                    b.HasOne("ServerAsmv.Models.User", "Coordinator")
-                        .WithMany()
-                        .HasForeignKey("CoordinatorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Coordinator");
+                    b.ToTable("VolunteerImage");
                 });
 
             modelBuilder.Entity("ServerAsmv.Models.ProjectImage", b =>
@@ -315,13 +275,6 @@ namespace ServerAsmv.Migrations
                     b.Navigation("Project");
                 });
 
-            modelBuilder.Entity("ServerAsmv.Models.User", b =>
-                {
-                    b.HasOne("ServerAsmv.Models.Activity", null)
-                        .WithMany("AssignedUsers")
-                        .HasForeignKey("ActivityId");
-                });
-
             modelBuilder.Entity("ServerAsmv.Models.VolunteerImage", b =>
                 {
                     b.HasOne("ServerAsmv.Models.Volunteer", "Volunteer")
@@ -333,11 +286,6 @@ namespace ServerAsmv.Migrations
                     b.Navigation("Volunteer");
                 });
 
-            modelBuilder.Entity("ServerAsmv.Models.Activity", b =>
-                {
-                    b.Navigation("AssignedUsers");
-                });
-
             modelBuilder.Entity("ServerAsmv.Models.Project", b =>
                 {
                     b.Navigation("ProjectImage")
@@ -346,7 +294,8 @@ namespace ServerAsmv.Migrations
 
             modelBuilder.Entity("ServerAsmv.Models.Volunteer", b =>
                 {
-                    b.Navigation("VolunteerImage");
+                    b.Navigation("VolunteerImage")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

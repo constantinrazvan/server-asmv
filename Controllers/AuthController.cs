@@ -117,5 +117,27 @@ namespace ServerAsmv.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
+        [HttpPost("change-password/{id}")]
+        public async Task<IActionResult> ChangePassword(long id, [FromBody] ChangePasswordDTO requestPass)
+        {
+            try
+            {
+                var (success, message) = await _service.ChangePassword(id, requestPass);
+                
+                if (success)
+                {
+                    return Ok(new { Message = message });
+                }
+                else
+                {
+                    return BadRequest(new { Message = message });
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = $"A apărut o eroare: {ex.Message}" });
+            }
+        }
     }
 }

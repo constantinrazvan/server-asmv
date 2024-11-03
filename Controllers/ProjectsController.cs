@@ -43,10 +43,11 @@ namespace ServerAsmv.Controllers
                     })
                     .ToList();
 
-                if (projects == null || !projects.Any())
+                // În loc de NotFound, returnează o listă goală cu status 200 OK
+                if (!projects.Any())
                 {
-                    _logger.LogWarning("No projects found.");
-                    return NotFound("No projects found.");
+                    _logger.LogInformation("No projects found.");
+                    return Ok(new List<ProjectResponseDTO>()); // Returnează o listă goală
                 }
 
                 _logger.LogInformation("Retrieved all projects successfully.");
@@ -58,6 +59,7 @@ namespace ServerAsmv.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+
 
         [HttpGet("project/{id}")]
         public ActionResult<ProjectResponseDTO> GetProject(long id)
@@ -210,11 +212,12 @@ namespace ServerAsmv.Controllers
                 if (!isDeleted)
                 {
                     _logger.LogWarning("Project with ID {Id} not found for deletion.", id);
-                    return NotFound($"Project with id {id} not found.");
+                    return NotFound(new { Message = $"Project with id {id} not found." });
                 }
 
                 _logger.LogInformation("Project with ID {Id} deleted successfully.", id);
-                return Ok("Project deleted successfully.");
+                // Returnează un obiect JSON în loc de text
+                return Ok(new { Message = "Project deleted successfully." });
             }
             catch (Exception ex)
             {

@@ -1,143 +1,79 @@
 using Microsoft.AspNetCore.Mvc;
 using ServerAsmv.DTOs;
-using ServerAsmv.Services;
 using ServerAsmv.Models;
-using Microsoft.AspNetCore.Authorization;
+using ServerAsmv.Services;
 
 namespace ServerAsmv.Controllers
 {
-    // [Authorize]
-    [Route("api/[controller]")]
     [ApiController]
-    public class VolunteersController : ControllerBase
+    [Route("api/[controller]")]
+    public class VolunteersController : ControllerBase 
     {
-        private readonly VolunteersService _service;
+        private readonly VolunteerService _service;
 
-        public VolunteersController(VolunteersService service)
+        public VolunteersController(VolunteerService service)
         {
             _service = service;
         }
 
-        [HttpPost("/new-volunteer")]
-        public ActionResult AddVolunteer([FromBody] VolunteerDTO volunteer)
+        [HttpPost("new-volunteer")]
+        public async Task<ActionResult<string>> AddVolunteer([FromForm] VolunteerDTO volunteer, IFormFile photo)
         {
-            if (volunteer == null)
+            var result = await _service.AddVolunteer(volunteer, photo);
+
+            if (result == "Volunteer added succesfully!")
             {
-                return BadRequest("Volunteer cannot be null!");
+                return Ok(result);
             }
 
-            try
-            {
-                _service.AddVolunteer(volunteer);
-                return Ok(new { message = "Volunteer added successfully." });
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return BadRequest("Something went wrong!");
-            }
+            return BadRequest(result);
         }
 
-        [HttpGet("/volunteers")]
-        public ActionResult<List<Volunteer>> GetVolunteers()
+        // GET api/volunteers
+        [HttpGet]
+        public async Task<ActionResult<List<Volunteer>>> GetVolunteers()
         {
-            try
-            {
-                var volunteers = _service.GetVolunteers();
-                return Ok(volunteers);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
-            }
+            var volunteers = await _service.GetVolunteers();
+            return Ok(volunteers); 
         }
 
-        [HttpGet("/volunteer/{id}")]
-        public ActionResult<Volunteer> GetVolunteerById(long id)
+        // GET api/volunteers/{id}
+        [HttpGet("{id}")]
+        public ActionResult<Volunteer> GetVolunteer(long id)
         {
-            if (id <= 0)
+            Volunteer volunteer = _service.GetVolunteer(id);
+            if (volunteer != null)
             {
-                return BadRequest("Id must be greater than 0.");
+                return Ok(volunteer); 
             }
 
-            try
-            {
-                var volunteer = _service.GetVolunteerById(id);
-                return Ok(volunteer);
-            }
-            catch (KeyNotFoundException)
-            {
-                return NotFound("Volunteer not found.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
-            }
+            return NotFound($"Voluntarul cu id {id} nu a fost gasit!"); 
         }
 
-        [HttpPut("/update-volunteer/{id}")]
-        public ActionResult UpdateVolunteer(long id, [FromBody] VolunteerDTO volunteerDto)
+        // DELETE api/volunteers/{id}
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> RemoveVolunteer(long id)
         {
-            if (id <= 0 || volunteerDto == null)
+            var (success, message) = await _service.RemoveVolunteer(id);
+            if (success)
             {
-                return BadRequest("Invalid input.");
+                return NoContent();  // Return 204 No Content for successful deletion
             }
 
-            try
-            {
-                var volunteer = new Volunteer
-                {
-                    Firstname = volunteerDto.Firstname,
-                    Lastname = volunteerDto.Lastname,
-                    Email = volunteerDto.Email,
-                    City = volunteerDto.City,
-                    Status = volunteerDto.Status,
-                    JoinedDate = volunteerDto.JoinedDate
-                };
-
-                _service.UpdateVolunteer(id, volunteer);
-                return Ok("Volunteer updated successfully.");
-            }
-            catch (KeyNotFoundException)
-            {
-                return NotFound("Volunteer not found.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
-            }
+            return NotFound(message);
         }
 
-        [HttpDelete("/delete-volunteer/{id}")]
-        public ActionResult DeleteVolunteer(long id)
+        // PUT api/volunteers/{id}
+        [HttpPut("{id}")]
+        public async Task<ActionResult<bool>> UpdateVolunteer(long id, [FromForm] VolunteerDTO volunteer, IFormFile photo)
         {
-            if (id <= 0)
+            var success = await _service.UpdateVolunteer(id, volunteer, photo);
+            if (success)
             {
-                return BadRequest("Id must be greater than 0.");
+                return Ok(true); 
             }
 
-            try
-            {
-                _service.DeleteVolunteer(id);
-                return Ok(new { message = "Volunteer deleted successfully." });
-            }
-            catch (KeyNotFoundException)
-            {
-                return NotFound("Volunteer not found.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
-            }
-        }
-
-        [HttpGet("/count-volunteers")]
-        public int Count() { 
-            return _service.Count();
+            return NotFound(false); 
         }
     }
 }
