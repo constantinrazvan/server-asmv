@@ -237,5 +237,12 @@ namespace ServerAsmv.Services {
             await _context.SaveChangesAsync();
             return true;
         }
+
+        public async Task<List<Volunteer?>> SelectByDepartment(string department)
+        {
+            return await _context.Volunteers
+                                   .Include(x => x.Department)
+                                   .ToListAsync();
+        }
     }
 }

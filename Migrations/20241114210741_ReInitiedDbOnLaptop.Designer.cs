@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using ServerAsmv.Data;
@@ -11,13 +12,15 @@ using ServerAsmv.Data;
 namespace ServerAsmv.Migrations
 {
     [DbContext(typeof(AppData))]
-    partial class AppDataModelSnapshot : ModelSnapshot
+    [Migration("20241114210741_ReInitiedDbOnLaptop")]
+    partial class ReInitiedDbOnLaptop
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.10")
+                .HasAnnotation("ProductVersion", "8.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -218,21 +221,21 @@ namespace ServerAsmv.Migrations
                         new
                         {
                             Id = 1L,
-                            CreatedAt = new DateTime(2024, 11, 22, 0, 20, 0, 665, DateTimeKind.Utc).AddTicks(8063),
+                            CreatedAt = new DateTime(2024, 11, 14, 21, 7, 38, 865, DateTimeKind.Utc).AddTicks(3121),
                             Email = "admin@asmv.com",
                             Firstname = "Admin",
                             Lastname = "Admin",
-                            Password = "$2a$11$2Bd2tbP7261YFgtzzAVhU.nf.A.U5.XsXERuDbEGgBsm0/4rhmQaS",
+                            Password = "$2a$11$.3sPZUfkkmJFYzxmiuanGOauRt.Kr.YWZm6Fnspya6/2ag6d5h0ue",
                             Role = "admin"
                         },
                         new
                         {
                             Id = 2L,
-                            CreatedAt = new DateTime(2024, 11, 22, 0, 20, 0, 839, DateTimeKind.Utc).AddTicks(7918),
+                            CreatedAt = new DateTime(2024, 11, 14, 21, 7, 39, 55, DateTimeKind.Utc).AddTicks(8193),
                             Email = "razvanpana20@gmail.com",
                             Firstname = "Razvan",
                             Lastname = "Constantin",
-                            Password = "$2a$11$En8LUV06Kovy0fIe1hoTwO2PUIj7KqNBxA9q0dzT3lPSavFX8llXW",
+                            Password = "$2a$11$sKOqiVVhMDBhsE1oDBCeTOmTLRjzLbIV2KhWhiTUbWz5jMhqpl7sS",
                             Role = "Membru Voluntar"
                         });
                 });
@@ -270,9 +273,6 @@ namespace ServerAsmv.Migrations
                         .HasColumnType("text");
 
                     b.Property<bool>("President")
-                        .HasColumnType("boolean");
-
-                    b.Property<bool>("Secretary")
                         .HasColumnType("boolean");
 
                     b.Property<bool>("VicePresident")

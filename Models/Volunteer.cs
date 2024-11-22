@@ -13,12 +13,12 @@ namespace ServerAsmv.Models {
         public string JoinedDate {get; set;} 
         public bool President {get; set;}
         public bool VicePresident {get; set;}
+        public bool Secretary { get; set; }
         public string Department {get; set;}
         public VolunteerImage? VolunteerImage {get; set;}
         public string PhoneNumber {get; set;}
     
         public Volunteer() {}
-
 
         public Volunteer(string firstname, string lastname, string email, string joinedDate, string department, bool president, bool vicepresident, string phoneNumber)
         {

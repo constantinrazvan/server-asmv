@@ -1,4 +1,4 @@
-using System.Text;
+﻿using System.Text;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
@@ -76,6 +76,16 @@ builder.Services.AddDbContext<AppData>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200") // Portul unde rulează Angular
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+    });
+});
+
 builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<JwtUtil>(provider => new JwtUtil(secretKey!, issuer!, audience!));
 builder.Services.AddScoped<BecomeVolunteerService>();
@@ -104,7 +114,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder =>
         builder.AllowAnyOrigin()
-               .AllowAnyMethod()
+               .AllowAnyMethod() // Permite toate metodele, inclusiv OPTIONS
                .AllowAnyHeader());
 });
 

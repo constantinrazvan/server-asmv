@@ -1,0 +1,40 @@
+2024-11-15 00:00:27.611 +02:00 [INF] User profile is available. Using 'C:\Users\Razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-15 00:00:28.144 +02:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-11-15 00:00:28.274 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-15 00:00:28.279 +02:00 [INF] Hosting environment: Development
+2024-11-15 00:00:28.282 +02:00 [INF] Content root path: C:\Users\Razvan\Desktop\server-asmv
+2024-11-15 00:00:28.684 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Auth/login - null null
+2024-11-15 00:00:28.950 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-11-15 00:00:29.167 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-11-15 00:00:29.710 +02:00 [INF] CORS policy execution successful.
+2024-11-15 00:00:29.735 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Auth/login - 204 null null 1061.6257ms
+2024-11-15 00:00:29.760 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/Auth/login - application/json 49
+2024-11-15 00:00:29.786 +02:00 [INF] CORS policy execution successful.
+2024-11-15 00:00:29.791 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.AuthController.Login (ServerAsmv)'
+2024-11-15 00:00:29.832 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ServerAsmv.LoginDTO) on controller ServerAsmv.Controllers.AuthController (ServerAsmv).
+2024-11-15 00:00:30.047 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 880.5337ms
+2024-11-15 00:11:11.475 +02:00 [INF] User profile is available. Using 'C:\Users\Razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-15 00:11:13.128 +02:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-11-15 00:11:13.458 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Auth/login - null null
+2024-11-15 00:11:13.507 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-15 00:11:13.513 +02:00 [INF] Hosting environment: Development
+2024-11-15 00:11:13.517 +02:00 [INF] Content root path: C:\Users\Razvan\Desktop\server-asmv
+2024-11-15 00:11:13.718 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-11-15 00:11:14.204 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-11-15 00:11:17.227 +02:00 [INF] CORS policy execution successful.
+2024-11-15 00:11:17.392 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Auth/login - 204 null null 3964.7221ms
+2024-11-15 00:11:17.407 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/Auth/login - application/json 49
+2024-11-15 00:11:17.432 +02:00 [INF] CORS policy execution successful.
+2024-11-15 00:11:17.444 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.AuthController.Login (ServerAsmv)'
+2024-11-15 00:11:17.549 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ServerAsmv.LoginDTO) on controller ServerAsmv.Controllers.AuthController (ServerAsmv).
+2024-11-15 00:11:17.655 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 3450.6143ms
+2024-11-15 00:11:17.713 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.css - null null
+2024-11-15 00:11:17.760 +02:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-11-15 00:11:17.769 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.css - 200 202 text/css 55.5403ms
+2024-11-15 00:11:17.788 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.js - null null
+2024-11-15 00:11:17.802 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.js - 200 null application/javascript;charset=utf-8 14.0372ms
+2024-11-15 00:11:17.816 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-15 00:11:17.833 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 17.1398ms
+2024-11-15 00:11:17.847 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-11-15 00:11:18.148 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 301.4065ms
+2024-11-15 00:11:18.526 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null

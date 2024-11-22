@@ -75,5 +75,18 @@ namespace ServerAsmv.Controllers
 
             return NotFound(false); 
         }
+
+        [HttpGet("{department}")]
+        public async Task<IActionResult> GetVolunteersByDepartment(string department)
+        {
+            List<Volunteer> volunteers = await _service.SelectByDepartment(department); 
+            
+            if(volunteers.Any())
+            {
+                return Ok(volunteers);
+            }
+
+            return NotFound();
+        }
     }
 }

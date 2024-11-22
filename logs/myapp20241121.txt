@@ -1,0 +1,151 @@
+2024-11-21 23:54:28.218 +02:00 [INF] User profile is available. Using 'C:\Users\Razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-21 23:54:28.758 +02:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-11-21 23:54:28.873 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-21 23:54:28.876 +02:00 [INF] Hosting environment: Development
+2024-11-21 23:54:28.879 +02:00 [INF] Content root path: C:\Users\Razvan\Desktop\server-asmv
+2024-11-21 23:54:31.686 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger - null null
+2024-11-21 23:54:32.015 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger - 301 0 null 335.5947ms
+2024-11-21 23:54:32.026 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-11-21 23:54:32.114 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 88.2541ms
+2024-11-21 23:54:32.197 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui.css - null null
+2024-11-21 23:54:32.354 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-standalone-preset.js - null null
+2024-11-21 23:54:32.369 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-bundle.js - null null
+2024-11-21 23:54:32.373 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-11-21 23:54:32.386 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui.css - 200 152035 text/css 188.9822ms
+2024-11-21 23:54:32.422 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.css - null null
+2024-11-21 23:54:32.442 +02:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-11-21 23:54:32.442 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-11-21 23:54:32.447 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.css - 200 202 text/css 24.8965ms
+2024-11-21 23:54:32.450 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-standalone-preset.js - 200 230007 text/javascript 95.8637ms
+2024-11-21 23:54:32.460 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-21 23:54:32.471 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.js - null null
+2024-11-21 23:54:32.481 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 20.4043ms
+2024-11-21 23:54:32.485 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-11-21 23:54:32.487 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.js - 200 null application/javascript;charset=utf-8 16.7097ms
+2024-11-21 23:54:32.495 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-11-21 23:54:32.501 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-bundle.js - 200 1426001 text/javascript 136.9741ms
+2024-11-21 23:54:32.757 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 262.59ms
+2024-11-21 23:54:32.915 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-21 23:54:32.917 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-bundle.js - null null
+2024-11-21 23:54:32.915 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-standalone-preset.js - null null
+2024-11-21 23:54:32.928 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 13.1126ms
+2024-11-21 23:54:32.977 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-11-21 23:54:32.918 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.js - null null
+2024-11-21 23:54:32.985 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-11-21 23:54:33.014 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-standalone-preset.js - 200 230007 text/javascript 98.326ms
+2024-11-21 23:54:33.028 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.js - 200 null application/javascript;charset=utf-8 111.5551ms
+2024-11-21 23:54:33.032 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-bundle.js - 200 1426001 text/javascript 115.4264ms
+2024-11-21 23:54:33.626 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-11-21 23:54:33.626 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/favicon-32x32.png - null null
+2024-11-21 23:54:33.667 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-11-21 23:54:33.673 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/favicon-32x32.png - 200 628 image/png 47.712ms
+2024-11-21 23:54:33.821 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 195.5511ms
+2024-11-21 23:54:36.080 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-11-21 23:54:36.099 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.5642ms
+2024-11-21 23:59:05.247 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Auth/login - null null
+2024-11-21 23:59:05.450 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-11-21 23:59:05.947 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:05.957 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Auth/login - 204 null null 724.4754ms
+2024-11-21 23:59:05.973 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/Auth/login - application/json 56
+2024-11-21 23:59:05.989 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:06.002 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.AuthController.Login (ServerAsmv)'
+2024-11-21 23:59:06.086 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ServerAsmv.LoginDTO) on controller ServerAsmv.Controllers.AuthController (ServerAsmv).
+2024-11-21 23:59:10.979 +02:00 [INF] Executed DbCommand (135ms) [Parameters=[@__user_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__user_Email_0
+LIMIT 1
+2024-11-21 23:59:11.408 +02:00 [INF] User razvanpana20@gmail.com logged in successfully.
+2024-11-21 23:59:11.417 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-21 23:59:11.430 +02:00 [INF] Executed action ServerAsmv.Controllers.AuthController.Login (ServerAsmv) in 5334.3355ms
+2024-11-21 23:59:11.434 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.AuthController.Login (ServerAsmv)'
+2024-11-21 23:59:11.445 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/Auth/login - 200 null text/plain; charset=utf-8 5472.239ms
+2024-11-21 23:59:11.830 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - null null
+2024-11-21 23:59:11.841 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:11.843 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - 204 null null 12.9411ms
+2024-11-21 23:59:11.849 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countRequests - null null
+2024-11-21 23:59:11.853 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:11.855 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countRequests - 204 null null 6.314ms
+2024-11-21 23:59:11.861 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countMessages - null null
+2024-11-21 23:59:11.864 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:11.865 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countMessages - 204 null null 4.8784ms
+2024-11-21 23:59:11.869 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - null null
+2024-11-21 23:59:11.875 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:11.876 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - 204 null null 6.9374ms
+2024-11-21 23:59:11.880 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - null null
+2024-11-21 23:59:11.929 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:11.936 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - 204 null null 55.7161ms
+2024-11-21 23:59:12.032 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - null null
+2024-11-21 23:59:12.040 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:12.043 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - 204 null null 11.1363ms
+2024-11-21 23:59:12.059 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - null null
+2024-11-21 23:59:12.156 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countRequests - null null
+2024-11-21 23:59:12.165 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/users-count - null null
+2024-11-21 23:59:12.157 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countMessages - null null
+2024-11-21 23:59:12.160 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - null null
+2024-11-21 23:59:12.175 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/count-volunteers - null null
+2024-11-21 23:59:12.225 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:12.225 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:12.225 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:12.225 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:12.225 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:12.225 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:12.229 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-21 23:59:12.229 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-21 23:59:12.231 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/count-volunteers - 404 0 null 57.7382ms
+2024-11-21 23:59:12.239 +02:00 [INF] Route matched with {action = "Count", controller = "BecomeVolunteers"}. Executing controller action with signature Int32 Count() on controller ServerAsmv.Controllers.BecomeVolunteersController (ServerAsmv).
+2024-11-21 23:59:12.233 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-21 23:59:12.234 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-21 23:59:12.232 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-21 23:59:12.239 +02:00 [INF] Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-21 23:59:12.244 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5235/count-volunteers, Response status code: 404
+2024-11-21 23:59:12.244 +02:00 [INF] Route matched with {action = "GetAll", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Message]] GetAll() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-21 23:59:12.245 +02:00 [INF] Route matched with {action = "Count", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-21 23:59:12.245 +02:00 [INF] Route matched with {action = "Count", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-21 23:59:12.292 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."Fullname", m."NewRequest", m."Text"
+FROM "Messages" AS m
+2024-11-21 23:59:12.299 +02:00 [INF] Retrieved all messages.
+2024-11-21 23:59:12.302 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Message, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-21 23:59:12.333 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv) in 78.7845ms
+2024-11-21 23:59:12.338 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-21 23:59:12.339 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - 200 null application/json; charset=utf-8 280.0083ms
+2024-11-21 23:59:12.343 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+2024-11-21 23:59:12.355 +02:00 [INF] Retrieved users count: 2.
+2024-11-21 23:59:12.359 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-21 23:59:12.369 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.Count (ServerAsmv) in 111.2547ms
+2024-11-21 23:59:12.372 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-21 23:59:12.377 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/users-count - 200 null application/json; charset=utf-8 211.9174ms
+2024-11-21 23:59:12.416 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Messages" AS m
+2024-11-21 23:59:12.419 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-21 23:59:12.421 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.Count (ServerAsmv) in 174.1804ms
+2024-11-21 23:59:12.422 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-21 23:59:12.423 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countMessages - 200 null application/json; charset=utf-8 266.4657ms
+2024-11-21 23:59:12.432 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM become_volunteer AS b
+2024-11-21 23:59:12.435 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-21 23:59:12.437 +02:00 [INF] Executed action ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv) in 195.6579ms
+2024-11-21 23:59:12.439 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-21 23:59:12.440 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countRequests - 200 null application/json; charset=utf-8 283.8441ms
+2024-11-21 23:59:12.449 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Projects" AS p
+2024-11-21 23:59:12.453 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-21 23:59:12.455 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv) in 193.2082ms
+2024-11-21 23:59:12.456 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-21 23:59:12.457 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - 200 null application/json; charset=utf-8 297.4456ms
+2024-11-21 23:59:16.881 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/BecomeVolunteers/all-volunteers - null null
+2024-11-21 23:59:16.889 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:16.894 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/BecomeVolunteers/all-volunteers - 204 null null 12.7207ms
+2024-11-21 23:59:16.898 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/BecomeVolunteers/all-volunteers - null null
+2024-11-21 23:59:16.905 +02:00 [INF] CORS policy execution successful.
+2024-11-21 23:59:16.910 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.GetAll (ServerAsmv)'
+2024-11-21 23:59:16.917 +02:00 [INF] Route matched with {action = "GetAll", controller = "BecomeVolunteers"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.BecomeVolunteer]] GetAll() on controller ServerAsmv.Controllers.BecomeVolunteersController (ServerAsmv).
+2024-11-21 23:59:16.932 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b."Email", b."Faculty", b."Fullname", b."Phone", b."Readed", b."Reason"
+FROM become_volunteer AS b

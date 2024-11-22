@@ -1,0 +1,730 @@
+2024-11-14 22:51:43.228 +02:00 [INF] User profile is available. Using 'C:\Users\Razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-14 22:51:43.491 +02:00 [WRN] The WebRootPath was not found: C:\Users\Razvan\Desktop\server-asmv\wwwroot. Static files may be unavailable.
+2024-11-14 22:51:43.650 +02:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-11-14 22:51:43.746 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-14 22:51:43.748 +02:00 [INF] Hosting environment: Development
+2024-11-14 22:51:43.751 +02:00 [INF] Content root path: C:\Users\Razvan\Desktop\server-asmv
+2024-11-14 22:51:45.336 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-11-14 22:51:45.795 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 465.3011ms
+2024-11-14 22:51:45.858 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 22:51:45.862 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-11-14 22:51:45.865 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 7.0839ms
+2024-11-14 22:51:45.941 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.2111ms
+2024-11-14 22:51:46.221 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-standalone-preset.js - null null
+2024-11-14 22:51:46.222 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-bundle.js - null null
+2024-11-14 22:51:46.222 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 22:51:46.235 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 12.9732ms
+2024-11-14 22:51:46.281 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-11-14 22:51:46.318 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-11-14 22:51:46.319 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-11-14 22:51:46.337 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.5928ms
+2024-11-14 22:51:46.337 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-11-14 22:51:46.342 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 120.905ms
+2024-11-14 22:51:46.354 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 131.9896ms
+2024-11-14 22:51:46.490 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 172.3795ms
+2024-11-14 22:57:46.550 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - null null
+2024-11-14 22:57:46.550 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - null null
+2024-11-14 22:57:46.550 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countMessages - null null
+2024-11-14 22:57:46.550 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - null null
+2024-11-14 22:57:46.550 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - null null
+2024-11-14 22:57:46.550 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countRequests - null null
+2024-11-14 22:57:46.879 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-11-14 22:57:48.833 +02:00 [INF] CORS policy execution successful.
+2024-11-14 22:57:48.834 +02:00 [INF] CORS policy execution successful.
+2024-11-14 22:57:48.834 +02:00 [INF] CORS policy execution successful.
+2024-11-14 22:57:48.834 +02:00 [INF] CORS policy execution successful.
+2024-11-14 22:57:48.835 +02:00 [INF] CORS policy execution successful.
+2024-11-14 22:57:48.835 +02:00 [INF] CORS policy execution successful.
+2024-11-14 22:57:48.849 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - 204 null null 2316.7212ms
+2024-11-14 22:57:48.849 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - 204 null null 2316.6822ms
+2024-11-14 22:57:48.849 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countRequests - 204 null null 2316.7115ms
+2024-11-14 22:57:48.848 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countMessages - 204 null null 2316.7176ms
+2024-11-14 22:57:48.849 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - 204 null null 2316.7261ms
+2024-11-14 22:57:48.865 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - 204 null null 2333.998ms
+2024-11-14 22:57:48.878 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - null null
+2024-11-14 22:57:48.890 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - null null
+2024-11-14 22:57:48.893 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countRequests - null null
+2024-11-14 22:57:48.899 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/users-count - null null
+2024-11-14 22:57:48.906 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countMessages - null null
+2024-11-14 22:57:48.909 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/count-volunteers - null null
+2024-11-14 22:57:49.111 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 8:57:49 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 22:57:49.111 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 8:57:49 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 22:57:49.111 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 8:57:49 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 22:57:49.111 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 8:57:49 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 22:57:49.111 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 8:57:49 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 22:57:49.111 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 8:57:49 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 22:57:49.147 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 8:57:49 PM'.
+2024-11-14 22:57:49.148 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 8:57:49 PM'.
+2024-11-14 22:57:49.150 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 8:57:49 PM'.
+2024-11-14 22:57:49.152 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 8:57:49 PM'.
+2024-11-14 22:57:49.154 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 8:57:49 PM'.
+2024-11-14 22:57:49.156 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 8:57:49 PM'.
+2024-11-14 22:57:49.158 +02:00 [INF] CORS policy execution successful.
+2024-11-14 22:57:49.158 +02:00 [INF] CORS policy execution successful.
+2024-11-14 22:57:49.159 +02:00 [INF] CORS policy execution successful.
+2024-11-14 22:57:49.160 +02:00 [INF] CORS policy execution successful.
+2024-11-14 22:57:49.161 +02:00 [INF] CORS policy execution successful.
+2024-11-14 22:57:49.162 +02:00 [INF] CORS policy execution successful.
+2024-11-14 22:57:49.167 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-14 22:57:49.167 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-14 22:57:49.167 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-14 22:57:49.167 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-14 22:57:49.167 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-14 22:57:49.171 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/count-volunteers - 404 0 null 262.4872ms
+2024-11-14 22:57:49.188 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5235/count-volunteers, Response status code: 404
+2024-11-14 22:57:49.230 +02:00 [INF] Route matched with {action = "Count", controller = "BecomeVolunteers"}. Executing controller action with signature Int32 Count() on controller ServerAsmv.Controllers.BecomeVolunteersController (ServerAsmv).
+2024-11-14 22:57:49.230 +02:00 [INF] Route matched with {action = "Count", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-14 22:57:49.230 +02:00 [INF] Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-14 22:57:49.230 +02:00 [INF] Route matched with {action = "Count", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-14 22:57:49.230 +02:00 [INF] Route matched with {action = "GetAll", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Message]] GetAll() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-14 23:00:56.022 +02:00 [INF] User profile is available. Using 'C:\Users\Razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-14 23:00:56.186 +02:00 [WRN] The WebRootPath was not found: C:\Users\Razvan\Desktop\server-asmv\wwwroot. Static files may be unavailable.
+2024-11-14 23:00:56.315 +02:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-11-14 23:00:56.369 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-14 23:00:56.373 +02:00 [INF] Hosting environment: Development
+2024-11-14 23:00:56.374 +02:00 [INF] Content root path: C:\Users\Razvan\Desktop\server-asmv
+2024-11-14 23:00:57.621 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-11-14 23:00:57.864 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 248.9011ms
+2024-11-14 23:00:57.911 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 23:00:57.933 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 21.9592ms
+2024-11-14 23:00:57.944 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-11-14 23:00:58.047 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 102.7143ms
+2024-11-14 23:00:58.229 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-11-14 23:00:58.465 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 235.784ms
+2024-11-14 23:07:57.464 +02:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-11-14 23:07:57.538 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-11-14 23:07:57.647 +02:00 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2024-11-14 23:07:57.680 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-11-14 23:07:57.684 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-11-14 23:07:57.692 +02:00 [INF] Applying migration '20240929120941_Init'.
+2024-11-14 23:07:57.721 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE become_volunteer (
+    "Id" bigint GENERATED BY DEFAULT AS IDENTITY,
+    "Fullname" character varying(100) NOT NULL,
+    "Email" character varying(100) NOT NULL,
+    "Phone" character varying(20) NOT NULL,
+    "Faculty" character varying(100) NOT NULL,
+    "Reason" character varying(500) NOT NULL,
+    "Readed" boolean NOT NULL,
+    CONSTRAINT "PK_become_volunteer" PRIMARY KEY ("Id")
+);
+2024-11-14 23:07:57.725 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Messages" (
+    "Id" bigint GENERATED BY DEFAULT AS IDENTITY,
+    "Fullname" text NOT NULL,
+    "Email" text NOT NULL,
+    "Text" text NOT NULL,
+    "NewRequest" boolean NOT NULL,
+    CONSTRAINT "PK_Messages" PRIMARY KEY ("Id")
+);
+2024-11-14 23:07:57.729 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Projects" (
+    "Id" bigint GENERATED BY DEFAULT AS IDENTITY,
+    "Title" text NOT NULL,
+    "Content" text NOT NULL,
+    "Summary" text NOT NULL,
+    CONSTRAINT "PK_Projects" PRIMARY KEY ("Id")
+);
+2024-11-14 23:07:57.734 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Users" (
+    "Id" bigint GENERATED BY DEFAULT AS IDENTITY,
+    "Firstname" text NOT NULL,
+    "Lastname" text NOT NULL,
+    "Email" text NOT NULL,
+    "Password" text NOT NULL,
+    "Role" text NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_Users" PRIMARY KEY ("Id")
+);
+2024-11-14 23:07:57.738 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Volunteers" (
+    "Id" bigint GENERATED BY DEFAULT AS IDENTITY,
+    "Firstname" text NOT NULL,
+    "Lastname" text NOT NULL,
+    "Email" text NOT NULL,
+    "Phone" text NOT NULL,
+    "City" text NOT NULL,
+    "Status" text NOT NULL,
+    "JoinedDate" text NOT NULL,
+    CONSTRAINT "PK_Volunteers" PRIMARY KEY ("Id")
+);
+2024-11-14 23:07:57.746 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ProjectImages" (
+    "Id" bigint GENERATED BY DEFAULT AS IDENTITY,
+    "Url" text NOT NULL,
+    "ProjectId" bigint NOT NULL,
+    CONSTRAINT "PK_ProjectImages" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ProjectImages_Projects_ProjectId" FOREIGN KEY ("ProjectId") REFERENCES "Projects" ("Id") ON DELETE CASCADE
+);
+2024-11-14 23:07:57.748 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_ProjectImages_ProjectId" ON "ProjectImages" ("ProjectId");
+2024-11-14 23:07:57.751 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240929120941_Init', '8.0.0');
+2024-11-14 23:07:57.755 +02:00 [INF] Applying migration '20240929121137_SeedAdminUser'.
+2024-11-14 23:07:57.770 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "CreatedAt", "Email", "Firstname", "Lastname", "Password", "Role")
+VALUES (1, TIMESTAMPTZ '2024-09-29T12:11:36.801719Z', 'admin@asmv.com', 'Admin', 'Admin', '$2a$11$cT2s9Rg13x3QLejtSTpZVeg0iRsTn4xw3zliin6RIDbkfSG92Gow.', 'admin');
+2024-11-14 23:07:57.930 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT setval(
+    pg_get_serial_sequence('"Users"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Users") + 1,
+        nextval(pg_get_serial_sequence('"Users"', 'Id'))),
+    false);
+2024-11-14 23:07:57.931 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240929121137_SeedAdminUser', '8.0.0');
+2024-11-14 23:07:57.932 +02:00 [INF] Applying migration '20240929234542_UpdateUserCreatedAt'.
+2024-11-14 23:07:57.954 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-09-29T23:45:42.799842Z', "Password" = '$2a$11$X9wQrEDAEwpNSYS00E5/ge1sfCYckUjh9sCjTeuO0gD.2dHN5lwea'
+WHERE "Id" = 1;
+2024-11-14 23:07:57.955 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20240929234542_UpdateUserCreatedAt', '8.0.0');
+2024-11-14 23:07:57.956 +02:00 [INF] Applying migration '20241005101623_UpdatedVolunteerToContainImage'.
+2024-11-14 23:07:57.966 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "VolunteerImage" (
+    "Id" bigint GENERATED BY DEFAULT AS IDENTITY,
+    "Url" text NOT NULL,
+    "VolunteerId" bigint NOT NULL,
+    CONSTRAINT "PK_VolunteerImage" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_VolunteerImage_Volunteers_VolunteerId" FOREIGN KEY ("VolunteerId") REFERENCES "Volunteers" ("Id") ON DELETE CASCADE
+);
+2024-11-14 23:07:57.967 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-10-05T10:16:23.160932Z', "Password" = '$2a$11$ctW/mno0.0kD3uAi5nM6xesYtuzjN.dkqtblbfQViZ7gv4LdTSKAu'
+WHERE "Id" = 1;
+2024-11-14 23:07:57.969 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_VolunteerImage_VolunteerId" ON "VolunteerImage" ("VolunteerId");
+2024-11-14 23:07:57.970 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241005101623_UpdatedVolunteerToContainImage', '8.0.0');
+2024-11-14 23:07:57.971 +02:00 [INF] Applying migration '20241010235214_AddedOcupationToVolutneer'.
+2024-11-14 23:07:57.985 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Volunteers" ADD "Ocupation" text NOT NULL DEFAULT '';
+2024-11-14 23:07:57.985 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-10-10T23:52:14.774433Z', "Password" = '$2a$11$K0m5biXQqqDiPLpk93CGpu0OVX/IKb5melxEw/mk5je9W90FCGavW'
+WHERE "Id" = 1;
+2024-11-14 23:07:57.986 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241010235214_AddedOcupationToVolutneer', '8.0.0');
+2024-11-14 23:07:57.986 +02:00 [INF] Applying migration '20241011124048_AddedPresidentAndVicePresidentToVol'.
+2024-11-14 23:07:57.993 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Volunteers" ADD "President" boolean;
+2024-11-14 23:07:57.994 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Volunteers" ADD "VicePresident" boolean;
+2024-11-14 23:07:57.994 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-10-11T12:40:48.599186Z', "Password" = '$2a$11$GmvFmCSDnLaNNEekOydQneCLctdhjpFeu0thXVM7xZz0YJVsNVgCa'
+WHERE "Id" = 1;
+2024-11-14 23:07:57.995 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241011124048_AddedPresidentAndVicePresidentToVol', '8.0.0');
+2024-11-14 23:07:57.996 +02:00 [INF] Applying migration '20241011185116_AddedVolunteerImagesTable'.
+2024-11-14 23:07:58.013 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "VolunteerImage" DROP CONSTRAINT "FK_VolunteerImage_Volunteers_VolunteerId";
+2024-11-14 23:08:00.929 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Volunteers" DROP CONSTRAINT "PK_Volunteers";
+2024-11-14 23:08:00.930 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "VolunteerImage" DROP CONSTRAINT "PK_VolunteerImage";
+2024-11-14 23:08:00.932 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Volunteers" DROP COLUMN "City";
+2024-11-14 23:08:00.933 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Volunteers" DROP COLUMN "Ocupation";
+2024-11-14 23:08:00.934 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Volunteers" DROP COLUMN "Phone";
+2024-11-14 23:08:00.935 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Volunteers" DROP COLUMN "Status";
+2024-11-14 23:08:00.937 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Volunteers" RENAME TO volunteers;
+2024-11-14 23:08:00.938 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "VolunteerImage" RENAME TO "VolunteerImages";
+2024-11-14 23:08:00.939 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX "IX_VolunteerImage_VolunteerId" RENAME TO "IX_VolunteerImages_VolunteerId";
+2024-11-14 23:08:00.950 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE volunteers SET "VicePresident" = FALSE WHERE "VicePresident" IS NULL;
+ALTER TABLE volunteers ALTER COLUMN "VicePresident" SET NOT NULL;
+ALTER TABLE volunteers ALTER COLUMN "VicePresident" SET DEFAULT FALSE;
+2024-11-14 23:08:00.953 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE volunteers SET "President" = FALSE WHERE "President" IS NULL;
+ALTER TABLE volunteers ALTER COLUMN "President" SET NOT NULL;
+ALTER TABLE volunteers ALTER COLUMN "President" SET DEFAULT FALSE;
+2024-11-14 23:08:00.956 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE volunteers ADD CONSTRAINT "PK_volunteers" PRIMARY KEY ("Id");
+2024-11-14 23:08:00.959 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "VolunteerImages" ADD CONSTRAINT "PK_VolunteerImages" PRIMARY KEY ("Id");
+2024-11-14 23:08:00.960 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-10-11T18:51:15.955359Z', "Password" = '$2a$11$FxfxxmoxPKdv6ZZFjl1kUORT8esGiE5KPbh9o7jaA.MkVScfxOFoy'
+WHERE "Id" = 1;
+2024-11-14 23:08:00.971 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "VolunteerImages" ADD CONSTRAINT "FK_VolunteerImages_volunteers_VolunteerId" FOREIGN KEY ("VolunteerId") REFERENCES volunteers ("Id") ON DELETE CASCADE;
+2024-11-14 23:08:00.972 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241011185116_AddedVolunteerImagesTable', '8.0.0');
+2024-11-14 23:08:00.978 +02:00 [INF] Applying migration '20241102195505_addedTypeToVolunteer'.
+2024-11-14 23:08:01.000 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE volunteers ADD "Type" text NOT NULL DEFAULT '';
+2024-11-14 23:08:01.001 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-02T19:55:04.919867Z', "Password" = '$2a$11$9dtdZzsWelFteNZIENfMf.gwvNJ8IAchczhF9hbuPyH2wm9l84pp.'
+WHERE "Id" = 1;
+2024-11-14 23:08:01.002 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241102195505_addedTypeToVolunteer', '8.0.0');
+2024-11-14 23:08:01.003 +02:00 [INF] Applying migration '20241103164430_changedTypeToDepartmentInVolunteer'.
+2024-11-14 23:08:02.793 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE volunteers RENAME COLUMN "Type" TO "Department";
+2024-11-14 23:08:02.794 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-03T16:44:30.316912Z', "Password" = '$2a$11$Xr9JjGkZWil1L9Dp/kIwsuEg.cA1oBjnf0CKN4.hC/wEPXlHOaCOa'
+WHERE "Id" = 1;
+2024-11-14 23:08:02.794 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241103164430_changedTypeToDepartmentInVolunteer', '8.0.0');
+2024-11-14 23:08:02.794 +02:00 [INF] Applying migration '20241103165300_phoneNumberVolunteer'.
+2024-11-14 23:08:02.800 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE volunteers ADD "PhoneNumber" text NOT NULL DEFAULT '';
+2024-11-14 23:08:02.801 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-03T16:53:00.410934Z', "Password" = '$2a$11$RQQ5EROj8t9o29aGbDdINuZWnnJ5sJejDA9Ub.xm9w7Afqw2dsfjm'
+WHERE "Id" = 1;
+2024-11-14 23:08:02.802 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241103165300_phoneNumberVolunteer', '8.0.0');
+2024-11-14 23:08:02.804 +02:00 [INF] Applying migration '20241103175104_AddedOneMoreUserSeed'.
+2024-11-14 23:08:02.810 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-03T17:51:04.274309Z', "Password" = '$2a$11$Xjsnokof6u0.5xLuvv.rIe08ve36OrMWKx0MadYFxBrMTGqhuXzPq'
+WHERE "Id" = 1;
+2024-11-14 23:08:02.810 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "CreatedAt", "Email", "Firstname", "Lastname", "Password", "Role")
+VALUES (2, TIMESTAMPTZ '2024-11-03T17:51:04.53165Z', 'razvanpana20@gmail.com', 'Razvan', 'Constantin', '$2a$11$Vdmg3PohVnuqLcOx.9XQs./1i6pv4bY9rFm44bPH5bfPYWaLlD0Nq', 'Membru Voluntar');
+2024-11-14 23:08:02.810 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT setval(
+    pg_get_serial_sequence('"Users"', 'Id'),
+    GREATEST(
+        (SELECT MAX("Id") FROM "Users") + 1,
+        nextval(pg_get_serial_sequence('"Users"', 'Id'))),
+    false);
+2024-11-14 23:08:02.811 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241103175104_AddedOneMoreUserSeed', '8.0.0');
+2024-11-14 23:08:02.811 +02:00 [INF] Applying migration '20241103230511_AddedActivitiesToDB'.
+2024-11-14 23:08:02.822 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Users" ADD "ActivityId" integer;
+2024-11-14 23:08:02.827 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Activities" (
+    "Id" integer GENERATED BY DEFAULT AS IDENTITY,
+    "Name" text NOT NULL,
+    "Date" timestamp with time zone NOT NULL,
+    "CoordinatorId" bigint NOT NULL,
+    "Description" text NOT NULL,
+    CONSTRAINT "PK_Activities" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Activities_Users_CoordinatorId" FOREIGN KEY ("CoordinatorId") REFERENCES "Users" ("Id") ON DELETE CASCADE
+);
+2024-11-14 23:08:02.833 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "ActivityId" = NULL, "CreatedAt" = TIMESTAMPTZ '2024-11-03T23:05:11.262619Z', "Password" = '$2a$11$zKY1rzaNsMhR74x2CV8wXe3FY0C7lxRpKynY4/j50ZaZni2lJ1.Yu'
+WHERE "Id" = 1;
+2024-11-14 23:08:02.835 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "ActivityId" = NULL, "CreatedAt" = TIMESTAMPTZ '2024-11-03T23:05:11.51308Z', "Password" = '$2a$11$59UzWdMovFxOq9Ij8WS9l.gyeRAgOYMWEA3td5erkFO.e7EFdPMQy'
+WHERE "Id" = 2;
+2024-11-14 23:08:02.838 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Users_ActivityId" ON "Users" ("ActivityId");
+2024-11-14 23:08:04.389 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Activities_CoordinatorId" ON "Activities" ("CoordinatorId");
+2024-11-14 23:08:04.393 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Users" ADD CONSTRAINT "FK_Users_Activities_ActivityId" FOREIGN KEY ("ActivityId") REFERENCES "Activities" ("Id");
+2024-11-14 23:08:04.394 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241103230511_AddedActivitiesToDB', '8.0.0');
+2024-11-14 23:08:04.395 +02:00 [INF] Applying migration '20241103230835_DeletedDescriptionFromActivity'.
+2024-11-14 23:08:04.404 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Activities" DROP COLUMN "Description";
+2024-11-14 23:08:04.406 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-03T23:08:35.175962Z', "Password" = '$2a$11$cnXnqEgV6bH3hhCsPIqqbOUQb5NeCRDeIqTVmtvRoBihf1x0S.Xri'
+WHERE "Id" = 1;
+2024-11-14 23:08:04.407 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-03T23:08:35.435681Z', "Password" = '$2a$11$QXFPUUkqdG08y8jImOqg4enRuHGrMBV0/mFycrsQuHPQDr/GpUEXy'
+WHERE "Id" = 2;
+2024-11-14 23:08:04.407 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241103230835_DeletedDescriptionFromActivity', '8.0.0');
+2024-11-14 23:08:04.408 +02:00 [INF] Applying migration '20241103232310_AddedActivityUserJoinTable'.
+2024-11-14 23:08:04.416 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Users" DROP CONSTRAINT "FK_Users_Activities_ActivityId";
+2024-11-14 23:08:04.417 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP INDEX "IX_Users_ActivityId";
+2024-11-14 23:08:04.418 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Users" DROP COLUMN "ActivityId";
+2024-11-14 23:08:04.429 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Activities" ALTER COLUMN "Id" TYPE bigint;
+2024-11-14 23:08:04.431 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ActivityUser" (
+    "ActivityId" bigint NOT NULL,
+    "UserId" bigint NOT NULL,
+    CONSTRAINT "PK_ActivityUser" PRIMARY KEY ("ActivityId", "UserId"),
+    CONSTRAINT "FK_ActivityUser_Activities_ActivityId" FOREIGN KEY ("ActivityId") REFERENCES "Activities" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_ActivityUser_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE CASCADE
+);
+2024-11-14 23:08:04.433 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-03T23:23:09.607883Z', "Password" = '$2a$11$FBnUTdvRMn6RKzce7xYskuKIx3uBTH4mSzXvszeBuZH6oByolCJy.'
+WHERE "Id" = 1;
+2024-11-14 23:08:04.434 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-03T23:23:09.89691Z', "Password" = '$2a$11$iOrfIQZ6fVobC4MidTl0T.0feK.yoe5QgxF3BMOYoZ2o2OC/Fa2d6'
+WHERE "Id" = 2;
+2024-11-14 23:08:04.436 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ActivityUser_UserId" ON "ActivityUser" ("UserId");
+2024-11-14 23:08:04.437 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241103232310_AddedActivityUserJoinTable', '8.0.0');
+2024-11-14 23:08:04.445 +02:00 [INF] Applying migration '20241114210741_ReInitiedDbOnLaptop'.
+2024-11-14 23:08:04.451 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-14T21:07:38.865312Z', "Password" = '$2a$11$.3sPZUfkkmJFYzxmiuanGOauRt.Kr.YWZm6Fnspya6/2ag6d5h0ue'
+WHERE "Id" = 1;
+2024-11-14 23:08:06.211 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-14T21:07:39.055819Z', "Password" = '$2a$11$sKOqiVVhMDBhsE1oDBCeTOmTLRjzLbIV2KhWhiTUbWz5jMhqpl7sS'
+WHERE "Id" = 2;
+2024-11-14 23:08:06.212 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241114210741_ReInitiedDbOnLaptop', '8.0.0');
+2024-11-14 23:08:22.171 +02:00 [INF] User profile is available. Using 'C:\Users\Razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-14 23:08:22.398 +02:00 [WRN] The WebRootPath was not found: C:\Users\Razvan\Desktop\server-asmv\wwwroot. Static files may be unavailable.
+2024-11-14 23:08:22.543 +02:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-11-14 23:08:22.617 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-14 23:08:22.621 +02:00 [INF] Hosting environment: Development
+2024-11-14 23:08:22.625 +02:00 [INF] Content root path: C:\Users\Razvan\Desktop\server-asmv
+2024-11-14 23:08:23.932 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-11-14 23:08:24.279 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 352.4086ms
+2024-11-14 23:08:24.608 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-14 23:08:24.609 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-11-14 23:08:24.642 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 33.9984ms
+2024-11-14 23:08:24.780 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 171.5117ms
+2024-11-14 23:08:25.001 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-11-14 23:08:25.152 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 151.0653ms
+2024-11-14 23:08:47.097 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:08:47.123 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-11-14 23:08:48.960 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:08:48.965 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 1869.1349ms
+2024-11-14 23:08:48.974 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:08:49.141 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:08:49 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 23:08:49.186 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:08:49 PM'.
+2024-11-14 23:08:49.189 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:08:49.194 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:08:49.234 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-14 23:08:51.574 +02:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-14 23:08:51.690 +02:00 [INF] Retrieved all users.
+2024-11-14 23:08:51.695 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-14 23:08:51.719 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 2460.9569ms
+2024-11-14 23:08:51.724 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:08:51.734 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 2760.3781ms
+2024-11-14 23:14:10.083 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:14:10.285 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:14:10.300 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 253.2524ms
+2024-11-14 23:14:10.315 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:14:10.397 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:14:10 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 23:14:10.418 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:14:10 PM'.
+2024-11-14 23:14:10.422 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:14:10.425 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:14:10.448 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-14 23:14:10.779 +02:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-14 23:14:10.857 +02:00 [INF] Retrieved all users.
+2024-11-14 23:14:10.862 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-14 23:14:10.881 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 428.6757ms
+2024-11-14 23:14:10.887 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:14:10.891 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 577.295ms
+2024-11-14 23:14:20.798 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:14:20.819 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:14:20.822 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 24.3054ms
+2024-11-14 23:14:20.829 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:14:20.835 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:14:20 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 23:14:20.841 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:14:20 PM'.
+2024-11-14 23:14:20.843 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:14:20.845 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:14:20.847 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-14 23:14:21.014 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-14 23:14:21.020 +02:00 [INF] Retrieved all users.
+2024-11-14 23:14:21.022 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-14 23:14:21.026 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 172.1847ms
+2024-11-14 23:14:21.029 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:14:21.031 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 202.3811ms
+2024-11-14 23:14:30.267 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:14:30.289 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:14:30.294 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 28.1899ms
+2024-11-14 23:14:30.319 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:14:30.326 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:14:30 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 23:14:30.331 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:14:30 PM'.
+2024-11-14 23:14:30.337 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:14:30.340 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:14:30.343 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-14 23:14:30.351 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-14 23:14:30.357 +02:00 [INF] Retrieved all users.
+2024-11-14 23:14:30.363 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-14 23:14:30.366 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 17.8633ms
+2024-11-14 23:14:30.371 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:14:30.376 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 56.9085ms
+2024-11-14 23:15:22.378 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:15:22.423 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:15:22.429 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 57.5369ms
+2024-11-14 23:15:22.438 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:15:22.469 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:15:22 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 23:15:22.489 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:15:22 PM'.
+2024-11-14 23:15:22.493 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:15:22.498 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:15:22.508 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-14 23:15:22.644 +02:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-14 23:15:22.652 +02:00 [INF] Retrieved all users.
+2024-11-14 23:15:22.657 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-14 23:15:22.665 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 151.9288ms
+2024-11-14 23:15:22.667 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:15:22.669 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 231.0695ms
+2024-11-14 23:15:37.996 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:15:38.029 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:15:38.036 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 40.4ms
+2024-11-14 23:15:38.081 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:15:38.088 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:15:38 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 23:15:38.093 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:15:38 PM'.
+2024-11-14 23:15:38.096 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:15:38.098 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:15:38.101 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-14 23:15:38.109 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-14 23:15:38.117 +02:00 [INF] Retrieved all users.
+2024-11-14 23:15:38.118 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-14 23:15:38.122 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 16.4548ms
+2024-11-14 23:15:38.125 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:15:38.127 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 46.7725ms
+2024-11-14 23:16:08.310 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:16:08.536 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:16:08.584 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/all-users - 204 null null 279.2504ms
+2024-11-14 23:16:08.624 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/all-users - null null
+2024-11-14 23:16:08.686 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:16:08 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 23:16:08.716 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:16:08 PM'.
+2024-11-14 23:16:08.719 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:16:08.724 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:16:08.734 +02:00 [INF] Route matched with {action = "GetAll", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.User]] GetAll() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-14 23:16:08.835 +02:00 [INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+2024-11-14 23:16:08.847 +02:00 [INF] Retrieved all users.
+2024-11-14 23:16:08.857 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.User, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-14 23:16:08.878 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv) in 139.0258ms
+2024-11-14 23:16:08.893 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.GetAll (ServerAsmv)'
+2024-11-14 23:16:08.900 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/all-users - 200 null application/json; charset=utf-8 283.2222ms
+2024-11-14 23:18:29.512 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - null null
+2024-11-14 23:18:29.555 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countRequests - null null
+2024-11-14 23:18:29.590 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - null null
+2024-11-14 23:18:29.571 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countMessages - null null
+2024-11-14 23:18:29.626 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - null null
+2024-11-14 23:18:29.686 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - null null
+2024-11-14 23:18:29.699 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:18:29.699 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:18:29.699 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:18:29.705 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:18:29.712 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:18:29.717 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countRequests - 204 null null 272.2537ms
+2024-11-14 23:18:29.716 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - 204 null null 269.7558ms
+2024-11-14 23:18:29.719 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - 204 null null 128.7775ms
+2024-11-14 23:18:29.720 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countMessages - 204 null null 158.9384ms
+2024-11-14 23:18:29.727 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - 204 null null 102.2709ms
+2024-11-14 23:18:29.719 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:18:29.760 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - null null
+2024-11-14 23:18:29.767 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countRequests - null null
+2024-11-14 23:18:29.772 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countMessages - null null
+2024-11-14 23:18:29.811 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:18:29 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 23:18:29.814 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:18:29 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 23:18:29.778 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/users-count - null null
+2024-11-14 23:18:29.785 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - null null
+2024-11-14 23:18:29.788 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - 204 null null 101.7183ms
+2024-11-14 23:18:29.851 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:18:29 PM'.
+2024-11-14 23:18:29.862 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:18:29 PM'.
+2024-11-14 23:18:29.827 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:18:29 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 23:18:29.867 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:18:29 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 23:18:29.872 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:18:29 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 23:18:29.876 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/count-volunteers - null null
+2024-11-14 23:18:29.881 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:18:29.882 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:18:29.910 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-14 23:18:29.888 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:18:29 PM'.
+2024-11-14 23:18:29.893 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:18:29 PM'.
+2024-11-14 23:18:29.902 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:18:29 PM'.
+2024-11-14 23:18:29.912 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:18:29 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-14 23:18:29.912 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-14 23:18:29.917 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:18:29.918 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:18:29.920 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:18:29.924 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/14/2024 1:23:23 AM', Current time (UTC): '11/14/2024 9:18:29 PM'.
+2024-11-14 23:18:29.926 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-14 23:18:29.927 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-14 23:18:29.929 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-14 23:18:29.931 +02:00 [INF] CORS policy execution successful.
+2024-11-14 23:18:29.943 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/count-volunteers - 404 0 null 66.3927ms
+2024-11-14 23:18:29.963 +02:00 [INF] Route matched with {action = "Count", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-14 23:18:29.963 +02:00 [INF] Route matched with {action = "Count", controller = "BecomeVolunteers"}. Executing controller action with signature Int32 Count() on controller ServerAsmv.Controllers.BecomeVolunteersController (ServerAsmv).
+2024-11-14 23:18:29.963 +02:00 [INF] Route matched with {action = "GetAll", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Message]] GetAll() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-14 23:18:29.963 +02:00 [INF] Route matched with {action = "Count", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-14 23:18:29.963 +02:00 [INF] Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-14 23:18:29.967 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5235/count-volunteers, Response status code: 404
+2024-11-14 23:18:30.130 +02:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."Fullname", m."NewRequest", m."Text"
+FROM "Messages" AS m
+2024-11-14 23:18:30.141 +02:00 [INF] Retrieved all messages.
+2024-11-14 23:18:30.143 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Message, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-14 23:18:30.237 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv) in 236.7223ms
+2024-11-14 23:18:30.240 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-14 23:18:30.263 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - 200 null application/json; charset=utf-8 502.8486ms
+2024-11-14 23:18:30.455 +02:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Messages" AS m
+2024-11-14 23:18:30.499 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-14 23:18:30.513 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM become_volunteer AS b
+2024-11-14 23:18:30.513 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Projects" AS p
+2024-11-14 23:18:30.515 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+2024-11-14 23:18:30.523 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.Count (ServerAsmv) in 499.7598ms
+2024-11-14 23:18:30.525 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-14 23:18:30.528 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-14 23:18:30.531 +02:00 [INF] Retrieved users count: 2.
+2024-11-14 23:18:30.532 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-14 23:18:30.541 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countMessages - 200 null application/json; charset=utf-8 768.889ms
+2024-11-14 23:18:30.537 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv) in 568.1862ms
+2024-11-14 23:18:30.545 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-14 23:18:30.536 +02:00 [INF] Executed action ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv) in 556.9328ms
+2024-11-14 23:18:30.549 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-14 23:18:30.547 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - 200 null application/json; charset=utf-8 762.9326ms
+2024-11-14 23:18:30.539 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-14 23:18:30.550 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countRequests - 401 null application/json; charset=utf-8 783.3896ms
+2024-11-14 23:18:30.556 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.Count (ServerAsmv) in 538.484ms
+2024-11-14 23:18:30.561 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-14 23:18:30.563 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/users-count - 200 null application/json; charset=utf-8 785.6262ms

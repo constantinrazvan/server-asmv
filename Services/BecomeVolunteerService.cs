@@ -70,7 +70,7 @@ namespace ServerAsmv.Services {
 
             if (becomeVolunteers.Count == 0)
             {
-                throw new KeyNotFoundException("No BecomeVolunteers found");
+                return new List<BecomeVolunteer>();
             }
 
             return becomeVolunteers;
