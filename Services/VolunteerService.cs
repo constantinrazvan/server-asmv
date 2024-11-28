@@ -11,47 +11,55 @@ namespace ServerAsmv.Services {
     {
         private readonly AppData _context;
         private readonly PhotoService _photoService;
+        private readonly string _baseUrl;
 
-        public VolunteerService(AppData context, PhotoService photoService)
+
+        public VolunteerService(AppData context, PhotoService photoService, IConfiguration configuration)
         {
             _context = context;
             _photoService = photoService;
+            _baseUrl = configuration["BaseUrl"] ?? "http://localhost:5235"; // Default pentru local
+
         }
 
-        public async Task<string> AddVolunteer(VolunteerDTO newVolunteer, IFormFile photo)
+        public async Task<string> AddVolunteer(VolunteerDTO newVolunteer, IFormFile? photo)
         {
-            Volunteer? found = await _context.Volunteers.FirstOrDefaultAsync(v => v.Email == newVolunteer.Email);
-
+            // Verificăm dacă există deja un voluntar cu același email
+            var found = await _context.Volunteers.FirstOrDefaultAsync(v => v.Email == newVolunteer.Email);
             if (found != null)
             {
                 return "Volunteer already exists!";
             }
 
+            // Verificăm dacă există deja un președinte pentru departament
             if (newVolunteer.President)
             {
                 var existingPresident = await _context.Volunteers
-                    .FirstOrDefaultAsync(v => v.President == true && v.Department == newVolunteer.Department);
+                    .FirstOrDefaultAsync(v => v.President && v.Department == newVolunteer.Department);
                 if (existingPresident != null)
                 {
                     return $"Departamentul {newVolunteer.Department} are deja un președinte.";
                 }
             }
 
+            // Verificăm dacă există deja un vicepreședinte pentru departament
             if (newVolunteer.VicePresident)
             {
                 var existingVicePresident = await _context.Volunteers
-                    .FirstOrDefaultAsync(v => v.VicePresident == true && v.Department == newVolunteer.Department);
+                    .FirstOrDefaultAsync(v => v.VicePresident && v.Department == newVolunteer.Department);
                 if (existingVicePresident != null)
                 {
                     return $"Departamentul {newVolunteer.Department} are deja un vicepreședinte.";
                 }
             }
 
+            // Gestionăm încărcarea imaginii dacă există
             string? imagePath = null;
             if (photo != null && photo.Length > 0)
             {
                 var allowedExtensions = new[] { ".jpg", ".jpeg", ".png" };
                 var extension = Path.GetExtension(photo.FileName).ToLower();
+
                 if (!allowedExtensions.Contains(extension))
                 {
                     throw new ArgumentException("Invalid image type. Allowed types are: jpg, jpeg, png.");
@@ -74,7 +82,8 @@ namespace ServerAsmv.Services {
                 imagePath = $"/images/volunteers/{uniqueFileName}";
             }
 
-            Volunteer volunteer = new Volunteer
+            // Creăm un nou obiect Volunteer
+            var volunteer = new Volunteer
             {
                 Firstname = newVolunteer.Firstname,
                 Lastname = newVolunteer.Lastname,
@@ -83,15 +92,27 @@ namespace ServerAsmv.Services {
                 Department = newVolunteer.Department,
                 President = newVolunteer.President,
                 VicePresident = newVolunteer.VicePresident,
-                VolunteerImage = new VolunteerImage { Url = imagePath },
-                PhoneNumber = newVolunteer.phoneNumber
+                VolunteerImage = imagePath != null ? new VolunteerImage { Url = imagePath } : null, // Setăm doar dacă există o imagine
+                PhoneNumber = newVolunteer.PhoneNumber,
+                Ocupation = newVolunteer.Ocupation
             };
 
-            _context.Add(volunteer);
-            await _context.SaveChangesAsync();
-
-            return "Volunteer added successfully!";
+            try
+            {
+                // Salvăm voluntarul în baza de date
+                _context.Add(volunteer);
+                await _context.SaveChangesAsync();
+                return "Volunteer added successfully!";
+            }
+            catch (Exception ex)
+            {
+                // Gestionăm eventualele erori și logăm excepțiile
+                Console.WriteLine($"Error while saving volunteer: {ex.Message}");
+                Console.WriteLine($"Inner Exception: {ex.InnerException?.Message}");
+                throw new Exception("An error occurred while adding the volunteer. Please try again.");
+            }
         }
+
 
         public int Count()
         {
@@ -100,10 +121,18 @@ namespace ServerAsmv.Services {
 
         public Volunteer? GetVolunteer(long id)
         {
-            return _context.Volunteers
-                .Include(v => v.VolunteerImage) 
-                .FirstOrDefault(v => v.Id == id); 
+            var volunteer = _context.Volunteers
+                .Include(v => v.VolunteerImage)
+                .FirstOrDefault(v => v.Id == id);
+
+            if (volunteer?.VolunteerImage != null)
+            {
+                volunteer.VolunteerImage.Url = $"{_baseUrl}{volunteer.VolunteerImage.Url}";
+            }
+
+            return volunteer;
         }
+
 
         public async Task<List<Volunteer>> GetVolunteers()
         {

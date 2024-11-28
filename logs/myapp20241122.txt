@@ -1790,3 +1790,1248 @@ WHERE "Id" = 2;
 2024-11-22 02:20:49.004 +02:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
 VALUES ('20241122002006_AddedNewColumnInVolunteersForSecretary', '8.0.10');
+2024-11-22 14:43:31.415 +02:00 [INF] User profile is available. Using 'C:\Users\Razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-22 14:43:31.822 +02:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-11-22 14:43:31.876 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-22 14:43:31.880 +02:00 [INF] Hosting environment: Development
+2024-11-22 14:43:31.884 +02:00 [INF] Content root path: C:\Users\Razvan\Desktop\server-asmv
+2024-11-22 14:43:34.834 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-11-22 14:43:35.680 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 860.8979ms
+2024-11-22 14:43:35.698 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-11-22 14:43:35.699 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.js - null null
+2024-11-22 14:43:35.718 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-22 14:43:35.791 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 72.5419ms
+2024-11-22 14:43:35.833 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.js - 200 null application/javascript;charset=utf-8 132.3499ms
+2024-11-22 14:43:36.063 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 364.6432ms
+2024-11-22 14:43:36.187 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-11-22 14:43:36.593 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 406.1775ms
+2024-11-22 15:05:36.225 +02:00 [INF] User profile is available. Using 'C:\Users\Razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-22 15:05:36.747 +02:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-11-22 15:05:36.801 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-22 15:05:36.805 +02:00 [INF] Hosting environment: Development
+2024-11-22 15:05:36.809 +02:00 [INF] Content root path: C:\Users\Razvan\Desktop\server-asmv
+2024-11-22 15:05:38.682 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger - null null
+2024-11-22 15:05:39.059 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger - 301 0 null 387.2121ms
+2024-11-22 15:05:39.077 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-11-22 15:05:39.157 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 80.1755ms
+2024-11-22 15:05:39.234 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.css - null null
+2024-11-22 15:05:39.234 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-bundle.js - null null
+2024-11-22 15:05:39.234 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui.css - null null
+2024-11-22 15:05:39.299 +02:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-11-22 15:05:39.318 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.css - 200 202 text/css 84.249ms
+2024-11-22 15:05:39.355 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-11-22 15:05:39.365 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-standalone-preset.js - null null
+2024-11-22 15:05:39.373 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui.css - 200 152035 text/css 138.8947ms
+2024-11-22 15:05:39.384 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-11-22 15:05:39.387 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-11-22 15:05:39.396 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.js - null null
+2024-11-22 15:05:39.403 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-bundle.js - 200 1426001 text/javascript 168.662ms
+2024-11-22 15:05:39.414 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/swagger-ui-standalone-preset.js - 200 230007 text/javascript 49.2376ms
+2024-11-22 15:05:39.436 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.js - 200 null application/javascript;charset=utf-8 39.5604ms
+2024-11-22 15:05:39.443 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-22 15:05:39.460 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-11-22 15:05:39.479 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 36.4488ms
+2024-11-22 15:05:39.602 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 142.4837ms
+2024-11-22 15:05:39.790 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-11-22 15:05:40.033 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 242.6016ms
+2024-11-22 15:06:32.044 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:06:32.298 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-11-22 15:06:32.754 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:06:32.768 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 745.0992ms
+2024-11-22 15:06:32.776 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:06:33.070 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:06:33 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-22 15:06:33.152 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:06:33 PM'.
+2024-11-22 15:06:33.156 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:06:33.172 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:06:33.268 +02:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-22 15:06:37.790 +02:00 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-11-22 15:06:38.010 +02:00 [INF] Retrieved all projects successfully.
+2024-11-22 15:06:38.030 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:06:38.099 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 4819.4517ms
+2024-11-22 15:06:38.102 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:06:38.121 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 5344.4231ms
+2024-11-22 15:06:38.459 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/images/projects/798e53e5-bc4e-422d-aaa8-5fef0944c720.png - null null
+2024-11-22 15:06:38.532 +02:00 [INF] Sending file. Request path: '/images/projects/798e53e5-bc4e-422d-aaa8-5fef0944c720.png'. Physical path: 'C:\Users\Razvan\Desktop\server-asmv\wwwroot\images\projects\798e53e5-bc4e-422d-aaa8-5fef0944c720.png'
+2024-11-22 15:06:38.535 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/images/projects/798e53e5-bc4e-422d-aaa8-5fef0944c720.png - 200 168631 image/png 75.2107ms
+2024-11-22 15:07:22.561 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - null null
+2024-11-22 15:07:22.567 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countRequests - null null
+2024-11-22 15:07:22.622 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:22.589 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countMessages - null null
+2024-11-22 15:07:22.623 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countRequests - 204 null null 56.9786ms
+2024-11-22 15:07:22.593 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:22.685 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countRequests - null null
+2024-11-22 15:07:22.638 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:22.609 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - null null
+2024-11-22 15:07:22.707 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:07:22 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-22 15:07:22.690 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - 204 null null 128.3608ms
+2024-11-22 15:07:22.706 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countMessages - 204 null null 117.3674ms
+2024-11-22 15:07:22.633 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - null null
+2024-11-22 15:07:22.651 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - null null
+2024-11-22 15:07:22.727 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:07:22 PM'.
+2024-11-22 15:07:22.754 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:22.755 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-22 15:07:22.723 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:22.757 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - 204 null null 148.5963ms
+2024-11-22 15:07:22.752 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:22.766 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - 204 null null 120.266ms
+2024-11-22 15:07:22.738 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countMessages - null null
+2024-11-22 15:07:22.747 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:22.778 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - 204 null null 145.0757ms
+2024-11-22 15:07:22.731 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - null null
+2024-11-22 15:07:22.765 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - null null
+2024-11-22 15:07:22.760 +02:00 [INF] Route matched with {action = "Count", controller = "BecomeVolunteers"}. Executing controller action with signature Int32 Count() on controller ServerAsmv.Controllers.BecomeVolunteersController (ServerAsmv).
+2024-11-22 15:07:22.789 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:07:22 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-22 15:07:22.777 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:07:22 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-22 15:07:22.811 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:07:22 PM'.
+2024-11-22 15:07:22.771 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/count-volunteers - null null
+2024-11-22 15:07:22.792 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:07:22 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-22 15:07:22.824 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:07:22 PM'.
+2024-11-22 15:07:22.813 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:22.827 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-22 15:07:22.820 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:07:22 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-22 15:07:22.805 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:07:22 PM'.
+2024-11-22 15:07:22.826 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:22.782 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/users-count - null null
+2024-11-22 15:07:22.832 +02:00 [INF] Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-22 15:07:22.834 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:22.836 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-22 15:07:22.834 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:07:22 PM'.
+2024-11-22 15:07:22.868 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:22.854 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:07:22.851 +02:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:07:22 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2024-11-22 15:07:22.875 +02:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '11/22/2024 12:08:27 AM', Current time (UTC): '11/22/2024 1:07:22 PM'.
+2024-11-22 15:07:22.869 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/count-volunteers - 404 0 null 98.3427ms
+2024-11-22 15:07:22.873 +02:00 [INF] Route matched with {action = "GetAll", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Message]] GetAll() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-22 15:07:22.868 +02:00 [INF] Route matched with {action = "Count", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-22 15:07:22.876 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:22.886 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5235/count-volunteers, Response status code: 404
+2024-11-22 15:07:22.910 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-22 15:07:22.916 +02:00 [INF] Route matched with {action = "Count", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-22 15:07:22.920 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM become_volunteer AS b
+2024-11-22 15:07:22.929 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:07:22.938 +02:00 [INF] Executed action ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv) in 143.6066ms
+2024-11-22 15:07:22.941 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-22 15:07:22.944 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countRequests - 401 null application/json; charset=utf-8 259.2247ms
+2024-11-22 15:07:22.956 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Messages" AS m
+2024-11-22 15:07:22.962 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:07:22.974 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.Count (ServerAsmv) in 121.6005ms
+2024-11-22 15:07:22.976 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-22 15:07:22.978 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countMessages - 499 null application/json; charset=utf-8 239.4613ms
+2024-11-22 15:07:23.038 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Projects" AS p
+2024-11-22 15:07:23.043 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:07:23.047 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv) in 137.4037ms
+2024-11-22 15:07:23.047 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+2024-11-22 15:07:23.048 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-22 15:07:23.052 +02:00 [INF] Retrieved users count: 2.
+2024-11-22 15:07:23.053 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - 499 null application/json; charset=utf-8 287.9129ms
+2024-11-22 15:07:23.055 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:07:23.060 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."Fullname", m."NewRequest", m."Text"
+FROM "Messages" AS m
+2024-11-22 15:07:23.061 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.Count (ServerAsmv) in 142.9839ms
+2024-11-22 15:07:23.063 +02:00 [INF] Retrieved all messages.
+2024-11-22 15:07:23.064 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-22 15:07:23.066 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Message, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:07:23.067 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/users-count - 499 null application/json; charset=utf-8 285.0683ms
+2024-11-22 15:07:23.074 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv) in 181.3679ms
+2024-11-22 15:07:23.077 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:07:23.078 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - 499 null application/json; charset=utf-8 347.9715ms
+2024-11-22 15:07:30.567 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Auth/login - null null
+2024-11-22 15:07:30.575 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:30.576 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Auth/login - 204 null null 8.5059ms
+2024-11-22 15:07:30.583 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/Auth/login - application/json 49
+2024-11-22 15:07:30.591 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:30.592 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.AuthController.Login (ServerAsmv)'
+2024-11-22 15:07:30.614 +02:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ServerAsmv.LoginDTO) on controller ServerAsmv.Controllers.AuthController (ServerAsmv).
+2024-11-22 15:07:30.778 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[@__user_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__user_Email_0
+LIMIT 1
+2024-11-22 15:07:31.258 +02:00 [INF] User admin@asmv.com logged in successfully.
+2024-11-22 15:07:31.261 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-11-22 15:07:31.265 +02:00 [INF] Executed action ServerAsmv.Controllers.AuthController.Login (ServerAsmv) in 648.1157ms
+2024-11-22 15:07:31.270 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.AuthController.Login (ServerAsmv)'
+2024-11-22 15:07:31.273 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/Auth/login - 200 null text/plain; charset=utf-8 690.4162ms
+2024-11-22 15:07:31.305 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - null null
+2024-11-22 15:07:31.306 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countRequests - null null
+2024-11-22 15:07:31.311 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:31.317 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:31.319 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - 204 null null 13.8927ms
+2024-11-22 15:07:31.320 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countRequests - 204 null null 14.0802ms
+2024-11-22 15:07:31.325 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countMessages - null null
+2024-11-22 15:07:31.333 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - null null
+2024-11-22 15:07:31.339 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:31.348 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:31.349 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countMessages - 204 null null 24.4345ms
+2024-11-22 15:07:31.351 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - 204 null null 17.6046ms
+2024-11-22 15:07:31.360 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - null null
+2024-11-22 15:07:31.368 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - null null
+2024-11-22 15:07:31.378 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:31.384 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:31.386 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - 204 null null 26.5557ms
+2024-11-22 15:07:31.389 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - 204 null null 20.8983ms
+2024-11-22 15:07:31.397 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - null null
+2024-11-22 15:07:31.402 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countRequests - null null
+2024-11-22 15:07:31.423 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:31.423 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:31.424 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-22 15:07:31.425 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:07:31.427 +02:00 [INF] Route matched with {action = "Count", controller = "BecomeVolunteers"}. Executing controller action with signature Int32 Count() on controller ServerAsmv.Controllers.BecomeVolunteersController (ServerAsmv).
+2024-11-22 15:07:31.428 +02:00 [INF] Route matched with {action = "GetAll", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Message]] GetAll() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-22 15:07:31.436 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM become_volunteer AS b
+2024-11-22 15:07:31.439 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."Fullname", m."NewRequest", m."Text"
+FROM "Messages" AS m
+2024-11-22 15:07:31.442 +02:00 [INF] Retrieved all messages.
+2024-11-22 15:07:31.443 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Message, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:07:31.440 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:07:31.445 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv) in 12.1284ms
+2024-11-22 15:07:31.448 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:07:31.447 +02:00 [INF] Executed action ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv) in 16.6704ms
+2024-11-22 15:07:31.450 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-22 15:07:31.451 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countRequests - 200 null application/json; charset=utf-8 48.7021ms
+2024-11-22 15:07:31.449 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - 200 null application/json; charset=utf-8 52.1861ms
+2024-11-22 15:07:31.458 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - null null
+2024-11-22 15:07:31.456 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countMessages - null null
+2024-11-22 15:07:31.463 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:31.466 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:31.468 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-22 15:07:31.468 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-22 15:07:31.473 +02:00 [INF] Route matched with {action = "Count", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-22 15:07:31.471 +02:00 [INF] Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-22 15:07:31.479 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Messages" AS m
+2024-11-22 15:07:31.482 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Projects" AS p
+2024-11-22 15:07:31.482 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:07:31.485 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:07:31.490 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.Count (ServerAsmv) in 12.3127ms
+2024-11-22 15:07:31.492 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv) in 16.7929ms
+2024-11-22 15:07:31.494 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-22 15:07:31.495 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-22 15:07:31.497 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countMessages - 200 null application/json; charset=utf-8 40.9411ms
+2024-11-22 15:07:31.498 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - 200 null application/json; charset=utf-8 39.898ms
+2024-11-22 15:07:31.502 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/users-count - null null
+2024-11-22 15:07:31.504 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/count-volunteers - null null
+2024-11-22 15:07:31.509 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:31.511 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:31.511 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-22 15:07:31.512 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/count-volunteers - 404 0 null 7.919ms
+2024-11-22 15:07:31.513 +02:00 [INF] Route matched with {action = "Count", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-22 15:07:31.516 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5235/count-volunteers, Response status code: 404
+2024-11-22 15:07:31.522 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+2024-11-22 15:07:31.524 +02:00 [INF] Retrieved users count: 2.
+2024-11-22 15:07:31.526 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:07:31.528 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.Count (ServerAsmv) in 10.1192ms
+2024-11-22 15:07:31.531 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-22 15:07:31.535 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/users-count - 200 null application/json; charset=utf-8 32.5106ms
+2024-11-22 15:07:33.301 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:07:33.306 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:33.309 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 7.969ms
+2024-11-22 15:07:33.315 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:07:33.319 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:33.321 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:07:33.322 +02:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-22 15:07:33.339 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-11-22 15:07:33.351 +02:00 [INF] Retrieved all projects successfully.
+2024-11-22 15:07:33.356 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:07:33.365 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 40.6847ms
+2024-11-22 15:07:33.369 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:07:33.370 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 55.1669ms
+2024-11-22 15:07:34.061 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - null null
+2024-11-22 15:07:34.064 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countRequests - null null
+2024-11-22 15:07:34.065 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:34.067 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:34.068 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:07:34.069 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-22 15:07:34.070 +02:00 [INF] Route matched with {action = "GetAll", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Message]] GetAll() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-22 15:07:34.071 +02:00 [INF] Route matched with {action = "Count", controller = "BecomeVolunteers"}. Executing controller action with signature Int32 Count() on controller ServerAsmv.Controllers.BecomeVolunteersController (ServerAsmv).
+2024-11-22 15:07:34.076 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."Fullname", m."NewRequest", m."Text"
+FROM "Messages" AS m
+2024-11-22 15:07:34.079 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM become_volunteer AS b
+2024-11-22 15:07:34.080 +02:00 [INF] Retrieved all messages.
+2024-11-22 15:07:34.083 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:07:34.083 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Message, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:07:34.085 +02:00 [INF] Executed action ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv) in 9.267ms
+2024-11-22 15:07:34.087 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv) in 13.166ms
+2024-11-22 15:07:34.089 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-22 15:07:34.091 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:07:34.092 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countRequests - 200 null application/json; charset=utf-8 28.1472ms
+2024-11-22 15:07:34.094 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - 200 null application/json; charset=utf-8 33.1671ms
+2024-11-22 15:07:34.097 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countMessages - null null
+2024-11-22 15:07:34.108 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - null null
+2024-11-22 15:07:34.114 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:34.126 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:34.126 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-22 15:07:34.129 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-22 15:07:34.132 +02:00 [INF] Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-22 15:07:34.134 +02:00 [INF] Route matched with {action = "Count", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-22 15:07:34.141 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Messages" AS m
+2024-11-22 15:07:34.144 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Projects" AS p
+2024-11-22 15:07:34.145 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:07:34.148 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:07:34.151 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.Count (ServerAsmv) in 13.1432ms
+2024-11-22 15:07:34.153 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv) in 11.3672ms
+2024-11-22 15:07:34.155 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-22 15:07:34.158 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-22 15:07:34.159 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countMessages - 200 null application/json; charset=utf-8 61.4276ms
+2024-11-22 15:07:34.162 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - 200 null application/json; charset=utf-8 54.4132ms
+2024-11-22 15:07:34.167 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/users-count - null null
+2024-11-22 15:07:34.173 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/count-volunteers - null null
+2024-11-22 15:07:34.179 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:34.185 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:34.186 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-22 15:07:34.187 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/count-volunteers - 404 0 null 14.1597ms
+2024-11-22 15:07:34.192 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5235/count-volunteers, Response status code: 404
+2024-11-22 15:07:34.188 +02:00 [INF] Route matched with {action = "Count", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-22 15:07:34.201 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+2024-11-22 15:07:34.204 +02:00 [INF] Retrieved users count: 2.
+2024-11-22 15:07:34.205 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:07:34.208 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.Count (ServerAsmv) in 10.7403ms
+2024-11-22 15:07:34.209 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-22 15:07:34.210 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/users-count - 200 null application/json; charset=utf-8 43.6743ms
+2024-11-22 15:07:35.449 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - null null
+2024-11-22 15:07:35.454 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:35.455 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:07:35.456 +02:00 [INF] Route matched with {action = "GetAll", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Message]] GetAll() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-22 15:07:35.461 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."Fullname", m."NewRequest", m."Text"
+FROM "Messages" AS m
+2024-11-22 15:07:35.467 +02:00 [INF] Retrieved all messages.
+2024-11-22 15:07:35.469 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Message, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:07:35.473 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv) in 13.4063ms
+2024-11-22 15:07:35.477 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:07:35.481 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - 200 null application/json; charset=utf-8 31.5263ms
+2024-11-22 15:07:36.335 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/volunteers - null null
+2024-11-22 15:07:36.350 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:07:36.355 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:07:36.372 +02:00 [INF] Route matched with {action = "GetVolunteers", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Volunteer]]] GetVolunteers() on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:07:36.484 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."PhoneNumber", v."President", v."Secretary", v."VicePresident", v0."Id", v0."Url", v0."VolunteerId"
+FROM volunteers AS v
+LEFT JOIN "VolunteerImages" AS v0 ON v."Id" = v0."VolunteerId"
+2024-11-22 15:07:36.509 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Volunteer, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:07:36.516 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv) in 139.4526ms
+2024-11-22 15:07:36.519 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:07:36.521 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/volunteers - 200 null application/json; charset=utf-8 186.4917ms
+2024-11-22 15:08:07.087 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - multipart/form-data; boundary=----WebKitFormBoundary3Nz0KOe0ADU3iG6T 795
+2024-11-22 15:08:07.106 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:08:07.108 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:08:07.125 +02:00 [INF] Route matched with {action = "AddVolunteer", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] AddVolunteer(ServerAsmv.DTOs.VolunteerDTO, Microsoft.AspNetCore.Http.IFormFile) on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:08:07.164 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-22 15:08:07.228 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv) in 99.842ms
+2024-11-22 15:08:07.230 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:08:07.231 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - 400 null application/problem+json; charset=utf-8 144.5014ms
+2024-11-22 15:09:50.811 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - multipart/form-data; boundary=----WebKitFormBoundarytCMOQOxN7gHpyAI4 794
+2024-11-22 15:09:50.858 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:09:50.861 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:09:50.877 +02:00 [INF] Route matched with {action = "AddVolunteer", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] AddVolunteer(ServerAsmv.DTOs.VolunteerDTO, Microsoft.AspNetCore.Http.IFormFile) on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:09:50.954 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-22 15:09:50.972 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv) in 89.6323ms
+2024-11-22 15:09:50.980 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:09:50.983 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - 400 null application/problem+json; charset=utf-8 176.4639ms
+2024-11-22 15:13:33.519 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - multipart/form-data; boundary=----WebKitFormBoundarypZrmFdSlpkRpi43A 795
+2024-11-22 15:13:33.626 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:13:33.636 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:13:33.652 +02:00 [INF] Route matched with {action = "AddVolunteer", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.String]] AddVolunteer(ServerAsmv.DTOs.VolunteerDTO, Microsoft.AspNetCore.Http.IFormFile) on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:13:33.711 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-22 15:13:33.740 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv) in 84.4091ms
+2024-11-22 15:13:33.751 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:13:33.755 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - 400 null application/problem+json; charset=utf-8 241.0437ms
+2024-11-22 15:20:53.213 +02:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-11-22 15:20:53.266 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-11-22 15:20:53.325 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-11-22 15:20:53.375 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-11-22 15:20:53.375 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-11-22 15:20:53.382 +02:00 [INF] Applying migration '20241122132033_AddedOcupationToVolunteer'.
+2024-11-22 15:20:53.434 +02:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE volunteers ADD "Ocupation" text NOT NULL DEFAULT '';
+2024-11-22 15:20:53.444 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-22T13:20:32.979094Z', "Password" = '$2a$11$CF96no.Nbff5aw2O3d1b1OGwAMi1yZcTaW86nFvAm7//spuPnrJ6i'
+WHERE "Id" = 1;
+2024-11-22 15:20:53.445 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = TIMESTAMPTZ '2024-11-22T13:20:33.168187Z', "Password" = '$2a$11$xRRfZ74EkwAx.FcsppjG4.zZiToPLmGeKN6b/BRnUwUY6PW7gnC4u'
+WHERE "Id" = 2;
+2024-11-22 15:20:53.446 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20241122132033_AddedOcupationToVolunteer', '8.0.10');
+2024-11-22 15:27:22.371 +02:00 [INF] User profile is available. Using 'C:\Users\Razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-22 15:27:22.993 +02:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-11-22 15:27:23.130 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-22 15:27:23.132 +02:00 [INF] Hosting environment: Development
+2024-11-22 15:27:23.134 +02:00 [INF] Content root path: C:\Users\Razvan\Desktop\server-asmv
+2024-11-22 15:27:24.224 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-11-22 15:27:24.786 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 663.7892ms
+2024-11-22 15:27:24.885 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.js - null null
+2024-11-22 15:27:24.898 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.js - 200 null application/javascript;charset=utf-8 13.735ms
+2024-11-22 15:27:24.908 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-22 15:27:24.919 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 11.454ms
+2024-11-22 15:27:24.931 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-11-22 15:27:25.022 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.0995ms
+2024-11-22 15:27:26.365 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-11-22 15:27:26.786 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 421.0858ms
+2024-11-22 15:27:54.494 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - null null
+2024-11-22 15:27:54.494 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countMessages - null null
+2024-11-22 15:27:54.494 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/countRequests - null null
+2024-11-22 15:27:54.494 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - null null
+2024-11-22 15:27:54.497 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - null null
+2024-11-22 15:27:54.510 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - null null
+2024-11-22 15:27:54.561 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-11-22 15:27:54.900 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:27:54.901 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:27:54.900 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:27:54.901 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:27:54.903 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:27:54.903 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:27:54.909 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countMessages - 204 null null 420.9532ms
+2024-11-22 15:27:54.913 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/countRequests - 204 null null 462.1298ms
+2024-11-22 15:27:54.915 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - 204 null null 464.5316ms
+2024-11-22 15:27:54.914 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/count-projects - 204 null null 420.6086ms
+2024-11-22 15:27:54.912 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Users/users-count - 204 null null 414.936ms
+2024-11-22 15:27:54.955 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/count-volunteers - null null
+2024-11-22 15:27:54.930 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countMessages - null null
+2024-11-22 15:27:54.934 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/countRequests - null null
+2024-11-22 15:27:54.939 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - null null
+2024-11-22 15:27:54.942 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Users/users-count - null null
+2024-11-22 15:27:54.915 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/count-volunteers - 204 null null 406.2211ms
+2024-11-22 15:27:55.005 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - null null
+2024-11-22 15:27:55.174 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:27:55.174 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:27:55.174 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:27:55.174 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:27:55.174 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:27:55.174 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:27:55.180 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/count-volunteers - 404 0 null 225.3296ms
+2024-11-22 15:27:55.184 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:27:55.184 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-22 15:27:55.184 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-22 15:27:55.184 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-22 15:27:55.185 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-22 15:27:55.190 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5235/count-volunteers, Response status code: 404
+2024-11-22 15:27:55.242 +02:00 [INF] Route matched with {action = "Count", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-22 15:27:55.242 +02:00 [INF] Route matched with {action = "Count", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.UsersController (ServerAsmv).
+2024-11-22 15:27:55.242 +02:00 [INF] Route matched with {action = "Count", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Int32] Count() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-22 15:27:55.242 +02:00 [INF] Route matched with {action = "GetAll", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Message]] GetAll() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-22 15:27:55.243 +02:00 [INF] Route matched with {action = "Count", controller = "BecomeVolunteers"}. Executing controller action with signature Int32 Count() on controller ServerAsmv.Controllers.BecomeVolunteersController (ServerAsmv).
+2024-11-22 15:27:59.064 +02:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Users" AS u
+2024-11-22 15:27:59.064 +02:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM become_volunteer AS b
+2024-11-22 15:27:59.064 +02:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."Fullname", m."NewRequest", m."Text"
+FROM "Messages" AS m
+2024-11-22 15:27:59.064 +02:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Messages" AS m
+2024-11-22 15:27:59.064 +02:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT count(*)::int
+FROM "Projects" AS p
+2024-11-22 15:27:59.131 +02:00 [INF] Retrieved all messages.
+2024-11-22 15:27:59.146 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Message, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:27:59.164 +02:00 [INF] Retrieved users count: 2.
+2024-11-22 15:27:59.167 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:27:59.165 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:27:59.165 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:27:59.164 +02:00 [INF] Executing ObjectResult, writing value of type 'System.Int32'.
+2024-11-22 15:27:59.189 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv) in 3927.7217ms
+2024-11-22 15:27:59.189 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv) in 3920.7245ms
+2024-11-22 15:27:59.189 +02:00 [INF] Executed action ServerAsmv.Controllers.UsersController.Count (ServerAsmv) in 3931.8169ms
+2024-11-22 15:27:59.189 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.Count (ServerAsmv) in 3936.5467ms
+2024-11-22 15:27:59.189 +02:00 [INF] Executed action ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv) in 3916.3904ms
+2024-11-22 15:27:59.191 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.Count (ServerAsmv)'
+2024-11-22 15:27:59.193 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:27:59.195 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.UsersController.Count (ServerAsmv)'
+2024-11-22 15:27:59.197 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.Count (ServerAsmv)'
+2024-11-22 15:27:59.199 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.BecomeVolunteersController.Count (ServerAsmv)'
+2024-11-22 15:27:59.214 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countRequests - 200 null application/json; charset=utf-8 4280.4264ms
+2024-11-22 15:27:59.214 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - 200 null application/json; charset=utf-8 4209.0348ms
+2024-11-22 15:27:59.214 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/countMessages - 200 null application/json; charset=utf-8 4283.8425ms
+2024-11-22 15:27:59.214 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/count-projects - 200 null application/json; charset=utf-8 4274.8418ms
+2024-11-22 15:27:59.214 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Users/users-count - 200 null application/json; charset=utf-8 4271.5578ms
+2024-11-22 15:28:05.139 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/volunteers - null null
+2024-11-22 15:28:05.148 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:28:05.151 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:28:05.166 +02:00 [INF] Route matched with {action = "GetVolunteers", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Volunteer]]] GetVolunteers() on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:28:05.526 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident", v0."Id", v0."Url", v0."VolunteerId"
+FROM volunteers AS v
+LEFT JOIN "VolunteerImages" AS v0 ON v."Id" = v0."VolunteerId"
+2024-11-22 15:28:05.551 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Volunteer, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:28:05.558 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv) in 384.5218ms
+2024-11-22 15:28:05.560 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:28:05.565 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/volunteers - 200 null application/json; charset=utf-8 425.7501ms
+2024-11-22 15:28:45.379 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - multipart/form-data; boundary=----WebKitFormBoundary1nQx8r8YIoy99DAf 795
+2024-11-22 15:28:45.398 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:28:45.408 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:28:45.456 +02:00 [INF] Route matched with {action = "AddVolunteer", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddVolunteer(ServerAsmv.DTOs.VolunteerDTO, Microsoft.AspNetCore.Http.IFormFile) on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:28:45.607 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-11-22 15:28:45.698 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv) in 226.5334ms
+2024-11-22 15:28:45.701 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:28:45.702 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - 400 null application/problem+json; charset=utf-8 323.9865ms
+2024-11-22 15:30:06.937 +02:00 [INF] User profile is available. Using 'C:\Users\Razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-22 15:30:07.291 +02:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-11-22 15:30:07.359 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-22 15:30:07.364 +02:00 [INF] Hosting environment: Development
+2024-11-22 15:30:07.369 +02:00 [INF] Content root path: C:\Users\Razvan\Desktop\server-asmv
+2024-11-22 15:30:14.737 +02:00 [INF] User profile is available. Using 'C:\Users\Razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-22 15:30:15.029 +02:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-11-22 15:30:15.080 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-22 15:30:15.085 +02:00 [INF] Hosting environment: Development
+2024-11-22 15:30:15.093 +02:00 [INF] Content root path: C:\Users\Razvan\Desktop\server-asmv
+2024-11-22 15:30:16.153 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-11-22 15:30:16.484 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 334.143ms
+2024-11-22 15:30:16.543 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-22 15:30:16.552 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.js - null null
+2024-11-22 15:30:16.545 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-11-22 15:30:16.575 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 31.498ms
+2024-11-22 15:30:16.583 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.js - 200 null application/javascript;charset=utf-8 35.5542ms
+2024-11-22 15:30:16.646 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 101.0753ms
+2024-11-22 15:30:16.954 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-11-22 15:30:17.243 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 288.4076ms
+2024-11-22 15:31:28.819 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/Volunteers/new-volunteer - multipart/form-data; boundary=----WebKitFormBoundarysTT1Wt3fIZZe1c1k 1194
+2024-11-22 15:31:28.835 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-11-22 15:31:28.999 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:31:29.008 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:31:29.098 +02:00 [INF] Route matched with {action = "AddVolunteer", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddVolunteer(ServerAsmv.DTOs.VolunteerDTO, Microsoft.AspNetCore.Http.IFormFile) on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:31:33.027 +02:00 [INF] Executed DbCommand (102ms) [Parameters=[@__newVolunteer_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident"
+FROM volunteers AS v
+WHERE v."Email" = @__newVolunteer_Email_0
+LIMIT 1
+2024-11-22 15:31:33.452 +02:00 [INF] Executed DbCommand (28ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?', @p6='?', @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO volunteers ("Department", "Email", "Firstname", "JoinedDate", "Lastname", "Ocupation", "PhoneNumber", "President", "Secretary", "VicePresident")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id";
+2024-11-22 15:31:33.544 +02:00 [ERR] Failed executing DbCommand (33ms) [Parameters=[@p10='?', @p11='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "VolunteerImages" ("Url", "VolunteerId")
+VALUES (@p10, @p11)
+RETURNING "Id";
+2024-11-22 15:31:33.652 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'ServerAsmv.Data.AppData'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Url" of relation "VolunteerImages" violates not-null constraint
+
+DETAIL: Failing row contains (1, null, 1).
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Url" of relation "VolunteerImages" violates not-null constraint
+    Detail: Failing row contains (1, null, 1).
+    SchemaName: public
+    TableName: VolunteerImages
+    ColumnName: Url
+    File: execMain.c
+    Line: 1987
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Url" of relation "VolunteerImages" violates not-null constraint
+
+DETAIL: Failing row contains (1, null, 1).
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Url" of relation "VolunteerImages" violates not-null constraint
+    Detail: Failing row contains (1, null, 1).
+    SchemaName: public
+    TableName: VolunteerImages
+    ColumnName: Url
+    File: execMain.c
+    Line: 1987
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-11-22 15:31:34.208 +02:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-22 15:31:34.235 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv) in 5126.8085ms
+2024-11-22 15:31:34.237 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:31:34.254 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/Volunteers/new-volunteer - 500 null application/json; charset=utf-8 5434.8111ms
+2024-11-22 15:32:51.506 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/Volunteers/new-volunteer - multipart/form-data; boundary=----WebKitFormBoundarydZmJGE02oEhDMhja 1193
+2024-11-22 15:32:51.540 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:32:51.542 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:32:51.545 +02:00 [INF] Route matched with {action = "AddVolunteer", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddVolunteer(ServerAsmv.DTOs.VolunteerDTO, Microsoft.AspNetCore.Http.IFormFile) on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:32:51.628 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[@__newVolunteer_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident"
+FROM volunteers AS v
+WHERE v."Email" = @__newVolunteer_Email_0
+LIMIT 1
+2024-11-22 15:32:51.654 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?', @p6='?', @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO volunteers ("Department", "Email", "Firstname", "JoinedDate", "Lastname", "Ocupation", "PhoneNumber", "President", "Secretary", "VicePresident")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id";
+2024-11-22 15:32:51.665 +02:00 [ERR] Failed executing DbCommand (6ms) [Parameters=[@p10='?', @p11='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "VolunteerImages" ("Url", "VolunteerId")
+VALUES (@p10, @p11)
+RETURNING "Id";
+2024-11-22 15:32:51.678 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'ServerAsmv.Data.AppData'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Url" of relation "VolunteerImages" violates not-null constraint
+
+DETAIL: Failing row contains (2, null, 2).
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Url" of relation "VolunteerImages" violates not-null constraint
+    Detail: Failing row contains (2, null, 2).
+    SchemaName: public
+    TableName: VolunteerImages
+    ColumnName: Url
+    File: execMain.c
+    Line: 1987
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Url" of relation "VolunteerImages" violates not-null constraint
+
+DETAIL: Failing row contains (2, null, 2).
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Url" of relation "VolunteerImages" violates not-null constraint
+    Detail: Failing row contains (2, null, 2).
+    SchemaName: public
+    TableName: VolunteerImages
+    ColumnName: Url
+    File: execMain.c
+    Line: 1987
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-11-22 15:32:51.864 +02:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-22 15:32:51.868 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv) in 316.0852ms
+2024-11-22 15:32:51.870 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:32:51.872 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/Volunteers/new-volunteer - 500 null application/json; charset=utf-8 367.1958ms
+2024-11-22 15:36:49.845 +02:00 [INF] User profile is available. Using 'C:\Users\Razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-22 15:36:50.175 +02:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-11-22 15:36:50.229 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-22 15:36:50.234 +02:00 [INF] Hosting environment: Development
+2024-11-22 15:36:50.239 +02:00 [INF] Content root path: C:\Users\Razvan\Desktop\server-asmv
+2024-11-22 15:36:51.573 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-11-22 15:36:51.934 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 367.4082ms
+2024-11-22 15:36:52.164 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-22 15:36:52.165 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.js - null null
+2024-11-22 15:36:52.179 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 15.2117ms
+2024-11-22 15:36:52.165 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-11-22 15:36:52.232 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.js - 200 null application/javascript;charset=utf-8 67.2188ms
+2024-11-22 15:36:52.321 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 155.6331ms
+2024-11-22 15:36:52.543 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-11-22 15:36:52.830 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 286.4398ms
+2024-11-22 15:37:56.238 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - multipart/form-data; boundary=----WebKitFormBoundaryfYSR5vN9yKC3gLMB 1006
+2024-11-22 15:37:56.269 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-11-22 15:37:56.493 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:37:56.513 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:37:56.582 +02:00 [INF] Route matched with {action = "AddVolunteer", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddVolunteer(ServerAsmv.DTOs.VolunteerDTO, Microsoft.AspNetCore.Http.IFormFile) on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:38:00.301 +02:00 [INF] Executed DbCommand (82ms) [Parameters=[@__newVolunteer_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident"
+FROM volunteers AS v
+WHERE v."Email" = @__newVolunteer_Email_0
+LIMIT 1
+2024-11-22 15:38:00.644 +02:00 [INF] Executed DbCommand (25ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?', @p6='?', @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO volunteers ("Department", "Email", "Firstname", "JoinedDate", "Lastname", "Ocupation", "PhoneNumber", "President", "Secretary", "VicePresident")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id";
+2024-11-22 15:38:00.748 +02:00 [ERR] Failed executing DbCommand (30ms) [Parameters=[@p10='?', @p11='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "VolunteerImages" ("Url", "VolunteerId")
+VALUES (@p10, @p11)
+RETURNING "Id";
+2024-11-22 15:38:00.833 +02:00 [ERR] An exception occurred in the database while saving changes for context type 'ServerAsmv.Data.AppData'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Url" of relation "VolunteerImages" violates not-null constraint
+
+DETAIL: Failing row contains (3, null, 3).
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Url" of relation "VolunteerImages" violates not-null constraint
+    Detail: Failing row contains (3, null, 3).
+    SchemaName: public
+    TableName: VolunteerImages
+    ColumnName: Url
+    File: execMain.c
+    Line: 1987
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23502: null value in column "Url" of relation "VolunteerImages" violates not-null constraint
+
+DETAIL: Failing row contains (3, null, 3).
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23502
+    MessageText: null value in column "Url" of relation "VolunteerImages" violates not-null constraint
+    Detail: Failing row contains (3, null, 3).
+    SchemaName: public
+    TableName: VolunteerImages
+    ColumnName: Url
+    File: execMain.c
+    Line: 1987
+    Routine: ExecConstraints
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-11-22 15:38:01.169 +02:00 [INF] Executing ObjectResult, writing value of type '<>f__AnonymousType5`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-22 15:38:01.205 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv) in 4614.8517ms
+2024-11-22 15:38:01.213 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:38:01.229 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - 500 null application/json; charset=utf-8 5037.6787ms
+2024-11-22 15:40:56.292 +02:00 [INF] User profile is available. Using 'C:\Users\Razvan\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-11-22 15:40:56.752 +02:00 [INF] Now listening on: http://0.0.0.0:5235
+2024-11-22 15:40:56.815 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-11-22 15:40:56.820 +02:00 [INF] Hosting environment: Development
+2024-11-22 15:40:56.822 +02:00 [INF] Content root path: C:\Users\Razvan\Desktop\server-asmv
+2024-11-22 15:40:58.081 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.html - null null
+2024-11-22 15:40:58.463 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.html - 200 null text/html;charset=utf-8 386.7817ms
+2024-11-22 15:40:58.522 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - null null
+2024-11-22 15:40:58.524 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/index.js - null null
+2024-11-22 15:40:58.527 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/_vs/browserLink - null null
+2024-11-22 15:40:58.548 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 25.3942ms
+2024-11-22 15:40:58.574 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/index.js - 200 null application/javascript;charset=utf-8 49.9485ms
+2024-11-22 15:40:58.792 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/_vs/browserLink - 200 null text/javascript; charset=UTF-8 265.3172ms
+2024-11-22 15:40:59.032 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - null null
+2024-11-22 15:40:59.314 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 281.7622ms
+2024-11-22 15:41:04.265 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - multipart/form-data; boundary=----WebKitFormBoundary8JqWgoakfyAevJN8 1006
+2024-11-22 15:41:04.280 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-11-22 15:41:04.494 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:41:04.502 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:41:04.564 +02:00 [INF] Route matched with {action = "AddVolunteer", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddVolunteer(ServerAsmv.DTOs.VolunteerDTO, Microsoft.AspNetCore.Http.IFormFile) on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:41:08.670 +02:00 [INF] Executed DbCommand (132ms) [Parameters=[@__newVolunteer_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident"
+FROM volunteers AS v
+WHERE v."Email" = @__newVolunteer_Email_0
+LIMIT 1
+2024-11-22 15:41:09.015 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?', @p6='?', @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO volunteers ("Department", "Email", "Firstname", "JoinedDate", "Lastname", "Ocupation", "PhoneNumber", "President", "Secretary", "VicePresident")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id";
+2024-11-22 15:41:09.095 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-22 15:41:09.119 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv) in 4546.6354ms
+2024-11-22 15:41:09.124 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:41:09.140 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - 200 null application/json; charset=utf-8 4875.1603ms
+2024-11-22 15:44:26.482 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/volunteers - null null
+2024-11-22 15:44:26.627 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:44:26.633 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:44:26.716 +02:00 [INF] Route matched with {action = "GetVolunteers", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Volunteer]]] GetVolunteers() on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:44:27.213 +02:00 [INF] Executed DbCommand (72ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident", v0."Id", v0."Url", v0."VolunteerId"
+FROM volunteers AS v
+LEFT JOIN "VolunteerImages" AS v0 ON v."Id" = v0."VolunteerId"
+2024-11-22 15:44:27.260 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Volunteer, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:44:27.303 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv) in 582.6246ms
+2024-11-22 15:44:27.305 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:44:27.308 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/volunteers - 200 null application/json; charset=utf-8 856.9767ms
+2024-11-22 15:44:32.937 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Auth/profile/1 - null null
+2024-11-22 15:44:32.952 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:44:32.953 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.AuthController.GetProfile (ServerAsmv)'
+2024-11-22 15:44:32.961 +02:00 [INF] Route matched with {action = "GetProfile", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[ServerAsmv.Models.User] GetProfile(Int64) on controller ServerAsmv.Controllers.AuthController (ServerAsmv).
+2024-11-22 15:44:33.138 +02:00 [INF] Executed DbCommand (9ms) [Parameters=[@__p_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."Firstname", u."Lastname", u."Password", u."Role"
+FROM "Users" AS u
+WHERE u."Id" = @__p_0
+LIMIT 1
+2024-11-22 15:44:33.187 +02:00 [INF] User profile retrieved successfully for user id: 1.
+2024-11-22 15:44:33.190 +02:00 [INF] Executing OkObjectResult, writing value of type 'ServerAsmv.Models.User'.
+2024-11-22 15:44:33.213 +02:00 [INF] Executed action ServerAsmv.Controllers.AuthController.GetProfile (ServerAsmv) in 247.2136ms
+2024-11-22 15:44:33.217 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.AuthController.GetProfile (ServerAsmv)'
+2024-11-22 15:44:33.220 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Auth/profile/1 - 200 null application/json; charset=utf-8 283.2645ms
+2024-11-22 15:44:37.134 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/volunteers - null null
+2024-11-22 15:44:37.139 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:44:37.140 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:44:37.144 +02:00 [INF] Route matched with {action = "GetVolunteers", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Volunteer]]] GetVolunteers() on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:44:37.157 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident", v0."Id", v0."Url", v0."VolunteerId"
+FROM volunteers AS v
+LEFT JOIN "VolunteerImages" AS v0 ON v."Id" = v0."VolunteerId"
+2024-11-22 15:44:37.164 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Volunteer, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:44:37.166 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv) in 20.8872ms
+2024-11-22 15:44:37.170 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:44:37.171 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/volunteers - 200 null application/json; charset=utf-8 37.0041ms
+2024-11-22 15:45:28.216 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - multipart/form-data; boundary=----WebKitFormBoundary4FmsoUNgB5PPxjRB 991
+2024-11-22 15:45:28.237 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:45:28.242 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:45:28.248 +02:00 [INF] Route matched with {action = "AddVolunteer", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddVolunteer(ServerAsmv.DTOs.VolunteerDTO, Microsoft.AspNetCore.Http.IFormFile) on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:45:28.311 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[@__newVolunteer_Email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident"
+FROM volunteers AS v
+WHERE v."Email" = @__newVolunteer_Email_0
+LIMIT 1
+2024-11-22 15:45:28.373 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__newVolunteer_Department_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident"
+FROM volunteers AS v
+WHERE v."VicePresident" AND v."Department" = @__newVolunteer_Department_0
+LIMIT 1
+2024-11-22 15:45:28.408 +02:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?', @p5='?', @p6='?', @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO volunteers ("Department", "Email", "Firstname", "JoinedDate", "Lastname", "Ocupation", "PhoneNumber", "President", "Secretary", "VicePresident")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9)
+RETURNING "Id";
+2024-11-22 15:45:28.419 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-22 15:45:28.422 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv) in 168.1192ms
+2024-11-22 15:45:28.424 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.AddVolunteer (ServerAsmv)'
+2024-11-22 15:45:28.427 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5235/api/volunteers/new-volunteer - 200 null application/json; charset=utf-8 214.4161ms
+2024-11-22 15:46:27.658 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/volunteers - null null
+2024-11-22 15:46:27.668 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:46:27.670 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:46:27.671 +02:00 [INF] Route matched with {action = "GetVolunteers", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Volunteer]]] GetVolunteers() on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:46:27.837 +02:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident", v0."Id", v0."Url", v0."VolunteerId"
+FROM volunteers AS v
+LEFT JOIN "VolunteerImages" AS v0 ON v."Id" = v0."VolunteerId"
+2024-11-22 15:46:27.857 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Volunteer, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:46:27.861 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv) in 184.0992ms
+2024-11-22 15:46:27.864 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:46:27.866 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/volunteers - 200 null application/json; charset=utf-8 207.5442ms
+2024-11-22 15:46:34.188 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/volunteers/5 - null null
+2024-11-22 15:46:34.193 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:46:34.201 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/volunteers/5 - 204 null null 12.9045ms
+2024-11-22 15:46:34.208 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5235/api/volunteers/5 - null null
+2024-11-22 15:46:34.219 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:46:34.231 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.RemoveVolunteer (ServerAsmv)'
+2024-11-22 15:46:34.263 +02:00 [INF] Route matched with {action = "RemoveVolunteer", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RemoveVolunteer(Int64) on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:46:34.312 +02:00 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident", v0."Id", v0."Url", v0."VolunteerId"
+FROM volunteers AS v
+LEFT JOIN "VolunteerImages" AS v0 ON v."Id" = v0."VolunteerId"
+WHERE v."Id" = @__id_0
+LIMIT 1
+2024-11-22 15:46:34.370 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM volunteers
+WHERE "Id" = @p0;
+2024-11-22 15:46:34.398 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2024-11-22 15:46:34.400 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.RemoveVolunteer (ServerAsmv) in 128.0498ms
+2024-11-22 15:46:34.402 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.RemoveVolunteer (ServerAsmv)'
+2024-11-22 15:46:34.404 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5235/api/volunteers/5 - 204 null null 196.0743ms
+2024-11-22 15:46:34.412 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/volunteers - null null
+2024-11-22 15:46:34.415 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:46:34.416 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:46:34.419 +02:00 [INF] Route matched with {action = "GetVolunteers", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Volunteer]]] GetVolunteers() on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:46:34.427 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident", v0."Id", v0."Url", v0."VolunteerId"
+FROM volunteers AS v
+LEFT JOIN "VolunteerImages" AS v0 ON v."Id" = v0."VolunteerId"
+2024-11-22 15:46:34.432 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Volunteer, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:46:34.434 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv) in 11.0926ms
+2024-11-22 15:46:34.438 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:46:34.441 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/volunteers - 200 null application/json; charset=utf-8 28.3796ms
+2024-11-22 15:48:00.749 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/volunteers - null null
+2024-11-22 15:48:00.860 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:48:00.867 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:48:00.890 +02:00 [INF] Route matched with {action = "GetVolunteers", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Volunteer]]] GetVolunteers() on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:48:01.105 +02:00 [INF] Executed DbCommand (85ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident", v0."Id", v0."Url", v0."VolunteerId"
+FROM volunteers AS v
+LEFT JOIN "VolunteerImages" AS v0 ON v."Id" = v0."VolunteerId"
+2024-11-22 15:48:01.134 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Volunteer, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:48:01.150 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv) in 253.8212ms
+2024-11-22 15:48:01.153 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:48:01.157 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/volunteers - 200 null application/json; charset=utf-8 431.6064ms
+2024-11-22 15:48:12.536 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/volunteers - null null
+2024-11-22 15:48:12.544 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:48:12.545 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:48:12.548 +02:00 [INF] Route matched with {action = "GetVolunteers", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Volunteer]]] GetVolunteers() on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:48:12.564 +02:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident", v0."Id", v0."Url", v0."VolunteerId"
+FROM volunteers AS v
+LEFT JOIN "VolunteerImages" AS v0 ON v."Id" = v0."VolunteerId"
+2024-11-22 15:48:12.573 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Volunteer, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:48:12.577 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv) in 24.3496ms
+2024-11-22 15:48:12.581 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:48:12.584 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/volunteers - 200 null application/json; charset=utf-8 48.9899ms
+2024-11-22 15:48:36.719 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/volunteers/4 - null null
+2024-11-22 15:48:36.728 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:48:36.733 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/volunteers/4 - 204 null null 13.4351ms
+2024-11-22 15:48:36.744 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5235/api/volunteers/4 - null null
+2024-11-22 15:48:36.760 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:48:36.761 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.RemoveVolunteer (ServerAsmv)'
+2024-11-22 15:48:36.767 +02:00 [INF] Route matched with {action = "RemoveVolunteer", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RemoveVolunteer(Int64) on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:48:36.826 +02:00 [INF] Executed DbCommand (17ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident", v0."Id", v0."Url", v0."VolunteerId"
+FROM volunteers AS v
+LEFT JOIN "VolunteerImages" AS v0 ON v."Id" = v0."VolunteerId"
+WHERE v."Id" = @__id_0
+LIMIT 1
+2024-11-22 15:48:36.869 +02:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM volunteers
+WHERE "Id" = @p0;
+2024-11-22 15:48:36.887 +02:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2024-11-22 15:48:36.888 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.RemoveVolunteer (ServerAsmv) in 113.9388ms
+2024-11-22 15:48:36.892 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.RemoveVolunteer (ServerAsmv)'
+2024-11-22 15:48:36.897 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5235/api/volunteers/4 - 204 null null 153.3228ms
+2024-11-22 15:48:36.903 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/volunteers - null null
+2024-11-22 15:48:36.906 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:48:36.907 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:48:36.909 +02:00 [INF] Route matched with {action = "GetVolunteers", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Volunteer]]] GetVolunteers() on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:48:36.916 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident", v0."Id", v0."Url", v0."VolunteerId"
+FROM volunteers AS v
+LEFT JOIN "VolunteerImages" AS v0 ON v."Id" = v0."VolunteerId"
+2024-11-22 15:48:36.922 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Volunteer, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:48:36.925 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv) in 13.3747ms
+2024-11-22 15:48:36.927 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:48:36.930 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/volunteers - 200 null application/json; charset=utf-8 26.472ms
+2024-11-22 15:48:44.520 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/volunteers - null null
+2024-11-22 15:48:44.528 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:48:44.529 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:48:44.532 +02:00 [INF] Route matched with {action = "GetVolunteers", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Volunteer]]] GetVolunteers() on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:48:44.541 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident", v0."Id", v0."Url", v0."VolunteerId"
+FROM volunteers AS v
+LEFT JOIN "VolunteerImages" AS v0 ON v."Id" = v0."VolunteerId"
+2024-11-22 15:48:44.548 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Volunteer, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:48:44.551 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv) in 15.7692ms
+2024-11-22 15:48:44.554 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:48:44.555 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/volunteers - 200 null application/json; charset=utf-8 35.9327ms
+2024-11-22 15:48:45.344 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/volunteers - null null
+2024-11-22 15:48:45.363 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:48:45.367 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:48:45.369 +02:00 [INF] Route matched with {action = "GetVolunteers", controller = "Volunteers"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Volunteer]]] GetVolunteers() on controller ServerAsmv.Controllers.VolunteersController (ServerAsmv).
+2024-11-22 15:48:45.402 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Department", v."Email", v."Firstname", v."JoinedDate", v."Lastname", v."Ocupation", v."PhoneNumber", v."President", v."Secretary", v."VicePresident", v0."Id", v0."Url", v0."VolunteerId"
+FROM volunteers AS v
+LEFT JOIN "VolunteerImages" AS v0 ON v."Id" = v0."VolunteerId"
+2024-11-22 15:48:45.413 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Volunteer, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:48:45.416 +02:00 [INF] Executed action ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv) in 22.5993ms
+2024-11-22 15:48:45.420 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.VolunteersController.GetVolunteers (ServerAsmv)'
+2024-11-22 15:48:45.421 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/volunteers - 200 null application/json; charset=utf-8 77.581ms
+2024-11-22 15:48:47.757 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - null null
+2024-11-22 15:48:47.767 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:48:47.778 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - 204 null null 20.6251ms
+2024-11-22 15:48:47.782 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - null null
+2024-11-22 15:48:48.291 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:48:48.293 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:48:48.319 +02:00 [INF] Route matched with {action = "GetAll", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Message]] GetAll() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-22 15:48:48.382 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."Fullname", m."NewRequest", m."Text"
+FROM "Messages" AS m
+2024-11-22 15:48:48.392 +02:00 [INF] Retrieved all messages.
+2024-11-22 15:48:48.396 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Message, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:48:48.435 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv) in 112.6834ms
+2024-11-22 15:48:48.437 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:48:48.439 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - 200 null application/json; charset=utf-8 656.9984ms
+2024-11-22 15:48:48.844 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:48:48.851 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:48:48.855 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 11.7033ms
+2024-11-22 15:48:48.870 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:48:48.877 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:48:48.878 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:48:48.883 +02:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-22 15:48:48.954 +02:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-11-22 15:48:49.037 +02:00 [INF] Retrieved all projects successfully.
+2024-11-22 15:48:49.039 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:48:49.046 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 160.5216ms
+2024-11-22 15:48:49.048 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:48:49.050 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 179.8068ms
+2024-11-22 15:49:56.857 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:49:56.958 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:49:56.983 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 158.2397ms
+2024-11-22 15:49:56.994 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:49:57.076 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:49:57.080 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:49:57.099 +02:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-22 15:49:57.307 +02:00 [INF] Executed DbCommand (68ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-11-22 15:49:57.371 +02:00 [INF] Retrieved all projects successfully.
+2024-11-22 15:49:57.380 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:49:57.394 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 291.3443ms
+2024-11-22 15:49:57.396 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:49:57.399 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 404.8155ms
+2024-11-22 15:50:04.933 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:50:04.939 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:50:04.940 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 6.7031ms
+2024-11-22 15:50:04.951 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:50:04.960 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:50:04.963 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:50:04.969 +02:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-22 15:50:04.986 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-11-22 15:50:04.997 +02:00 [INF] Retrieved all projects successfully.
+2024-11-22 15:50:05.008 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:50:05.031 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 57.1982ms
+2024-11-22 15:50:05.035 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:50:05.037 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 85.4408ms
+2024-11-22 15:50:14.544 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:50:14.551 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:50:14.552 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 8.059ms
+2024-11-22 15:50:14.559 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:50:14.567 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:50:14.572 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:50:14.575 +02:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-22 15:50:14.595 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-11-22 15:50:14.605 +02:00 [INF] Retrieved all projects successfully.
+2024-11-22 15:50:14.607 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:50:14.610 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 20.3712ms
+2024-11-22 15:50:14.622 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:50:14.624 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 64.6254ms
+2024-11-22 15:50:22.804 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/delete-project/1 - null null
+2024-11-22 15:50:22.821 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:50:22.822 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/delete-project/1 - 204 null null 17.8185ms
+2024-11-22 15:50:22.849 +02:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5235/api/Projects/delete-project/1 - null null
+2024-11-22 15:50:22.945 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:50:22.947 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.DeleteProject (ServerAsmv)'
+2024-11-22 15:50:23.508 +02:00 [INF] Route matched with {action = "DeleteProject", controller = "Projects"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteProject(Int64) on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-22 15:50:23.637 +02:00 [INF] Executed DbCommand (14ms) [Parameters=[@__id_0='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+WHERE p."Id" = @__id_0
+LIMIT 1
+2024-11-22 15:50:23.823 +02:00 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = Int64), @p1='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "ProjectImages"
+WHERE "Id" = @p0;
+DELETE FROM "Projects"
+WHERE "Id" = @p1;
+2024-11-22 15:50:23.892 +02:00 [INF] Project with ID 1 deleted successfully.
+2024-11-22 15:50:23.896 +02:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-11-22 15:50:23.914 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.DeleteProject (ServerAsmv) in 400.7967ms
+2024-11-22 15:50:23.916 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.DeleteProject (ServerAsmv)'
+2024-11-22 15:50:23.918 +02:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5235/api/Projects/delete-project/1 - 200 null application/json; charset=utf-8 1069.8261ms
+2024-11-22 15:50:42.315 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:50:42.379 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:50:42.385 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 72.3573ms
+2024-11-22 15:50:42.394 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:50:42.407 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:50:42.410 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:50:42.437 +02:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-22 15:50:42.512 +02:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-11-22 15:50:42.522 +02:00 [INF] No projects found.
+2024-11-22 15:50:42.527 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:50:42.536 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 89.0098ms
+2024-11-22 15:50:42.542 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:50:42.545 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 151.1435ms
+2024-11-22 15:52:18.243 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:52:18.243 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:52:18.487 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:52:18.487 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:52:18.514 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 315.2307ms
+2024-11-22 15:52:18.514 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Projects/all-projects - 204 null null 315.2101ms
+2024-11-22 15:52:18.554 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - null null
+2024-11-22 15:52:18.631 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:52:18.641 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:52:18.666 +02:00 [INF] Route matched with {action = "GetAllProjects", controller = "Projects"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.DTOs.ProjectResponseDTO]] GetAllProjects() on controller ServerAsmv.Controllers.ProjectsController (ServerAsmv).
+2024-11-22 15:52:19.150 +02:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."Content", p."Summary", p."Title", p0."Id", p0."ProjectId", p0."Url"
+FROM "Projects" AS p
+LEFT JOIN "ProjectImages" AS p0 ON p."Id" = p0."ProjectId"
+2024-11-22 15:52:19.191 +02:00 [INF] No projects found.
+2024-11-22 15:52:19.204 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.DTOs.ProjectResponseDTO, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:52:19.229 +02:00 [INF] Executed action ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv) in 551.6606ms
+2024-11-22 15:52:19.240 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.ProjectsController.GetAllProjects (ServerAsmv)'
+2024-11-22 15:52:19.250 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Projects/all-projects - 200 null application/json; charset=utf-8 695.9592ms
+2024-11-22 15:52:27.631 +02:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - null null
+2024-11-22 15:52:27.660 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:52:27.665 +02:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5235/api/Message/all-messages - 204 null null 34.4076ms
+2024-11-22 15:52:27.685 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - null null
+2024-11-22 15:52:27.701 +02:00 [INF] CORS policy execution successful.
+2024-11-22 15:52:27.704 +02:00 [INF] Executing endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:52:27.709 +02:00 [INF] Route matched with {action = "GetAll", controller = "Message"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ServerAsmv.Models.Message]] GetAll() on controller ServerAsmv.Controllers.MessageController (ServerAsmv).
+2024-11-22 15:52:27.749 +02:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."Fullname", m."NewRequest", m."Text"
+FROM "Messages" AS m
+2024-11-22 15:52:27.763 +02:00 [INF] Retrieved all messages.
+2024-11-22 15:52:27.768 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ServerAsmv.Models.Message, ServerAsmv, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-11-22 15:52:27.775 +02:00 [INF] Executed action ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv) in 56.8567ms
+2024-11-22 15:52:27.784 +02:00 [INF] Executed endpoint 'ServerAsmv.Controllers.MessageController.GetAll (ServerAsmv)'
+2024-11-22 15:52:27.788 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5235/api/Message/all-messages - 200 null application/json; charset=utf-8 102.8784ms

@@ -10,7 +10,8 @@ namespace ServerAsmv.Models {
         public string Firstname {get; set;}
         public string Lastname {get; set;} 
         public string Email {get; set;} 
-        public string JoinedDate {get; set;} 
+        public string JoinedDate {get; set;}
+        public string Ocupation { get; set;}
         public bool President {get; set;}
         public bool VicePresident {get; set;}
         public bool Secretary { get; set; }
@@ -20,12 +21,13 @@ namespace ServerAsmv.Models {
     
         public Volunteer() {}
 
-        public Volunteer(string firstname, string lastname, string email, string joinedDate, string department, bool president, bool vicepresident, string phoneNumber)
+        public Volunteer(string firstname, string lastname, string email, string joinedDate, string ocupation, string department, bool president, bool vicepresident, string phoneNumber)
         {
             Firstname = firstname;
             Lastname = lastname; 
             Email = email;
             JoinedDate = joinedDate;
+            Ocupation = ocupation;
             President = president; 
             VicePresident = vicepresident;
             Department = department;
@@ -34,7 +36,7 @@ namespace ServerAsmv.Models {
 
         public override string ToString()
         {
-            return $"Volunteer: {Firstname} {Lastname}, Email: {Email}, Joined Date: {JoinedDate}, President: {President}, Vice President: {VicePresident}, Department: {Department}";
+            return $"Volunteer: {Firstname} {Lastname}, Email: {Email}, Joined Date: {JoinedDate}, Ocupation: {Ocupation}, President: {President}, Vice President: {VicePresident}, Department: {Department}";
         }
 
     }

@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using ServerAsmv.DTOs;
 using ServerAsmv.Models;
 using ServerAsmv.Services;
@@ -17,16 +17,32 @@ namespace ServerAsmv.Controllers
         }
 
         [HttpPost("new-volunteer")]
-        public async Task<ActionResult<string>> AddVolunteer([FromForm] VolunteerDTO volunteer, IFormFile photo)
+        public async Task<IActionResult> AddVolunteer([FromForm] VolunteerDTO volunteer, IFormFile? photo)
         {
-            var result = await _service.AddVolunteer(volunteer, photo);
-
-            if (result == "Volunteer added succesfully!")
+            try
             {
-                return Ok(result);
-            }
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(new ValidationProblemDetails(ModelState));
+                }
 
-            return BadRequest(result);
+                var result = await _service.AddVolunteer(volunteer, photo);
+
+                if (result == "Volunteer added successfully!")
+                {
+                    return Ok(new { message = result });
+                }
+
+                return BadRequest(new { error = result });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    message = "An unexpected error occurred.",
+                    details = ex.InnerException?.Message ?? ex.Message
+                });
+            }
         }
 
         // GET api/volunteers
@@ -67,6 +83,15 @@ namespace ServerAsmv.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<bool>> UpdateVolunteer(long id, [FromForm] VolunteerDTO volunteer, IFormFile photo)
         {
+            if (!ModelState.IsValid)
+            {
+                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    Console.WriteLine($"Validation Error: {error.ErrorMessage}");
+                }
+                return BadRequest(ModelState);
+            }
+
             var success = await _service.UpdateVolunteer(id, volunteer, photo);
             if (success)
             {
@@ -76,17 +101,18 @@ namespace ServerAsmv.Controllers
             return NotFound(false); 
         }
 
-        [HttpGet("{department}")]
-        public async Task<IActionResult> GetVolunteersByDepartment(string department)
-        {
-            List<Volunteer> volunteers = await _service.SelectByDepartment(department); 
-            
-            if(volunteers.Any())
-            {
-                return Ok(volunteers);
-            }
 
-            return NotFound();
-        }
+        // [HttpGet("{department}")]
+        // public async Task<IActionResult> GetVolunteersByDepartment(string department)
+        // {
+        //     List<Volunteer> volunteers = await _service.SelectByDepartment(department); 
+            
+        //     if(volunteers.Any())
+        //     {
+        //         return Ok(volunteers);
+        //     }
+
+        //     return NotFound();
+        // }
     }
 }
