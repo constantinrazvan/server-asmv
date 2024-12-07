@@ -18,12 +18,11 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '8.0' 
+        dotnet-version: '8.0'
 
     # 3. Restore dependențe
     - name: Restore dependencies
       run: dotnet restore ./server-asmv.sln
-
 
     # 4. Build proiectul
     - name: Build the project
@@ -41,12 +40,18 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.VPS_SSH_KEY }}
         source: ./publish/
-        target: /var/www/app # Schimbă cu locația dorită pe VPS
+        target: /var/www/app
         port: 2222
 
     # 7. Repornire aplicație pe VPS
+    - name: Create SSH key file
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+
     - name: Restart application
       run: |
-        ssh -i ~/.ssh/id_rsa ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
+        ssh -i ~/.ssh/id_rsa -p 2222 ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
         sudo systemctl restart myapp.service
         EOF
