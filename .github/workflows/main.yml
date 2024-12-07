@@ -24,6 +24,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./server-asmv.sln
 
+
     # 4. Build proiectul
     - name: Build the project
       run: dotnet build ./server-asmv.sln --configuration Release --no-restore
