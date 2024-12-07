@@ -1,0 +1,50 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main # Rulați pe branch-ul principal
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Checkout codul sursă
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # 2. Configurare .NET Core
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0' 
+
+    # 3. Restore dependențe
+    - name: Restore dependencies
+      run: dotnet restore
+
+    # 4. Build proiectul
+    - name: Build the project
+      run: dotnet build --configuration Release --no-restore
+
+    # 5. Publicare proiect
+    - name: Publish the project
+      run: dotnet publish -c Release -o ./publish
+
+    # 6. Copiere fișiere pe VPS
+    - name: Deploy to VPS
+      uses: appleboy/scp-action@v0.1.5
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        source: ./publish/
+        target: /var/www/app # Schimbă cu locația dorită pe VPS
+
+    # 7. Repornire aplicație pe VPS
+    - name: Restart application
+      run: |
+        ssh -i ~/.ssh/id_rsa ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
+        sudo systemctl restart myapp.service
+        EOF
