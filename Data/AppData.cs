@@ -28,33 +28,21 @@ namespace ServerAsmv.Data
                 .HasOne(v => v.VolunteerImage)
                 .WithOne(vi => vi.Volunteer)
                 .HasForeignKey<VolunteerImage>(vi => vi.VolunteerId);
-                
-            var store_password = BCrypt.Net.BCrypt.HashPassword("adminasmv", BCrypt.Net.BCrypt.GenerateSalt());
 
+            // Generare hash pentru parola utilizatorului admin
+            var adminPassword = BCrypt.Net.BCrypt.HashPassword("adminasmv", BCrypt.Net.BCrypt.GenerateSalt());
+
+            // Adăugare utilizator admin
             modelBuilder.Entity<User>().HasData(
                 new User
                 {
-                    Id = 1, // Asigură-te că Id-ul este unic și nu există un conflict
+                    Id = 1, // ID-ul utilizatorului trebuie să fie unic
                     Firstname = "Admin",
                     Lastname = "Admin",
                     Email = "admin@asmv.com",
-                    Password = store_password,
+                    Password = adminPassword,
                     Role = "admin",
                     CreatedAt = DateTime.UtcNow
-                }
-            );
-
-            var secondUserPass = BCrypt.Net.BCrypt.HashPassword("razvan20", BCrypt.Net.BCrypt.GenerateSalt());
-            modelBuilder.Entity<User>().HasData(
-                new User
-                {
-                    Id = 2, 
-                    Firstname = "Razvan", 
-                    Lastname = "Constantin", 
-                    Email = "razvanpana20@gmail.com", 
-                    Password = secondUserPass,
-                    Role = "Membru Voluntar", 
-                    CreatedAt = DateTime.UtcNow, 
                 }
             );
 
