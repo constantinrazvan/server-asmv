@@ -13,6 +13,7 @@ using ServerAsmv.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
@@ -60,6 +61,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     }
 );
+
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
@@ -112,13 +114,31 @@ builder.Services.Configure<FormOptions>(options =>
 // Configure CORS to allow all origins, methods, and headers
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", builder =>
-        builder.AllowAnyOrigin()
-               .AllowAnyMethod() // Permite toate metodele, inclusiv OPTIONS
-               .AllowAnyHeader());
+    options.AddPolicy("AllowFrontend", policy =>
+    {
+        if (builder.Environment.IsDevelopment())
+        {
+            policy.AllowAnyOrigin()
+                  .AllowAnyMethod()
+                  .AllowAnyHeader();
+        }
+        else
+        {
+            policy.WithOrigins("https://asmv-ong.ro")
+                  .AllowAnyMethod()
+                  .AllowAnyHeader();
+        }
+    });
 });
 
+
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppData>();
+    dbContext.Database.Migrate();
+}
 
 if (app.Environment.IsDevelopment())
 {
@@ -130,7 +150,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseCors("AllowAll");
+app.UseCors("AllowFrontend");
 
 app.MapControllers();
 
