@@ -22,15 +22,15 @@ jobs:
 
     # 3. Restore dependențe
     - name: Restore dependencies
-      run: dotnet restore ServerAsmv.sln
+      run: dotnet restore ./server-asmv.sln
 
     # 4. Build proiectul
     - name: Build the project
-      run: dotnet build ServerAsmv.sln --configuration Release --no-restore
+      run: dotnet build ./server-asmv.sln --configuration Release --no-restore
 
     # 5. Publicare proiect
     - name: Publish the project
-      run: dotnet publish ServerAsmv.csproj -c Release -o ./publish
+      run: dotnet publish ./ServerAsmv.csproj -c Release -o ./publish
 
     # 6. Copiere fișiere pe VPS
     - name: Deploy to VPS
