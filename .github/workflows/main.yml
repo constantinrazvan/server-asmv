@@ -43,13 +43,20 @@ jobs:
         target: /var/www/app
         port: 2222
 
-    # 7. Repornire aplicație pe VPS
+    # 7. Creare fișier cheie SSH
     - name: Create SSH key file
       run: |
         mkdir -p ~/.ssh
         echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
 
+    # 8. Adaugare VPS la known_hosts
+    - name: Add VPS to known_hosts
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan -p 2222 ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+
+    # 9. Repornire aplicație pe VPS
     - name: Restart application
       run: |
         ssh -i ~/.ssh/id_rsa -p 2222 ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
