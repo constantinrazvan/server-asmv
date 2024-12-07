@@ -88,11 +88,11 @@ jobs:
         fi
         EOF
 
-    # 10. Aplicare migrări pe VPS
+     # 10. Aplicare migrări pe VPS
     - name: Apply database migrations
       run: |
         ssh -i ~/.ssh/id_rsa -p 2222 ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
-        cd /var/www/app
+        cd /var/www/app/publish
         sudo /usr/bin/dotnet ServerAsmv.dll --migrate
         EOF
 
