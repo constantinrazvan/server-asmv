@@ -56,7 +56,39 @@ jobs:
         mkdir -p ~/.ssh
         ssh-keyscan -p 2222 ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
 
-    # 9. Repornire aplicație pe VPS
+    # 9. Creare sau actualizare serviciu pe VPS
+    - name: Create or update service
+      run: |
+        ssh -i ~/.ssh/id_rsa -p 2222 ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
+        if [ ! -f /etc/systemd/system/myapp.service ]; then
+          echo "Creating myapp.service"
+          sudo bash -c 'cat > /etc/systemd/system/myapp.service <<- "EOL"
+          [Unit]
+          Description=Aplicatia mea .NET Core
+          After=network.target
+
+          [Service]
+          WorkingDirectory=/var/www/app
+          ExecStart=/usr/bin/dotnet /var/www/app/ServerAsmv.dll
+          Restart=always
+          RestartSec=10
+          KillSignal=SIGINT
+          SyslogIdentifier=myapp
+          User=www-data
+          Environment=ASPNETCORE_ENVIRONMENT=Production
+
+          [Install]
+          WantedBy=multi-user.target
+          EOL'
+          sudo systemctl daemon-reload
+          sudo systemctl enable myapp.service
+        else
+          echo "Service already exists, updating if necessary"
+          sudo systemctl daemon-reload
+        fi
+        EOF
+
+    # 10. Repornire aplicație pe VPS
     - name: Restart application
       run: |
         ssh -i ~/.ssh/id_rsa -p 2222 ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
