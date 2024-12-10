@@ -1,0 +1,37 @@
+name: Backend CI/CD
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Checkout repository
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # 2. Copy source code to server
+    - name: Copy source code to VPS
+      uses: appleboy/scp-action@v0.1.1
+      with:
+        host: <IP-VPS>
+        username: root
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        source: .
+        target: ~/server-asmv
+
+    # 3. Build and restart Docker containers on the server
+    - name: Restart backend containers
+      uses: appleboy/ssh-action@v0.1.1
+      with:
+        host: http://89.40.72.64/
+        username: root
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd ~/server-asmv
+          docker-compose down
+          docker-compose up -d --build
