@@ -13,7 +13,6 @@ using ServerAsmv.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
@@ -59,14 +58,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 return Task.CompletedTask;
             }
         };
-    }
-);
-
+    });
 
 builder.Services.AddControllers().AddJsonOptions(options =>
 {
-    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
-    options.JsonSerializerOptions.DefaultIgnoreCondition = System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    options.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
 });
 
 builder.Services.AddAuthorization(options =>
@@ -78,13 +75,14 @@ builder.Services.AddDbContext<AppData>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
 );
 
+// Configure CORS to allow all origins
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowFrontend", policy =>
+    options.AddPolicy("AllowAll", policy =>
     {
-        policy.WithOrigins("http://localhost:4200") // Portul unde rulează Angular
-              .AllowAnyMethod()
-              .AllowAnyHeader();
+        policy.AllowAnyOrigin()  // Permite cererile din orice origine
+              .AllowAnyMethod()  // Permite toate metodele (GET, POST, PUT etc.)
+              .AllowAnyHeader(); // Permite toate header-ele
     });
 });
 
@@ -111,27 +109,6 @@ builder.Services.Configure<FormOptions>(options =>
     options.MultipartBodyLengthLimit = 104857600; // Limit to 100MB
 });
 
-// Configure CORS to allow all origins, methods, and headers
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowFrontend", policy =>
-    {
-        if (builder.Environment.IsDevelopment())
-        {
-            policy.AllowAnyOrigin()
-                  .AllowAnyMethod()
-                  .AllowAnyHeader();
-        }
-        else
-        {
-            policy.WithOrigins("https://asmv-ong.ro")
-                  .AllowAnyMethod()
-                  .AllowAnyHeader();
-        }
-    });
-});
-
-
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -148,9 +125,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseCors("AllowAll"); // Aplică politica CORS care permite toate cererile
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseCors("AllowFrontend");
 
 app.MapControllers();
 

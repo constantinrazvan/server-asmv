@@ -1,0 +1,49 @@
+2024-12-10 11:06:02.087 +02:00 [INF] Executed DbCommand (519ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE DATABASE "AsmvDatabase";
+2024-12-10 11:06:02.569 +02:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2024-12-10 11:06:02.713 +02:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-12-10 11:06:02.721 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-12-10 11:06:03.576 +02:00 [INF] No migrations were applied. The database is already up to date.
+2024-12-10 11:06:03.734 +02:00 [INF] User profile is available. Using 'C:\Users\razva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-12-10 11:06:03.956 +02:00 [WRN] Overriding address(es) 'http://0.0.0.0:5235'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2024-12-10 11:06:04.014 +02:00 [INF] Now listening on: http://0.0.0.0:5000
+2024-12-10 11:06:04.016 +02:00 [INF] Now listening on: https://0.0.0.0:5001
+2024-12-10 11:06:04.019 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-10 11:06:04.021 +02:00 [INF] Hosting environment: Development
+2024-12-10 11:06:04.023 +02:00 [INF] Content root path: C:\Users\razva\Desktop\server-asmv
+2024-12-10 11:06:15.948 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - null null
+2024-12-10 11:06:16.039 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 92.516ms
+2024-12-10 11:06:16.070 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - null null
+2024-12-10 11:06:16.071 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.css - null null
+2024-12-10 11:06:16.090 +02:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2024-12-10 11:06:16.093 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.css - 200 202 text/css 21.3781ms
+2024-12-10 11:06:16.098 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-12-10 11:06:16.101 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - null null
+2024-12-10 11:06:16.105 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css - 200 152035 text/css 35.0259ms
+2024-12-10 11:06:16.113 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - null null
+2024-12-10 11:06:16.119 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-12-10 11:06:16.119 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-12-10 11:06:16.121 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js - 200 1426001 text/javascript 19.7597ms
+2024-12-10 11:06:16.122 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js - 200 230007 text/javascript 8.9978ms
+2024-12-10 11:06:16.129 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.js - null null
+2024-12-10 11:06:16.138 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.js - 200 null application/javascript;charset=utf-8 9.9404ms
+2024-12-10 11:06:16.479 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - null null
+2024-12-10 11:06:16.566 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png - null null
+2024-12-10 11:06:16.569 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-12-10 11:06:16.572 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png - 200 628 image/png 5.9959ms
+2024-12-10 11:06:16.665 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 185.8379ms
+2024-12-10 11:20:45.725 +02:00 [INF] Application is shutting down...
