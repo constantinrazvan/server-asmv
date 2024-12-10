@@ -1,31 +1,37 @@
 version: '3.8'
 
 services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: AsmvDatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
   backend:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "5235:80"
-    environment:
-      POSTGRES_HOST: postgres
-      POSTGRES_DB: AsmvDatabase
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      ConnectionStrings__DefaultConnection: "Host=postgres;Port=5432;Database=AsmvDatabase;Username=postgres;Password=postgres"
+    container_name: backend_app
+    restart: always
     depends_on:
       - postgres
-
-  postgres:
-    image: postgres:15
     environment:
-      POSTGRES_DB: AsmvDatabase
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__DefaultConnection: "Host=postgres;Database=AsmvDatabase;Username=postgres;Password=postgres"
     ports:
-      - "5432:5432"
-    volumes:
-      - pgdata:/var/lib/postgresql/data
+      - "5000:5000"
+    command: >
+      sh -c "
+      dotnet ef database update &&
+      dotnet ServerAsmv.dll
+      "
 
 volumes:
-  pgdata:
+  postgres_data:
