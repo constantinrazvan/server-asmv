@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Net;
+using System.Text;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http.Features;
@@ -109,8 +110,20 @@ builder.Services.Configure<FormOptions>(options =>
     options.MultipartBodyLengthLimit = 104857600; // Limit to 100MB
 });
 
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5000); // HTTP port
+    options.ListenAnyIP(5001, listenOptions =>
+    {
+        listenOptions.UseHttps(
+            builder.Configuration["Kestrel:Endpoints:Https:Certificate:Path"], 
+            builder.Configuration["Kestrel:Endpoints:Https:Certificate:KeyPath"]);
+    });
+});
+
 var app = builder.Build();
 
+// Apply migrations at startup
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<AppData>();
@@ -123,12 +136,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Redirect HTTP to HTTPS
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseCors("AllowAll"); // Aplică politica CORS care permite toate cererile
+app.UseCors("AllowAll"); // Apply CORS policy to allow all requests
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Map controllers to endpoints
 app.MapControllers();
 
 app.Run();
+
